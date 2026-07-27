@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estudo · Comunidade Manifesto</title>
+<meta name="description" content="Calendário do estudo da Comunidade Manifesto: a próxima aula em destaque, o programa completo do ano e as gravações dos encontros anteriores para assistir na própria página.">
+<meta name="theme-color" content="#f7f3ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#100e0c" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://estudo.comunidademanifesto.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Comunidade Manifesto">
+<meta property="og:title" content="Estudo · Comunidade Manifesto">
+<meta property="og:description" content="A próxima aula em destaque, o calendário completo do ano e o acervo das gravações.">
+<meta property="og:url" content="https://estudo.comunidademanifesto.com/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
+
+<link rel="preload" href="assets/fonts/fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/app.css">
+
+<script>
+  // Aplica o tema antes da primeira pintura, para não haver "flash" branco.
+  try {
+    var t = localStorage.getItem('estudo:tema');
+    if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.dataset.theme = t;
+  } catch (e) {}
+</script>
+</head>
+
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<a class="sr-only" href="#programa">Ir para o calendário</a>
+
+<header class="head">
+  <div class="wrap head__in">
+    <a class="brand" href="./">
+      <span class="brand__mark">Estudo</span>
+      <span class="brand__sub">Comunidade Manifesto</span>
+    </a>
+    <nav class="nav" aria-label="Seções">
+      <a href="#hero">Próxima aula</a>
+      <a href="#programa">Programa</a>
+      <a href="#programa" data-nav-filtro="gravados">Acervo</a>
+    </nav>
+    <button class="icon-btn theme-toggle" id="tema" type="button" aria-label="Alternar entre tema claro e escuro"></button>
+  </div>
+</header>
+
+<main>
+  <!-- Herói: a próxima aula, sempre em destaque -->
+  <section class="hero" id="hero" aria-labelledby="heroLabel">
+    <h2 class="sr-only" id="heroLabel">Próxima aula</h2>
+  </section>
+
+  <!-- Programa: agenda + calendário anual -->
+  <section class="programa" id="programa">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <h2>O programa</h2>
+        <p class="eyebrow">Aulas anteriores e futuras</p>
+      </div>
+
+      <div class="toolbar">
+        <div class="seg" role="tablist" aria-label="Modo de visualização">
+          <span class="seg__pill" aria-hidden="true"></span>
+          <button type="button" role="tab" data-view="agenda" aria-selected="true" aria-controls="panelAgenda">Agenda</button>
+          <button type="button" role="tab" data-view="calendario" aria-selected="false" aria-controls="panelCalendario">Calendário</button>
+        </div>
+
+        <div class="search">
+          <label class="sr-only" for="busca">Buscar por tema, capítulo, data ou responsável</label>
+          <input id="busca" type="search" autocomplete="off" spellcheck="false"
+                 placeholder="Buscar tema, capítulo ou data…">
+          <button class="search__clear" id="limpar" type="button" aria-label="Limpar busca"></button>
+        </div>
+
+        <div class="chips" id="toolFiltros" role="group" aria-label="Filtrar encontros">
+          <button class="chip" type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+          <button class="chip" type="button" data-filtro="proximos" aria-pressed="false">Próximos</button>
+          <button class="chip" type="button" data-filtro="anteriores" aria-pressed="false">Anteriores</button>
+          <button class="chip" type="button" data-filtro="gravados" aria-pressed="false">Com gravação</button>
+        </div>
+      </div>
+
+      <div class="panel" id="panelAgenda" role="tabpanel" aria-label="Agenda">
+        <div id="agenda"></div>
+      </div>
+
+      <div class="panel" id="panelCalendario" role="tabpanel" aria-label="Calendário anual" hidden>
+        <div id="calendario"></div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <p class="foot__word">“Permanecei na minha palavra… e conhecereis a verdade.”</p>
+    <div class="foot__meta">
+      <p><strong>Comunidade Manifesto</strong> · Rio de Janeiro</p>
+      <p>Encontros semanais pelo Google Meet.</p>
+      <p><a href="https://comunidademanifesto.com">comunidademanifesto.com</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="data/calendario.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
