@@ -16,23 +16,22 @@
   const MESES = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho',
     'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
   const DIAS = ['domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado'];
-  const DOW = ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'];
 
-  /* -- Ícones (SVG inline, traço único — nada de emoji) -------------------- */
+  /* -- Ícones (SVG de traço único — nunca emoji) --------------------------- */
   const ico = {
     play: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.54.84l10.29-6.86a1 1 0 0 0 0-1.68L9.54 4.3A1 1 0 0 0 8 5.14Z"/></svg>',
-    chev: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>',
-    film: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M7 4.5v15M17 4.5v15M2.5 12h19M2.5 8.2h4.5M2.5 15.8h4.5M17 8.2h4.5M17 15.8h4.5"/></svg>',
-    video: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>',
-    ext: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>',
-    cal: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg>',
-    list: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></svg>',
-    search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>',
-    x: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>',
-    arrowL: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>',
-    arrowR: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>',
-    sun: '<svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M18.7 5.3l-1.4 1.4M6.7 17.3l-1.4 1.4"/></svg>',
-    moon: '<svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>',
+    chev: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>',
+    film: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M7 4.5v15M17 4.5v15M2.5 12h19M2.5 8.2h4.5M2.5 15.8h4.5M17 8.2h4.5M17 15.8h4.5"/></svg>',
+    video: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>',
+    ext: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>',
+    cal: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg>',
+    list: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></svg>',
+    search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>',
+    x: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>',
+    arrowL: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>',
+    arrowR: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>',
+    sun: '<svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M18.7 5.3l-1.4 1.4M6.7 17.3l-1.4 1.4"/></svg>',
+    moon: '<svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>',
   };
 
   /* -- Datas --------------------------------------------------------------- */
@@ -55,10 +54,21 @@
 
   const fmtLong = (iso) => {
     const d = toDate(iso);
-    return `${DIAS[d.getDay()]}-feira, ${d.getDate()} de ${MESES[d.getMonth()]}`
-      .replace('domingo-feira', 'domingo')
-      .replace('sábado-feira', 'sábado');
+    const dow = DIAS[d.getDay()];
+    const nome = dow === 'domingo' || dow === 'sábado' ? dow : `${dow}-feira`;
+    return `${nome}, ${d.getDate()} de ${MESES[d.getMonth()]}`;
   };
+
+  /* -- Capítulo: separa o número do título para virar pílula --------------- */
+
+  function partesCap(txt) {
+    if (!txt) return null;
+    const m = String(txt).match(/^\s*(\d+)\s*[.)]\s*(.+)$/s);
+    return m ? { n: m[1], titulo: m[2].trim() } : { n: null, titulo: String(txt).trim() };
+  }
+
+  const pillHTML = (n) =>
+    n ? `<span class="pill-num" data-c="${((Number(n) - 1) % 6) + 1}" aria-hidden="true">${n}</span>` : '';
 
   /* -- Vídeo: normaliza Drive / YouTube em URL de player -------------------- */
 
@@ -76,10 +86,17 @@
     m = s.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|live\/)|youtu\.be\/)([\w-]{11})/);
     if (m) return `https://www.youtube-nocookie.com/embed/${m[1]}?rel=0`;
 
-    // ID solto do Drive
     if (/^[\w-]{20,}$/.test(s)) return `https://drive.google.com/file/d/${s}/preview`;
+    return s;
+  }
 
-    return s; // já é uma URL de embed
+  /* -- Imagens ------------------------------------------------------------- */
+
+  function imgHTML(slug, alt, sizes) {
+    if (!slug) return '';
+    return `<img src="assets/img/${slug}-800.webp"
+                 srcset="assets/img/${slug}-800.webp 800w, assets/img/${slug}-1400.webp 1400w"
+                 sizes="${sizes}" alt="${escape(alt)}" loading="lazy" decoding="async">`;
   }
 
   /* -- Normalização dos encontros ------------------------------------------ */
@@ -92,18 +109,19 @@
     .filter((e) => e && e.data)
     .map((e) => {
       const inicio = withTime(e.data);
-      const fim = new Date(inicio.getTime() + (CFG.duracaoMin || 90) * 60000);
-      const topicos = (e.topicos || []).filter(Boolean);
+      const mod = modulos.get(e.modulo) || null;
+      const cap = partesCap(e.capitulo);
       return {
         ...e,
-        topicos,
+        topicos: (e.topicos || []).filter(Boolean),
         inicio,
-        fim,
-        modInfo: modulos.get(e.modulo) || null,
+        fim: new Date(inicio.getTime() + (CFG.duracaoMin || 90) * 60000),
+        modInfo: mod,
+        cap,
+        foto: e.foto || (mod && mod.capa) || null,
         video: embedUrl(e.video),
         videoRaw: e.video || null,
         meet: e.meet || CFG.meetPadrao || '',
-        // "a definir" enquanto o tema não foi publicado
         tbd: !e.capitulo,
         passado: toDate(e.data) < hoje,
       };
@@ -112,8 +130,6 @@
 
   const proximo = encontros.find((e) => e.fim >= new Date()) || null;
   const idxDe = new Map(encontros.map((e, i) => [e.data, i]));
-
-  /* -- Estado da interface -------------------------------------------------- */
 
   const ui = {
     view: 'agenda',
@@ -130,10 +146,11 @@
 
   function renderHero() {
     const host = $('#hero');
+
     if (!proximo) {
       host.innerHTML = `
         <div class="wrap">
-          <p class="eyebrow" style="margin-bottom:1rem">Calendário do estudo</p>
+          <p class="eyebrow" style="margin-bottom:var(--s-3)">Calendário do estudo</p>
           <h1 class="hero__title">Até o próximo semestre.</h1>
           <p class="hero__resumo">Não há encontros agendados no momento. O acervo das aulas
              anteriores continua disponível abaixo.</p>
@@ -142,13 +159,11 @@
     }
 
     const e = proximo;
-    const mod = e.modInfo;
-    const hojeIso = isoOf(new Date());
-    const quando = e.data === hojeIso ? 'hoje' : fmtLong(e.data);
+    const quando = e.data === isoOf(new Date()) ? 'Hoje' : fmtLong(e.data);
 
     const titulo = e.tbd
-      ? `<em>Tema da semana<br>a ser confirmado</em>`
-      : escape(e.capitulo);
+      ? `<em>Tema a confirmar</em>`
+      : `${pillHTML(e.cap.n)}<span>${escape(e.cap.titulo)}</span>`;
 
     const resumo = e.resumo
       ? `<p class="hero__resumo">${escape(e.resumo)}</p>`
@@ -163,24 +178,25 @@
       <div class="wrap">
         <div class="hero__grid">
           <div data-reveal>
-            <p class="hero__tag"><span class="pulse"></span><span class="eyebrow">Próxima aula</span></p>
-            <p class="hero__date">${quando} · ${CFG.horario || ''}</p>
+            <p class="hero__tag"><span class="dot"></span>Próxima aula</p>
+            <p class="hero__date"><b>${escape(quando)}</b> · ${escape(CFG.horario || '')}${
+              e.responsavel ? ` · com ${escape(e.responsavel)}` : ''}</p>
             <h1 class="hero__title">${titulo}</h1>
             ${resumo}
             ${topicos}
             <div class="hero__actions">
-              ${e.meet ? `<a class="btn btn--solid" href="${escape(e.meet)}" target="_blank" rel="noopener">${ico.video} Entrar no Meet</a>` : ''}
-              <button class="btn btn--ghost" data-goto="${e.data}">${ico.list} Ver no calendário</button>
-              <button class="btn btn--ghost" data-ics="${e.data}">${ico.cal} Adicionar à agenda</button>
+              ${e.meet ? `<a class="btn btn--primary" href="${escape(e.meet)}" target="_blank" rel="noopener">${ico.video} Entrar no Meet</a>` : ''}
+              <button class="btn ${e.meet ? 'btn--ghost' : 'btn--primary'}" data-goto="${e.data}">${ico.list} Ver detalhes da aula</button>
+              <button class="btn btn--quiet" data-ics="${e.data}">${ico.cal} Adicionar à agenda</button>
             </div>
           </div>
 
-          <aside class="hero__side" data-reveal style="--reveal-delay:120ms">
+          <aside class="hero__side" data-reveal style="--reveal-delay:110ms">
             <div class="countdown">
-              <p class="eyebrow countdown__label">Faltam</p>
-              <div class="countdown__clock" id="clock" role="timer" aria-live="off"></div>
+              <p class="eyebrow">Faltam</p>
+              <div class="countdown__clock" id="clock" role="timer"></div>
             </div>
-            ${mod ? bookletHTML(mod) : ''}
+            ${e.modInfo ? bookletHTML(e.modInfo) : ''}
           </aside>
         </div>
       </div>`;
@@ -200,13 +216,22 @@
   function bookletHTML(mod) {
     return `
       <div class="booklet">
-        <p class="eyebrow booklet__kicker">Estudando agora</p>
-        <p class="booklet__title">${escape(mod.titulo)}</p>
-        <p class="booklet__author">${escape(mod.autor || '')}</p>
-        ${mod.epigrafe ? `<p class="booklet__quote">${escape(mod.epigrafe)}</p>` : ''}
-        <div class="meter">
-          <div class="meter__track"><div class="meter__fill" id="meterFill"></div></div>
-          <p class="meter__text" id="meterText"></p>
+        ${mod.capa ? `<img class="booklet__cover"
+            src="assets/img/${mod.capa}-800.webp"
+            srcset="assets/img/${mod.capa}-800.webp 800w, assets/img/${mod.capa}-1400.webp 1400w"
+            sizes="(max-width: 64rem) 100vw, 22rem"
+            alt="" width="800" height="450" loading="lazy" decoding="async">` : ''}
+        <div class="booklet__body">
+          <div>
+            <p class="eyebrow" style="margin-bottom:var(--s-2)">Estudando agora</p>
+            <p class="booklet__title">${escape(mod.titulo)}</p>
+            <p class="booklet__author">${escape(mod.autor || '')}</p>
+          </div>
+          ${mod.epigrafe ? `<p class="booklet__quote">${escape(mod.epigrafe)}</p>` : ''}
+          <div class="meter">
+            <div class="meter__track"><div class="meter__fill" id="meterFill"></div></div>
+            <p class="meter__text" id="meterText"></p>
+          </div>
         </div>
       </div>`;
   }
@@ -215,9 +240,9 @@
     const host = $('#clock');
     if (!host || !proximo) return;
 
-    let diff = proximo.inicio - new Date();
+    const diff = proximo.inicio - new Date();
     if (diff <= 0) {
-      host.innerHTML = `<p class="hero__date" style="margin:0">Acontecendo agora</p>`;
+      host.innerHTML = `<p class="countdown__live">Acontecendo agora</p>`;
       return;
     }
     const d = Math.floor(diff / 864e5);
@@ -226,7 +251,7 @@
     const s = Math.floor((diff % 6e4) / 1000);
 
     const unit = (n, label) =>
-      `<div class="countdown__unit"><span class="countdown__n num">${String(n).padStart(2, '0')}</span><span class="countdown__u">${label}</span></div>`;
+      `<div><span class="countdown__n">${String(n).padStart(2, '0')}</span><span class="countdown__u">${label}</span></div>`;
 
     host.innerHTML = d > 0
       ? unit(d, d === 1 ? 'dia' : 'dias') + unit(h, 'horas') + unit(m, 'min')
@@ -253,7 +278,6 @@
     });
   }
 
-  // Agrupa por mês, mantendo a ordem cronológica.
   function porMes(lista) {
     const grupos = [];
     let atual = null;
@@ -286,7 +310,7 @@
       return;
     }
 
-    // Na visão completa, o passado fica recolhido para que a próxima aula
+    // Na visão completa o passado fica recolhido, para que a próxima aula
     // apareça de imediato — sem esconder nada: é um clique para abrir.
     const neutro = ui.filtro === 'todos' && !ui.busca.trim();
     const passados = neutro ? lista.filter((e) => e.passado) : [];
@@ -298,7 +322,7 @@
         <button class="past-toggle" type="button" id="verPassado" aria-expanded="${ui.mostrarPassado}">
           <span class="past-toggle__chev">${ico.chev}</span>
           <span>${ui.mostrarPassado ? 'Ocultar' : 'Ver'} os ${passados.length} encontros anteriores</span>
-          <span class="past-toggle__rule" aria-hidden="true"></span>
+          <span class="past-toggle__rule"></span>
         </button>`;
       if (ui.mostrarPassado) html += porMes(passados);
     } else {
@@ -307,15 +331,13 @@
     html += porMes(adiante);
 
     host.innerHTML = html;
-
-    // Reabre o item que estava aberto (ex.: após uma busca)
     if (ui.aberto) abrir(ui.aberto, false);
-    observarReveal(host);
   }
 
   function encHTML(e) {
     const d = toDate(e.data);
     const ehProximo = proximo && proximo.data === e.data;
+
     const classes = ['enc'];
     if (e.passado) classes.push('enc--past');
     if (ehProximo) classes.push('enc--next');
@@ -330,17 +352,21 @@
     if (e.responsavel) sub.push(escape(e.responsavel));
     if (e.topicos.length) sub.push(`${e.topicos.length} ${e.topicos.length === 1 ? 'seção' : 'seções'}`);
 
+    const titulo = e.tbd
+      ? `<span>Tema a confirmar</span>`
+      : `${pillHTML(e.cap.n)}<span>${escape(e.cap.titulo)}</span>`;
+
     return `
       <article class="${classes.join(' ')}" id="enc-${e.data}" data-enc="${e.data}">
         <h4>
           <button class="enc__btn" aria-expanded="false" aria-controls="body-${e.data}">
             <span class="enc__day">
-              <b class="num">${String(d.getDate()).padStart(2, '0')}</b>
+              <b>${String(d.getDate()).padStart(2, '0')}</b>
               <small>${DIAS[d.getDay()].slice(0, 3)}</small>
             </span>
             <span class="enc__main">
-              <span class="enc__title">${e.tbd ? 'Tema a confirmar' : escape(e.capitulo)}</span>
-              <span class="enc__sub">${sub.map((s, i) => (i ? `<i class="dot"></i>${s}` : s)).join('')}</span>
+              <span class="enc__title">${titulo}</span>
+              <span class="enc__sub">${sub.map((s, i) => (i ? `<span class="sep">·</span>${s}` : s)).join('')}</span>
             </span>
             <span class="enc__aside">
               ${badges.join('')}
@@ -349,56 +375,68 @@
           </button>
         </h4>
         <div class="enc__body" id="body-${e.data}" role="region">
-          <div><div class="enc__inner" data-lazy="${e.data}"></div></div>
+          <div><div class="enc__inner"></div></div>
         </div>
       </article>`;
   }
 
-  // O conteúdo pesado (player) só é montado quando o item abre.
+  // O conteúdo pesado (imagem, player) só é montado quando o item abre.
   function montarInterior(e, host) {
     if (host.dataset.ready) return;
     host.dataset.ready = '1';
 
     const col1 = document.createElement('div');
-    if (e.resumo) {
-      col1.innerHTML = `<p class="enc__resumo">${escape(e.resumo)}</p>`;
-    } else {
-      col1.innerHTML = `<p class="enc__empty">O resumo desta semana ainda não foi publicado.</p>`;
-    }
+    col1.innerHTML = e.resumo
+      ? `<p class="enc__resumo">${escape(e.resumo)}</p>`
+      : `<p class="enc__empty">O resumo desta semana ainda não foi publicado.</p>`;
 
     if (e.topicos.length) {
       col1.insertAdjacentHTML('beforeend',
         `<ul class="topicos">${e.topicos.map((t) => `<li>${escape(t)}</li>`).join('')}</ul>`);
     }
 
-    const facts = [];
-    facts.push(`<div class="fact"><dt>Data</dt><dd>${fmtLong(e.data)}</dd></div>`);
-    facts.push(`<div class="fact"><dt>Horário</dt><dd class="num">${CFG.horario || '—'}</dd></div>`);
+    const facts = [
+      `<div class="fact"><dt>Data</dt><dd>${fmtLong(e.data)}</dd></div>`,
+      `<div class="fact"><dt>Horário</dt><dd class="num">${CFG.horario || '—'}</dd></div>`,
+    ];
     if (e.responsavel) facts.push(`<div class="fact"><dt>Conduzido por</dt><dd>${escape(e.responsavel)}</dd></div>`);
     if (e.modInfo) facts.push(`<div class="fact"><dt>Livro</dt><dd>${escape(e.modInfo.titulo)}</dd></div>`);
     col1.insertAdjacentHTML('beforeend', `<dl class="enc__facts">${facts.join('')}</dl>`);
 
     const links = [];
     if (!e.passado && e.meet) {
-      links.push(`<a class="btn btn--solid" href="${escape(e.meet)}" target="_blank" rel="noopener">${ico.video} Entrar no Meet</a>`);
+      links.push(`<a class="btn btn--primary" href="${escape(e.meet)}" target="_blank" rel="noopener">${ico.video} Entrar no Meet</a>`);
     }
-    if (!e.passado) links.push(`<button class="btn btn--ghost" data-ics="${e.data}">${ico.cal} Adicionar à agenda</button>`);
-    if (e.material) links.push(`<a class="btn btn--ghost" href="${escape(e.material)}" target="_blank" rel="noopener">${ico.ext} Material</a>`);
+    if (!e.passado) links.push(`<button class="btn btn--quiet" data-ics="${e.data}">${ico.cal} Adicionar à agenda</button>`);
+    if (e.material) links.push(`<a class="btn btn--quiet" href="${escape(e.material)}" target="_blank" rel="noopener">${ico.ext} Material</a>`);
     if (links.length) col1.insertAdjacentHTML('beforeend', `<div class="enc__links">${links.join('')}</div>`);
 
     const col2 = document.createElement('div');
-    col2.appendChild(playerEl(e));
+    col2.appendChild(midiaEl(e));
 
     host.append(col1, col2);
   }
 
-  function playerEl(e) {
+  const SIZES_MEDIA = '(max-width: 58rem) 92vw, 34rem';
+
+  function midiaEl(e) {
+    // Sem gravação: mostra a foto do capítulo (ou nada, se não houver).
     if (!e.video) {
-      const box = document.createElement('div');
-      box.className = 'player--empty';
-      box.innerHTML = `${ico.film}<p>${e.passado
+      const nota = e.passado
         ? 'A gravação deste encontro ainda não foi publicada.'
-        : 'A gravação fica disponível aqui depois do encontro.'}</p>`;
+        : 'A gravação fica disponível aqui depois do encontro.';
+
+      if (!e.foto) {
+        const box = document.createElement('div');
+        box.className = 'media--none';
+        box.innerHTML = `${ico.film}<p>${nota}</p>`;
+        return box;
+      }
+      const box = document.createElement('div');
+      box.className = 'media';
+      box.innerHTML = `
+        <div class="media__frame">${imgHTML(e.foto, '', SIZES_MEDIA)}</div>
+        <p class="media__note">${nota}</p>`;
       return box;
     }
 
@@ -408,8 +446,11 @@
       <div class="player__frame">
         <button class="player__poster" type="button"
                 aria-label="Reproduzir a gravação de ${escape(fmtLong(e.data))}">
-          <span class="player__play">${ico.play}</span>
-          <span class="player__hint">Assistir à gravação</span>
+          ${imgHTML(e.foto, '', SIZES_MEDIA)}
+          <span class="player__cta">
+            <span class="player__play">${ico.play}</span>
+            <span class="player__hint">Assistir à gravação</span>
+          </span>
         </button>
       </div>
       <div class="player__foot">
@@ -425,10 +466,9 @@
       f.title = `Gravação — ${e.capitulo || fmtLong(e.data)}`;
       f.allow = 'autoplay; encrypted-media; fullscreen; picture-in-picture';
       f.allowFullscreen = true;
-      f.loading = 'lazy';
       frame.prepend(f);
       frame.classList.add('is-live');
-    }, { once: false });
+    });
 
     return wrap;
   }
@@ -441,13 +481,11 @@
 
     if (ui.aberto && ui.aberto !== iso) fechar(ui.aberto);
 
-    const btn = $('.enc__btn', art);
-    const inner = $('.enc__inner', art);
     const e = encontros[idxDe.get(iso)];
-    if (e) montarInterior(e, inner);
+    if (e) montarInterior(e, $('.enc__inner', art));
 
     art.classList.add('is-open');
-    btn.setAttribute('aria-expanded', 'true');
+    $('.enc__btn', art).setAttribute('aria-expanded', 'true');
     ui.aberto = iso;
     history.replaceState(null, '', `#${iso}`);
 
@@ -466,8 +504,8 @@
     if (ui.aberto === iso) ui.aberto = null;
   }
 
-  // Leva a interface até uma data qualquer, desfazendo filtros e
-  // abrindo a seção de encontros anteriores se for preciso.
+  // Leva a interface até uma data qualquer, desfazendo filtros e abrindo a
+  // seção de encontros anteriores quando for preciso.
   function irPara(iso) {
     const e = encontros[idxDe.get(iso)];
     if (!e) return;
@@ -495,7 +533,7 @@
   }
 
   /* ======================================================================
-     CALENDÁRIO ANUAL
+     CALENDÁRIO — apenas os dias de estudo
      ==================================================================== */
 
   const anos = [...new Set(encontros.map((e) => toDate(e.data).getFullYear()))].sort();
@@ -505,13 +543,22 @@
     const ano = ui.ano;
     const i = anos.indexOf(ano);
 
-    const meses = Array.from({ length: 12 }, (_, m) => mesHTML(ano, m)).join('');
+    const doAno = encontros.filter((e) => toDate(e.data).getFullYear() === ano);
+
+    // Só os meses que têm encontro — nada de grade vazia.
+    const meses = [];
+    for (const e of doAno) {
+      const m = toDate(e.data).getMonth();
+      let g = meses.find((x) => x.m === m);
+      if (!g) meses.push((g = { m, itens: [] }));
+      g.itens.push(e);
+    }
 
     host.innerHTML = `
       <div class="cal__top">
         <div class="yearpick">
           <button class="icon-btn" id="anoAnt" aria-label="Ano anterior" ${i <= 0 ? 'disabled' : ''}>${ico.arrowL}</button>
-          <span class="yearpick__y num">${ano}</span>
+          <span class="yearpick__y">${ano}</span>
           <button class="icon-btn" id="anoProx" aria-label="Próximo ano" ${i >= anos.length - 1 ? 'disabled' : ''}>${ico.arrowR}</button>
         </div>
         <div class="legend">
@@ -521,51 +568,41 @@
           <span><i class="k-future"></i>Agendada</span>
         </div>
       </div>
-      <div class="cal__grid">${meses}</div>`;
+      <div class="cal__grid">${meses.map(mesHTML).join('')}</div>`;
 
     $('#anoAnt').addEventListener('click', () => { ui.ano = anos[i - 1]; renderCalendario(); });
     $('#anoProx').addEventListener('click', () => { ui.ano = anos[i + 1]; renderCalendario(); });
   }
 
-  function mesHTML(ano, mes) {
-    const primeiro = new Date(ano, mes, 1);
-    const dias = new Date(ano, mes + 1, 0).getDate();
-    const pad = primeiro.getDay();
+  function mesHTML(g) {
     const hojeIso = isoOf(new Date());
+    const n = g.itens.length;
 
-    let cells = '';
-    for (let p = 0; p < pad; p++) cells += `<span class="day day--pad" aria-hidden="true"></span>`;
+    const chips = g.itens.map((e) => {
+      const d = toDate(e.data);
+      const cls = ['dchip'];
+      if (e.data === hojeIso) cls.push('is-today');
+      if (proximo && proximo.data === e.data) cls.push('is-next');
+      else if (e.video) cls.push('has-video');
+      else if (e.passado) cls.push('is-past');
 
-    let temEncontro = false;
+      const rotulo = e.tbd ? 'tema a confirmar' : e.capitulo;
+      const nota = [e.responsavel, e.video ? 'gravação disponível' : ''].filter(Boolean).join(' · ');
 
-    for (let dia = 1; dia <= dias; dia++) {
-      const iso = `${ano}-${String(mes + 1).padStart(2, '0')}-${String(dia).padStart(2, '0')}`;
-      const e = encontros[idxDe.get(iso)];
-      const cls = ['day'];
-      if (iso === hojeIso) cls.push('day--today');
-
-      if (e) {
-        temEncontro = true;
-        cls.push('day--enc');
-        if (proximo && proximo.data === iso) cls.push('is-next');
-        else if (e.video) cls.push('has-video');
-        else if (e.passado) cls.push('is-past');
-
-        const rotulo = e.tbd ? 'tema a confirmar' : e.capitulo;
-        cells += `<button class="${cls.join(' ')}" type="button" data-day="${iso}"
-                     data-title="${escape(e.tbd ? 'Tema a confirmar' : e.capitulo)}"
-                     data-note="${escape([e.responsavel, e.video ? 'gravação disponível' : ''].filter(Boolean).join(' · '))}"
-                     aria-label="${escape(`${fmtLong(iso)} — ${rotulo}`)}">${dia}</button>`;
-      } else {
-        cells += `<span class="${cls.join(' ')}">${dia}</span>`;
-      }
-    }
+      return `<button class="${cls.join(' ')}" type="button" data-day="${e.data}"
+                 data-title="${escape(e.tbd ? 'Tema a confirmar' : e.capitulo)}"
+                 data-note="${escape(nota)}"
+                 aria-label="${escape(`${fmtLong(e.data)} — ${rotulo}`)}">
+                <b>${String(d.getDate()).padStart(2, '0')}</b>
+                <small>${DIAS[d.getDay()].slice(0, 3)}</small>
+                ${e.video ? `<span class="dchip__play">${ico.play}</span>` : ''}
+              </button>`;
+    }).join('');
 
     return `
-      <div class="mon${temEncontro ? '' : ' mon--empty'}">
-        <h4 class="mon__name">${MESES[mes]}</h4>
-        <div class="mon__dows" aria-hidden="true">${DOW.map((d) => `<span>${d}</span>`).join('')}</div>
-        <div class="mon__days">${cells}</div>
+      <div class="mon">
+        <h4 class="mon__name"><span>${MESES[g.m]}</span><b>${n} ${n === 1 ? 'encontro' : 'encontros'}</b></h4>
+        <div class="mon__days">${chips}</div>
       </div>`;
   }
 
@@ -573,20 +610,18 @@
 
   const tip = document.createElement('div');
   tip.className = 'tip';
-  tip.setAttribute('role', 'presentation');
   document.body.appendChild(tip);
 
   function mostrarTip(alvo) {
     const iso = alvo.dataset.day;
-    const e = encontros[idxDe.get(iso)];
-    if (!e) return;
+    if (!idxDe.has(iso)) return;
     tip.innerHTML = `<b>${escape(alvo.dataset.title)}</b>
       <i>${escape(fmtLong(iso))}${alvo.dataset.note ? ' · ' + escape(alvo.dataset.note) : ''}</i>`;
     const r = alvo.getBoundingClientRect();
     tip.classList.add('is-on');
     const w = tip.offsetWidth;
     tip.style.left = `${Math.min(Math.max(8, r.left + r.width / 2 - w / 2), innerWidth - w - 8)}px`;
-    tip.style.top = `${r.bottom + 10}px`;
+    tip.style.top = `${r.bottom + 8}px`;
   }
   const esconderTip = () => tip.classList.remove('is-on');
 
@@ -637,7 +672,7 @@
       `SUMMARY:${titulo.replace(/[,;]/g, '\\$&')}`,
       desc ? `DESCRIPTION:${desc.replace(/[,;]/g, '\\$&')}` : '',
       e.meet ? `URL:${e.meet}` : '',
-      e.meet ? `LOCATION:Google Meet` : '',
+      e.meet ? 'LOCATION:Google Meet' : '',
       'END:VEVENT', 'END:VCALENDAR',
     ].filter(Boolean).join('\r\n');
 
@@ -661,19 +696,18 @@
   const prefersMotion = () => !matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   let io;
-  function observarReveal(root = document) {
-    if (!('IntersectionObserver' in window)) return;
+  function observarReveal() {
+    if (!('IntersectionObserver' in window)) {
+      $$('[data-reveal]').forEach((el) => el.classList.add('is-in'));
+      return;
+    }
     io = io || new IntersectionObserver((entries) => {
       entries.forEach((en) => {
         if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); }
       });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
-    $$('[data-reveal]:not(.is-in)', root).forEach((el) => io.observe(el));
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.03 });
+    $$('[data-reveal]:not(.is-in)').forEach((el) => io.observe(el));
   }
-
-  /* ======================================================================
-     TEMA
-     ==================================================================== */
 
   function aplicarTema(t) {
     document.documentElement.dataset.theme = t;
@@ -685,13 +719,9 @@
      ==================================================================== */
 
   function bind() {
-    // Delegação única para tudo que é clicável.
     document.addEventListener('click', (ev) => {
       const encBtn = ev.target.closest('.enc__btn');
-      if (encBtn) {
-        alternar(encBtn.closest('.enc').dataset.enc);
-        return;
-      }
+      if (encBtn) { alternar(encBtn.closest('.enc').dataset.enc); return; }
 
       const dia = ev.target.closest('[data-day]');
       if (dia) { esconderTip(); irPara(dia.dataset.day); return; }
@@ -744,16 +774,14 @@
       }
     });
 
-    // Busca com debounce
     let t;
     $('#busca').addEventListener('input', (ev) => {
       const v = ev.target.value;
       $('.search').classList.toggle('has-value', v.length > 0);
       clearTimeout(t);
-      t = setTimeout(() => { ui.busca = v; renderAgenda(); }, 140);
+      t = setTimeout(() => { ui.busca = v; renderAgenda(); }, 130);
     });
 
-    // Dica do calendário (mouse e teclado)
     const cal = $('#calendario');
     cal.addEventListener('mouseover', (ev) => {
       const d = ev.target.closest('[data-day]');
@@ -767,20 +795,18 @@
     cal.addEventListener('focusout', esconderTip);
     addEventListener('scroll', esconderTip, { passive: true });
 
-    // Navegação por setas dentro de um mês
+    // Navegação por setas entre os dias de estudo
     cal.addEventListener('keydown', (ev) => {
       if (!['ArrowRight', 'ArrowLeft'].includes(ev.key)) return;
       const atual = ev.target.closest('[data-day]');
       if (!atual) return;
       const todos = $$('[data-day]', cal);
-      const i = todos.indexOf(atual);
-      const alvo = todos[i + (ev.key === 'ArrowRight' ? 1 : -1)];
+      const alvo = todos[todos.indexOf(atual) + (ev.key === 'ArrowRight' ? 1 : -1)];
       if (alvo) { ev.preventDefault(); alvo.focus(); }
     });
 
     addEventListener('keydown', (ev) => {
       if (ev.key === 'Escape' && ui.aberto) { fechar(ui.aberto); esconderTip(); }
-      // "/" foca a busca, como nos apps que a gente gosta de usar
       if (ev.key === '/' && !/^(INPUT|TEXTAREA)$/.test(document.activeElement.tagName)) {
         ev.preventDefault();
         setView('agenda');
@@ -788,10 +814,9 @@
       }
     });
 
-    // Cabeçalho que encolhe
     const head = $('.head');
     addEventListener('scroll', () => {
-      head.classList.toggle('is-stuck', scrollY > 12);
+      head.classList.toggle('is-stuck', scrollY > 8);
     }, { passive: true });
 
     addEventListener('resize', posicionarPill);
@@ -802,9 +827,7 @@
      ==================================================================== */
 
   function init() {
-    // Ícones do chrome
     $('#tema').innerHTML = ico.sun + ico.moon;
-    $('.search svg')?.remove();
     $('.search').insertAdjacentHTML('afterbegin', ico.search);
     $('#limpar').innerHTML = ico.x;
     $('[data-view="agenda"]').insertAdjacentHTML('afterbegin', ico.list);
@@ -819,10 +842,8 @@
     // Link direto para uma data: estudo.comunidademanifesto.com/#2026-05-19
     const alvo = location.hash.replace('#', '');
     if (/^\d{4}-\d{2}-\d{2}$/.test(alvo) && idxDe.has(alvo)) {
-      setTimeout(() => irPara(alvo), 260);
+      setTimeout(() => irPara(alvo), 240);
     }
-
-    document.body.classList.add('is-ready');
   }
 
   if (document.readyState === 'loading') {

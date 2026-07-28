@@ -13,11 +13,6 @@
  *     O site converte sozinho para o player e exibe o vídeo na própria página.
  *     Links do YouTube também funcionam.
  *
- *  COMO PREENCHER UM ENCONTRO FUTURO
- *  ---------------------------------
- *  Basta preencher `capitulo`, `topicos` e `resumo`. Enquanto estiverem
- *  vazios, o site mostra o encontro como "tema a confirmar" — sem quebrar.
- *
  *  CAMPOS DE CADA ENCONTRO
  *  -----------------------
  *    data        "AAAA-MM-DD"  (obrigatório)
@@ -26,6 +21,7 @@
  *    topicos     lista de seções/páginas tratadas na semana
  *    responsavel quem conduz o encontro
  *    resumo      parágrafo curto sobre o tema da semana
+ *    foto        nome de uma imagem em assets/img (sem o tamanho e a extensão)
  *    video       link do Drive/YouTube da gravação (encontros passados)
  *    meet        link da sala do Meet (se diferente do padrão)
  *    material    link para PDF, slides ou página do Notion (opcional)
@@ -48,46 +44,305 @@ window.ESTUDO = {
       titulo: 'Simplesmente Crente',
       autor: 'Michael Horton',
       periodo: '2026 · 2º semestre',
+      capa: 'quintal',
       epigrafe:
-        'O cristianismo não é um conjunto de técnicas para uma vida melhor — é a notícia de que Deus agiu na história, e que essa história agora é a nossa.',
+        'Deus não nos chamou para sermos radicais, revolucionários ou extraordinários. Ele nos chamou para uma fidelidade comum, sustentável, que dura a vida inteira.',
     },
     {
       id: 'conspiracao-divina',
       titulo: 'A Conspiração Divina',
       autor: 'Dallas Willard',
       periodo: '2026 · 1º semestre',
+      capa: 'oracao',
       epigrafe:
         'O Reino de Deus não é um lugar para onde se vai depois de morrer, mas o governo real de Deus disponível aqui e agora, para quem quiser aprender a viver nele.',
     },
   ],
 
-  /* ---------------------------------------------------------------------
-   * 2026.2 — SIMPLESMENTE CRENTE (Michael Horton)
-   * As datas seguem o ritmo semanal de terça-feira, herdado do 1º semestre.
-   * Capítulos, tópicos e resumos: preencher conforme o calendário do Notion.
-   * ------------------------------------------------------------------ */
   encontros: [
-    { data: '2026-07-28', modulo: 'simplesmente-crente' },
-    { data: '2026-08-04', modulo: 'simplesmente-crente' },
-    { data: '2026-08-11', modulo: 'simplesmente-crente' },
-    { data: '2026-08-18', modulo: 'simplesmente-crente' },
-    { data: '2026-08-25', modulo: 'simplesmente-crente' },
-    { data: '2026-09-01', modulo: 'simplesmente-crente' },
-    { data: '2026-09-08', modulo: 'simplesmente-crente' },
-    { data: '2026-09-15', modulo: 'simplesmente-crente' },
-    { data: '2026-09-22', modulo: 'simplesmente-crente' },
-    { data: '2026-09-29', modulo: 'simplesmente-crente' },
-    { data: '2026-10-06', modulo: 'simplesmente-crente' },
-    { data: '2026-10-13', modulo: 'simplesmente-crente' },
-    { data: '2026-10-20', modulo: 'simplesmente-crente' },
-    { data: '2026-10-27', modulo: 'simplesmente-crente' },
-    { data: '2026-11-03', modulo: 'simplesmente-crente' },
-    { data: '2026-11-10', modulo: 'simplesmente-crente' },
-    { data: '2026-11-17', modulo: 'simplesmente-crente' },
-    { data: '2026-11-24', modulo: 'simplesmente-crente' },
-    { data: '2026-12-01', modulo: 'simplesmente-crente' },
-    { data: '2026-12-08', modulo: 'simplesmente-crente' },
-    { data: '2026-12-15', modulo: 'simplesmente-crente' },
+    /* -------------------------------------------------------------------
+     * 2026.2 — SIMPLESMENTE CRENTE (Michael Horton)
+     * ---------------------------------------------------------------- */
+    {
+      data: '2026-07-28',
+      modulo: 'simplesmente-crente',
+      capitulo: '1. O Novo Radical',
+      topicos: ['Introdução (p. 17–24)', 'Meu problema é a mesmice (p. 24–29)'],
+      responsavel: 'Bell',
+      foto: 'montanha',
+      resumo:
+        'Horton abre o livro nomeando o clima que nos formou: uma espiritualidade que só se sente legítima quando é radical, épica, revolucionária. “Mesmice” virou sinônimo de fracasso — e é exatamente aí que ele coloca o dedo. Primeira aula do semestre: vale chegar de coração aberto, porque o diagnóstico é sobre nós.',
+    },
+    {
+      data: '2026-08-04',
+      modulo: 'simplesmente-crente',
+      capitulo: '1. O Novo Radical',
+      topicos: [
+        'Isso não seria uma desculpa para nos manter confortáveis? (p. 29–32)',
+        'Tempo de quantidade (p. 32–42)',
+      ],
+      responsavel: 'Alamo',
+      foto: 'montanha',
+      resumo:
+        'A objeção mais óbvia ao livro — “isso não é acomodação disfarçada?” — é enfrentada de frente. Horton responde que o oposto do radicalismo não é a preguiça, mas a fidelidade que dura. E apresenta uma de suas imagens centrais: maturidade e vínculo não se constroem em momentos intensos, e sim em tempo de quantidade.',
+    },
+    {
+      data: '2026-08-11',
+      modulo: 'simplesmente-crente',
+      capitulo: '2. Corriqueiro não é o mesmo que medíocre',
+      topicos: ['Introdução (p. 43–44)', 'Excelência distorcida (p. 44–53)'],
+      responsavel: 'Eduardo',
+      foto: 'mesa',
+      resumo:
+        'O capítulo desfaz o mal-entendido que mais atrapalha a tese do livro: ser comum não é ser relaxado. Horton mostra como a cultura da “excelência” acabou produzindo o contrário do que prometia — comparação, ansiedade e gente exausta dentro da igreja.',
+    },
+    {
+      data: '2026-08-18',
+      modulo: 'simplesmente-crente',
+      capitulo: '2. Corriqueiro não é o mesmo que medíocre',
+      topicos: [
+        'Excelência versus perfeccionismo (p. 53–59)',
+        'Chamado à ação (p. 59–68)',
+      ],
+      responsavel: 'Bell',
+      foto: 'mesa',
+      resumo:
+        'A diferença entre buscar excelência e viver refém do perfeccionismo. Encontro bem prático: termina com um chamado à ação que redefine o que conta como uma vida cristã bem-sucedida.',
+    },
+    {
+      data: '2026-08-25',
+      modulo: 'simplesmente-crente',
+      capitulo: '3. Jovens e inquietos',
+      topicos: [
+        'Introdução (p. 69–71)',
+        'Jovem é inquietação (p. 71–72)',
+        'Amadurecer (p. 72–78)',
+        'As gerações de Deus e nossas gerações (p. 78–83)',
+      ],
+      responsavel: 'Alamo',
+      foto: 'jovens',
+      resumo:
+        'Por que a igreja passou a organizar tanto da sua vida em torno da linguagem da juventude — e o que se perde quando amadurecer deixa de ser um objetivo. Horton contrapõe a lógica das “gerações” de mercado à visão bíblica de gerações que recebem e entregam uma herança.',
+    },
+    {
+      data: '2026-09-01',
+      modulo: 'simplesmente-crente',
+      capitulo: '3. Jovens e inquietos',
+      topicos: [
+        'O paradoxo hedonista (p. 83–88)',
+        'Queremos tudo: autonomia e comunidade (p. 88–90)',
+        'Mergulhar em mares profundos numa era de jet-ski (p. 90–99)',
+      ],
+      responsavel: 'Eduardo',
+      foto: 'jovens',
+      resumo:
+        'Queremos autonomia total e comunidade profunda ao mesmo tempo — e as duas coisas não cabem juntas. A imagem do jet-ski contra o mergulho é uma das mais lembradas do livro: passamos a vida deslizando pela superfície de muita coisa, sem descer fundo em nada.',
+    },
+    {
+      data: '2026-09-08',
+      modulo: 'simplesmente-crente',
+      capitulo: '4. A próxima grande coisa',
+      topicos: [
+        'Introdução (p. 101–106)',
+        'A próxima grande coisa é uma tradição (p. 106–112)',
+      ],
+      responsavel: 'Bell',
+      foto: 'transito',
+      resumo:
+        'A ironia que dá título ao capítulo: a obsessão pelo novo já é, ela mesma, uma tradição antiga. Horton faz aqui um trabalho histórico que ajuda a entender por que estamos sempre esperando o próximo avivamento, o próximo método, a próxima onda.',
+    },
+    {
+      data: '2026-09-15',
+      modulo: 'simplesmente-crente',
+      capitulo: '4. A próxima grande coisa',
+      topicos: ['Ansiando por avivamento (p. 112–122)'],
+      responsavel: 'Alamo',
+      foto: 'transito',
+      resumo:
+        'Uma leitura cuidadosa — e desconfortável — da história dos avivamentos. A pergunta de fundo é se buscamos a Deus ou buscamos a experiência, e o que acontece com uma igreja quando o extraordinário vira o padrão esperado.',
+    },
+    {
+      data: '2026-09-22',
+      modulo: 'simplesmente-crente',
+      capitulo: '4. A próxima grande coisa',
+      topicos: [
+        'Conversação e nutrição pactual (p. 122–124)',
+        'Como foi a igreja hoje? (p. 124–129)',
+      ],
+      responsavel: 'Eduardo',
+      foto: 'transito',
+      resumo:
+        'A alternativa que Horton propõe: a nutrição pactual — aquilo que Deus prometeu usar de maneira ordinária: Palavra, mesa, oração, comunidade. A pergunta que fecha o capítulo (“como foi a igreja hoje?”) reorganiza o que esperamos de um domingo.',
+    },
+    {
+      data: '2026-09-29',
+      modulo: 'simplesmente-crente',
+      capitulo: '5. Ambição: como um vício se tornou uma virtude',
+      topicos: ['Introdução (p. 132–134)', 'Ambição na Escritura (p. 134–141)'],
+      responsavel: 'Bell',
+      foto: 'multidao',
+      resumo:
+        'A Escritura trata ambição como vício — e nós a transformamos em virtude, inclusive dentro da igreja. Encontro que costuma incomodar, porque exige olhar para as próprias motivações no trabalho, no ministério e nos planos de vida.',
+    },
+    {
+      data: '2026-10-06',
+      modulo: 'simplesmente-crente',
+      capitulo: '5. Ambição: como um vício se tornou uma virtude',
+      topicos: [
+        'Asas derretidas e como um vício se tornou virtude (p. 141–152)',
+        'Morte e ressurreição, não maquiagem (p. 152–155)',
+      ],
+      responsavel: 'Alamo',
+      foto: 'multidao',
+      resumo:
+        'Ícaro como parábola da nossa cultura de alta performance. Horton fecha o capítulo recusando qualquer solução cosmética: o evangelho não ajusta a ambição, ele a mata e ressuscita o desejo em outra direção.',
+    },
+    {
+      data: '2026-10-13',
+      modulo: 'simplesmente-crente',
+      capitulo: '6. Praticar o que pregamos: não temos mais superapóstolos',
+      topicos: [
+        'Introdução (p. 157–158)',
+        'Paulo e os “superapóstolos” (p. 159–167)',
+        'Idolatrando nossos líderes (p. 167–171)',
+      ],
+      responsavel: 'Eduardo',
+      foto: 'travessia',
+      resumo:
+        'Paulo enfrentando os “superapóstolos” de Corinto: líderes espetaculares, eloquentes, com currículo de poder. Horton usa o texto para falar da nossa própria idolatria de líderes — e do preço que pastores e igrejas pagam por ela.',
+    },
+    {
+      data: '2026-10-20',
+      modulo: 'simplesmente-crente',
+      capitulo: '6. Praticar o que pregamos: não temos mais superapóstolos',
+      topicos: [
+        'Submeter versus reinar em ambição (p. 171–179)',
+        '“Não temais, pequeno rebanho” (p. 180–182)',
+      ],
+      responsavel: 'Bell',
+      foto: 'travessia',
+      resumo:
+        'O contraste entre a liderança que se submete e a que reina. Termina com uma palavra de consolo para igrejas pequenas: “não temais, pequeno rebanho” — tamanho nunca foi a medida da fidelidade.',
+    },
+    {
+      data: '2026-10-27',
+      modulo: 'simplesmente-crente',
+      capitulo: '7. Contentamento',
+      topicos: [
+        'Introdução (p. 187–188)',
+        'Sustentabilidade (p. 189–190)',
+        'Ganância: irmã gêmea da ambição (p. 190–193)',
+        'Pacto, não contrato (p. 193–202)',
+        'Contentes com nosso Pai (p. 202–204)',
+      ],
+      responsavel: 'Alamo',
+      foto: 'fogueira',
+      resumo:
+        'O capítulo mais longo do livro, e talvez o mais necessário. Contentamento aqui não é resignação: é a liberdade de quem parou de tratar a fé como contrato — “eu faço, Deus retribui” — e voltou a viver como filho dentro de um pacto.',
+    },
+    {
+      data: '2026-11-03',
+      modulo: 'simplesmente-crente',
+      capitulo: '7. Contentamento',
+      topicos: [
+        'Contentes com Cristo e seu reino (p. 204–208)',
+        'Contentes com os meios comuns de operação na criação e providência de Deus (p. 208–215)',
+        'Contentes com o modo comum de Deus operar a redenção (p. 215–225)',
+      ],
+      responsavel: 'Eduardo',
+      foto: 'fogueira',
+      resumo:
+        'A segunda metade desdobra o contentamento em três direções: com Cristo, com o modo comum como Deus sustenta a criação e com o modo comum como ele salva. É aqui que a tese do livro fica mais nítida — o ordinário é o lugar escolhido por Deus.',
+    },
+    {
+      data: '2026-11-10',
+      modulo: 'simplesmente-crente',
+      capitulo: '8. Não precisamos de mais um herói',
+      topicos: [
+        'Introdução (p. 227–232)',
+        'Chamados ordinários: transformação cultural ou serviço por amor (p. 232–236)',
+        'Reformar nossa teologia da cultura (p. 236–240)',
+      ],
+      responsavel: 'Bell',
+      foto: 'oracao',
+      resumo:
+        'Horton questiona a linguagem de “transformar a cultura” e propõe algo menor e mais difícil: servir por amor, no lugar onde já estamos. Encontro importante para quem trabalha, estuda ou cria — é sobre vocação comum.',
+    },
+    {
+      data: '2026-11-17',
+      modulo: 'simplesmente-crente',
+      capitulo: '8. Não precisamos de mais um herói',
+      topicos: [
+        'Amar o próximo é mais difícil do que amar as causas (p. 240–246)',
+        'Gente comum (p. 246–250)',
+      ],
+      responsavel: 'Alamo',
+      foto: 'oracao',
+      resumo:
+        'A frase que resume o livro inteiro: é mais fácil se dedicar a uma causa do que ao vizinho concreto, com nome, que às vezes nos irrita. Horton mostra por que Deus insiste em nos santificar através de gente comum.',
+    },
+    {
+      data: '2026-11-24',
+      modulo: 'simplesmente-crente',
+      capitulo: '9. O ecossistema de Deus',
+      topicos: [
+        'Introdução (p. 251)',
+        'O Reino como um jardim (p. 252–257)',
+        'De que maneira o jardim de Deus cresce? (p. 257–261)',
+        'O sábado como cinturão verde de Deus (p. 261–262)',
+        '“Reduzir, reutilizar, reciclar” (p. 262–266)',
+      ],
+      responsavel: 'Eduardo',
+      foto: 'rua',
+      resumo:
+        'A imagem do Reino como jardim: cresce devagar, por meios ordinários, num ritmo que não controlamos. O sábado aparece como o “cinturão verde” que protege a vida do cultivo predatório — um contraponto direto à nossa pressa.',
+    },
+    {
+      data: '2026-12-01',
+      modulo: 'simplesmente-crente',
+      capitulo: '9. O ecossistema de Deus',
+      topicos: [
+        'Disciplinas pessoais (p. 266–269)',
+        'Ramos emergentes (p. 269–280)',
+      ],
+      responsavel: 'Bell',
+      foto: 'rua',
+      resumo:
+        'As disciplinas pessoais no lugar certo: não como motor da vida cristã, mas como o cuidado diário de quem já foi plantado. Encontro prático, com aplicação para começar na mesma semana.',
+    },
+    {
+      data: '2026-12-08',
+      modulo: 'simplesmente-crente',
+      capitulo: '10. Pare de sonhar e ame o próximo',
+      topicos: [
+        'Introdução (p. 281–282)',
+        'Vá em frente, menina! (p. 282–286)',
+        'Pessoas versus projetos (p. 286–288)',
+        'Dois tipos de sacrifício (p. 288–294)',
+        'Entrando no descanso de Deus (p. 294–296)',
+        'Impossível de parar? (p. 296–299)',
+      ],
+      responsavel: 'Alamo',
+      foto: 'vizinhanca',
+      resumo:
+        'O convite mais direto do livro: parar de sonhar com o impacto que teríamos e amar quem está na nossa frente. Horton separa pessoas de projetos e distingue dois tipos de sacrifício — o que edifica e o que apenas nos consome.',
+    },
+    {
+      data: '2026-12-15',
+      modulo: 'simplesmente-crente',
+      capitulo: '11. Depois do corriqueiro: antevendo a revolução',
+      topicos: [
+        'Introdução (p. 301–302)',
+        'Não tão bom quanto vai ser (p. 302–304)',
+        'O próximo grande evento — não, o verdadeiro acontecimento (p. 304–306)',
+        'Se você soubesse que Jesus voltaria amanhã (p. 306–308)',
+        'Última chamada: morrer como vocação (p. 308–313)',
+      ],
+      responsavel: 'Eduardo',
+      foto: 'quintal',
+      resumo:
+        'O encerramento devolve a palavra “revolução” ao seu dono. A verdadeira grande coisa não é o próximo movimento, mas a volta de Cristo — e é ela que dá sentido a uma vida comum, fiel até o fim. Última aula do semestre.',
+    },
 
     /* -------------------------------------------------------------------
      * 2026.1 — A CONSPIRAÇÃO DIVINA (Dallas Willard) — encerrado
@@ -132,7 +387,7 @@ window.ESTUDO = {
       ],
       responsavel: 'Eduardo',
       resumo:
-        'Um dos capítulos mais confrontadores do livro. Quando o evangelho é reduzido à gestão da culpa, ele passa a responder apenas à pergunta "como ser perdoado?" e deixa de responder "como viver?". O resultado é uma fé que garante o destino final sem transformar o cotidiano.',
+        'Um dos capítulos mais confrontadores do livro. Quando o evangelho é reduzido à gestão da culpa, ele passa a responder apenas à pergunta “como ser perdoado?” e deixa de responder “como viver?”. O resultado é uma fé que garante o destino final sem transformar o cotidiano.',
     },
     {
       data: '2026-02-03',
@@ -156,7 +411,7 @@ window.ESTUDO = {
       ],
       responsavel: 'Alamo',
       resumo:
-        'Se Deus está realmente presente e ativo neste mundo, isso muda tudo — inclusive a maneira como oramos, trabalhamos e tomamos decisões. Este encontro recupera a visão bíblica dos "céus" como o espaço imediatamente ao nosso redor, e não como um endereço distante.',
+        'Se Deus está realmente presente e ativo neste mundo, isso muda tudo — inclusive a maneira como oramos, trabalhamos e tomamos decisões. Este encontro recupera a visão bíblica dos “céus” como o espaço imediatamente ao nosso redor, e não como um endereço distante.',
     },
     {
       data: '2026-02-24',
@@ -205,7 +460,7 @@ window.ESTUDO = {
       ],
       responsavel: 'Eduardo',
       resumo:
-        'Depois de desfazer a leitura moralista, o autor devolve o texto ao ouvinte: quem, hoje, na nossa cidade e na nossa igreja, ocuparia o lugar dos "pobres de espírito"? Um encontro que costuma reposicionar a forma como enxergamos os que estão à margem.',
+        'Depois de desfazer a leitura moralista, o autor devolve o texto ao ouvinte: quem, hoje, na nossa cidade e na nossa igreja, ocuparia o lugar dos “pobres de espírito”? Um encontro que costuma reposicionar a forma como enxergamos os que estão à margem.',
     },
     {
       data: '2026-03-24',
@@ -217,7 +472,7 @@ window.ESTUDO = {
       ],
       responsavel: 'Bell',
       resumo:
-        '"Se a vossa justiça não exceder a dos escribas e fariseus…" — Jesus não pede mais esforço na mesma direção, mas uma justiça de outra natureza, que nasce do coração e não do cumprimento externo da norma.',
+        '“Se a vossa justiça não exceder a dos escribas e fariseus…” — Jesus não pede mais esforço na mesma direção, mas uma justiça de outra natureza, que nasce do coração e não do cumprimento externo da norma.',
     },
     {
       data: '2026-03-31',
@@ -357,7 +612,7 @@ window.ESTUDO = {
       topicos: ['Adquirindo hábitos de bondade (p. 431–445)'],
       responsavel: 'Alamo',
       resumo:
-        'Caráter é hábito consolidado. A proposta é substituir a tentativa de "tentar mais" pelo treino inteligente — aquilo que fazemos fora do momento da prova é o que nos sustenta durante a prova.',
+        'Caráter é hábito consolidado. A proposta é substituir a tentativa de “tentar mais” pelo treino inteligente — aquilo que fazemos fora do momento da prova é o que nos sustenta durante a prova.',
     },
     {
       data: '2026-06-30',

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Estudo — Comunidade Manifesto">
-  <rect width="64" height="64" rx="14" fill="#a8442a"/>
-  <g fill="none" stroke="#f7f3ec" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+  <rect width="64" height="64" rx="14" fill="#0075de"/>
+  <g fill="none" stroke="#ffffff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">
     <path d="M32 20.5C28.2 17.6 23.6 16.4 18 16.6v27.2c5.6-.2 10.2 1 14 3.9 3.8-2.9 8.4-4.1 14-3.9V16.6c-5.6-.2-10.2 1-14 3.9Z"/>
     <path d="M32 20.5v27.2"/>
   </g>

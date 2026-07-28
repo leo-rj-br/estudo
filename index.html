@@ -2,31 +2,31 @@
 <html lang="pt-BR" data-theme="light">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Estudo · Comunidade Manifesto</title>
-<meta name="description" content="Calendário do estudo da Comunidade Manifesto: a próxima aula em destaque, o programa completo do ano e as gravações dos encontros anteriores para assistir na própria página.">
-<meta name="theme-color" content="#f7f3ec" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#100e0c" media="(prefers-color-scheme: dark)">
+<meta name="description" content="Calendário do estudo da Comunidade Manifesto: a próxima aula em destaque, o programa completo do semestre e as gravações dos encontros anteriores para assistir na própria página.">
+<meta name="theme-color" content="#f6f5f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#191919" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://estudo.comunidademanifesto.com/">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Comunidade Manifesto">
 <meta property="og:title" content="Estudo · Comunidade Manifesto">
-<meta property="og:description" content="A próxima aula em destaque, o calendário completo do ano e o acervo das gravações.">
+<meta property="og:description" content="A próxima aula em destaque, o calendário completo e o acervo das gravações.">
 <meta property="og:url" content="https://estudo.comunidademanifesto.com/">
+<meta property="og:image" content="https://estudo.comunidademanifesto.com/assets/img/quintal-1400.webp">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/favicon.svg">
 
-<link rel="preload" href="assets/fonts/fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/fonts.css">
 <link rel="stylesheet" href="assets/css/app.css">
 
 <script>
-  // Aplica o tema antes da primeira pintura, para não haver "flash" branco.
+  // Aplica o tema antes da primeira pintura, para não haver "flash".
   try {
     var t = localStorage.getItem('estudo:tema');
     if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -36,18 +36,17 @@
 </head>
 
 <body>
-<div class="grain" aria-hidden="true"></div>
-
 <a class="sr-only" href="#programa">Ir para o calendário</a>
 
 <header class="head">
   <div class="wrap head__in">
     <a class="brand" href="./">
+      <img class="brand__logo" src="assets/favicon.svg" alt="" width="26" height="26">
       <span class="brand__mark">Estudo</span>
       <span class="brand__sub">Comunidade Manifesto</span>
     </a>
     <nav class="nav" aria-label="Seções">
-      <a href="#hero">Próxima aula</a>
+      <a href="#hero">Próxima</a>
       <a href="#programa">Programa</a>
       <a href="#programa" data-nav-filtro="gravados">Acervo</a>
     </nav>
@@ -61,12 +60,12 @@
     <h2 class="sr-only" id="heroLabel">Próxima aula</h2>
   </section>
 
-  <!-- Programa: agenda + calendário anual -->
+  <!-- Programa: agenda + calendário dos dias de estudo -->
   <section class="programa" id="programa">
     <div class="wrap">
       <div class="section-head" data-reveal>
         <h2>O programa</h2>
-        <p class="eyebrow">Aulas anteriores e futuras</p>
+        <p>Aulas anteriores e futuras</p>
       </div>
 
       <div class="toolbar">
@@ -95,10 +94,9 @@
         <div id="agenda"></div>
       </div>
 
-      <div class="panel" id="panelCalendario" role="tabpanel" aria-label="Calendário anual" hidden>
+      <div class="panel" id="panelCalendario" role="tabpanel" aria-label="Calendário dos dias de estudo" hidden>
         <div id="calendario"></div>
       </div>
-
     </div>
   </section>
 </main>
@@ -108,8 +106,11 @@
     <p class="foot__word">“Permanecei na minha palavra… e conhecereis a verdade.”</p>
     <div class="foot__meta">
       <p><strong>Comunidade Manifesto</strong> · Rio de Janeiro</p>
-      <p>Encontros semanais pelo Google Meet.</p>
+      <p>Encontros semanais às terças-feiras, pelo Google Meet.</p>
       <p><a href="https://comunidademanifesto.com">comunidademanifesto.com</a></p>
+      <p class="foot__credits">Fotografias de Brooke Cagle, Carlos Kenobi, Dan Gold, Dylan Gillis,
+        Evan Wise, Felipe Vieira, Helena Lopes, Ryoji Iwata, Samuel Martins, Shane Dawson
+        e Timon Studler no Unsplash.</p>
     </div>
   </div>
 </footer>
