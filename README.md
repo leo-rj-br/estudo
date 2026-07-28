@@ -75,10 +75,15 @@ use esse `id` no campo `modulo` dos encontros. O site agrupa e destaca automatic
 
 No bloco `config`:
 
-- `horario` — horário dos encontros (usado no destaque, na contagem regressiva e no `.ics`)
+- `horario` — horário dos encontros (`19:00`), usado no destaque, na contagem
+  regressiva e no `.ics`
 - `duracaoMin` — duração em minutos, para o evento de calendário
-- `meetPadrao` — **link fixo da sala do Meet.** Enquanto estiver vazio (`''`), o botão
-  *"Entrar no Meet"* não aparece. Preencha para ativá-lo em todos os encontros.
+- `fuso` — fuso dos encontros (`-03:00`). O `horario` é sempre lido neste fuso, então
+  quem acessar de fora do Brasil vê a contagem regressiva certa e recebe um `.ics`
+  no instante correto — e "hoje" continua sendo hoje em Brasília
+- `meetPadrao` — link fixo da sala do Meet, aplicado a todos os encontros. Deixe vazio
+  (`''`) para esconder o botão *"Entrar no Meet"*. Um encontro pode sobrescrevê-lo com
+  o próprio campo `meet`.
 
 ---
 

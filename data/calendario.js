@@ -30,12 +30,14 @@
 window.ESTUDO = {
   config: {
     igreja: 'Comunidade Manifesto',
-    horario: '20:00',
+    horario: '19:00',
     duracaoMin: 90,
+    // Fuso dos encontros. O horário acima é sempre lido neste fuso, então quem
+    // acessar de fora do Brasil vê a contagem regressiva e o .ics corretos.
     fuso: '-03:00',
     // Sala fixa do Meet usada por padrão em todos os encontros.
     // Deixe vazio ('') para esconder o botão "Entrar no Meet".
-    meetPadrao: '',
+    meetPadrao: 'https://meet.google.com/fhc-qomq-ggb',
   },
 
   modulos: [

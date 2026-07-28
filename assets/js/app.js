@@ -42,15 +42,26 @@
     return new Date(y, m - 1, d);
   };
 
+  // O horário do encontro é sempre o de Brasília (config.fuso), não o de quem
+  // acessa: quem estiver viajando ou fora do país vê a contagem regressiva certa
+  // e recebe um .ics com o instante correto.
   const withTime = (iso) => {
-    const dt = toDate(iso);
-    const [h, mi] = (CFG.horario || '20:00').split(':').map(Number);
-    dt.setHours(h || 0, mi || 0, 0, 0);
-    return dt;
+    const hora = /^\d{1,2}:\d{2}$/.test(CFG.horario || '') ? CFG.horario : '20:00';
+    const dt = new Date(`${iso}T${hora.padStart(5, '0')}:00${CFG.fuso || '-03:00'}`);
+    if (!isNaN(dt)) return dt;
+
+    const local = toDate(iso); // recurso de segurança se o fuso vier inválido
+    const [h, mi] = hora.split(':').map(Number);
+    local.setHours(h, mi, 0, 0);
+    return local;
   };
 
-  const isoOf = (d) =>
-    `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  // "Hoje" é sempre hoje no fuso da igreja — não no fuso de quem está olhando.
+  function hojeNoFuso() {
+    const m = String(CFG.fuso || '-03:00').match(/^([+-])(\d{2}):?(\d{2})$/);
+    const min = m ? (m[1] === '-' ? -1 : 1) * (Number(m[2]) * 60 + Number(m[3])) : -180;
+    return new Date(Date.now() + min * 60000).toISOString().slice(0, 10);
+  }
 
   const fmtLong = (iso) => {
     const d = toDate(iso);
@@ -102,8 +113,7 @@
   /* -- Normalização dos encontros ------------------------------------------ */
 
   const modulos = new Map((DATA.modulos || []).map((m) => [m.id, m]));
-  const hoje = new Date();
-  hoje.setHours(0, 0, 0, 0);
+  const HOJE = hojeNoFuso();
 
   const encontros = (DATA.encontros || [])
     .filter((e) => e && e.data)
@@ -123,7 +133,7 @@
         videoRaw: e.video || null,
         meet: e.meet || CFG.meetPadrao || '',
         tbd: !e.capitulo,
-        passado: toDate(e.data) < hoje,
+        passado: e.data < HOJE,
       };
     })
     .sort((a, b) => a.inicio - b.inicio);
@@ -159,7 +169,7 @@
     }
 
     const e = proximo;
-    const quando = e.data === isoOf(new Date()) ? 'Hoje' : fmtLong(e.data);
+    const quando = e.data === HOJE ? 'Hoje' : fmtLong(e.data);
 
     const titulo = e.tbd
       ? `<em>Tema a confirmar</em>`
@@ -575,13 +585,12 @@
   }
 
   function mesHTML(g) {
-    const hojeIso = isoOf(new Date());
     const n = g.itens.length;
 
     const chips = g.itens.map((e) => {
       const d = toDate(e.data);
       const cls = ['dchip'];
-      if (e.data === hojeIso) cls.push('is-today');
+      if (e.data === HOJE) cls.push('is-today');
       if (proximo && proximo.data === e.data) cls.push('is-next');
       else if (e.video) cls.push('has-video');
       else if (e.passado) cls.push('is-past');
