@@ -70,7 +70,7 @@ window.ESTUDO = {
       modulo: 'simplesmente-crente',
       capitulo: '1. O Novo Radical',
       topicos: ['Introdução (p. 17–24)', 'Meu problema é a mesmice (p. 24–29)'],
-      responsavel: 'Bell',
+      responsavel: 'Bel',
       foto: 'montanha',
       resumo:
         '“Radical. Épico. Revolucionário. Transformador.” Horton abre listando os adjetivos que viraram ruído de fundo na igreja, e cita Rod Dreher: “A mesmice é meu problema. É fácil pensar no que você faria se estourasse uma guerra… Muito mais difícil é saber como vai passar o dia de hoje sem se desesperar.” O alerta da primeira aula é duro: mudar o mundo pode ser justamente a forma de fugir das pessoas reais que Deus colocou à nossa frente — transformadas em “elenco de coadjuvantes para o filme da nossa vida”.',
@@ -106,7 +106,7 @@ window.ESTUDO = {
         'Excelência versus perfeccionismo (p. 53–59)',
         'Chamado à ação (p. 59–68)',
       ],
-      responsavel: 'Bell',
+      responsavel: 'Bel',
       foto: 'mesa',
       resumo:
         'Dois perfeccionismos, e os dois adoecem. O aspirante se fecha e desiste quando falta aprovação; o iludido se intoxica com a ilusão da autojustiça quando o sucesso vem. Ambos vivem do aplauso de outros pecadores em vez da justificação em Cristo. Na segunda metade, o chamado à ação: “corriqueiro” não quer dizer passivo, mas o ativismo não perdoa pecados nem ressuscita mortos — quem faz isso é o evangelho (Rm 1.16).',
@@ -148,7 +148,7 @@ window.ESTUDO = {
         'Introdução (p. 101–106)',
         'A próxima grande coisa é uma tradição (p. 106–112)',
       ],
-      responsavel: 'Bell',
+      responsavel: 'Bel',
       foto: 'transito',
       resumo:
         'Setembro de 2003: a revista Adbusters lança seu próprio tênis “subversivo”. Dali em diante, diz Horton, ficou claro que a rebeldia não ameaça o sistema — ela é o sistema. E vem a ironia que dá nome ao capítulo: criado num meio que se julgava sem tradição, ele mostra que a corrida pela Próxima Grande Coisa é, ela mesma, uma tradição antiga, herdada do avivamentismo norte-americano.',
@@ -181,7 +181,7 @@ window.ESTUDO = {
       modulo: 'simplesmente-crente',
       capitulo: '5. Ambição: como um vício se tornou uma virtude',
       topicos: ['Introdução (p. 132–134)', 'Ambição na Escritura (p. 134–141)'],
-      responsavel: 'Bell',
+      responsavel: 'Bel',
       foto: 'multidao',
       resumo:
         'Palavras trocam de valor com o tempo: “inquieto” já significou instável e pouco confiável. Com a ambição foi igual — virou virtude. Horton volta ao grego eritheia, lembra que os filósofos tinham a humildade como postura de escravo, e mostra em Filipenses 2 a “completa revolução moral” que muda tudo: onde a humanidade sobe em ambição, Deus desce em humildade.',
@@ -221,7 +221,7 @@ window.ESTUDO = {
         'Submeter versus reinar em ambição (p. 171–179)',
         '“Não temais, pequeno rebanho” (p. 180–182)',
       ],
-      responsavel: 'Bell',
+      responsavel: 'Bel',
       foto: 'travessia',
       resumo:
         '“Trata-se do ministério, não do ministro.” Pastores vêm e vão, e são iguais e mutuamente responsáveis: a igreja é de Cristo, que governa por sua Palavra através de homens falíveis. O capítulo fecha tirando um peso das costas — “Eu edificarei a minha igreja” (Mt 16.18). Não é o seu ministério, sua igreja, seu povo. Encontro especialmente bom para quem serve em algum ministério e anda cansado.',
@@ -265,7 +265,7 @@ window.ESTUDO = {
         'Chamados ordinários: transformação cultural ou serviço por amor (p. 232–236)',
         'Reformar nossa teologia da cultura (p. 236–240)',
       ],
-      responsavel: 'Bell',
+      responsavel: 'Bel',
       foto: 'oracao',
       resumo:
         'Horton começa discordando do próprio título: heróis são necessários, mas a coisa foi longe demais — e Cristo acaba reduzido a Herói Máximo, quando é muito mais que isso por nós. O capítulo questiona a linguagem de “transformar a cultura”, faz um balanço franco do fracasso da Direita Cristã e propõe a troca: serviço por amor, dentro do chamado comum que já temos. Encontro importante para quem trabalha, estuda ou cria.',
@@ -307,7 +307,7 @@ window.ESTUDO = {
         'Disciplinas pessoais (p. 266–269)',
         'Ramos emergentes (p. 269–280)',
       ],
-      responsavel: 'Bell',
+      responsavel: 'Bel',
       foto: 'rua',
       resumo:
         'A igreja antiga cresceu contra todos os prognósticos por meio da catequese: instrução paciente, em perguntas e respostas, que os novos aprendiam e os mais velhos aprofundavam. Horton cita Packer e Parrett — “jamais nos movemos saindo do Evangelho; vamos em frente para o Evangelho”. Depois trata dos filhos como ramos emergentes, num contraste que incomoda: o mercado sabe muito bem quanto vale formar alguém desde cedo.',
@@ -363,7 +363,7 @@ window.ESTUDO = {
       modulo: 'conspiracao-divina',
       capitulo: '1. Entrando desde já no tipo eterno de vida',
       topicos: ['Mensagem sobre uma realidade diferente (p. 34–46)'],
-      responsavel: 'Bell',
+      responsavel: 'Bel',
       resumo:
         'O evangelho não é uma mensagem sobre como escapar deste mundo, mas o anúncio de uma realidade diferente disponível agora. Aqui o autor distingue a vida eterna como qualidade de vida presente — conhecer a Deus — da ideia reduzida de sobrevivência após a morte.',
     },
@@ -399,7 +399,7 @@ window.ESTUDO = {
         'O evangelho de esquerda (p. 80–87)',
         'Rumo à integração de vida e fé (p. 87–92)',
       ],
-      responsavel: 'Bell',
+      responsavel: 'Bel',
       resumo:
         'A crítica agora vira para o outro lado: a fé reduzida a ação social sem transformação interior. Willard recusa os dois atalhos e propõe a integração — uma vida em que crer, ser e agir deixam de ocupar compartimentos separados.',
     },
@@ -436,7 +436,7 @@ window.ESTUDO = {
         'Que lado está realmente certo? (p. 128–131)',
         'Jesus: Senhor do intelecto (p. 131–137)',
       ],
-      responsavel: 'Bell',
+      responsavel: 'Bel',
       resumo:
         'Uma afirmação central e frequentemente esquecida: Jesus é a pessoa mais inteligente que já viveu. Reconhecer isso significa deixar de tratar a fé como sentimento privado e passar a confiar em Cristo também naquilo que pensamos sobre a realidade.',
     },
@@ -472,7 +472,7 @@ window.ESTUDO = {
         'Mestre do entendimento moral (p. 177–189)',
         'Lei e alma (p. 189–198)',
       ],
-      responsavel: 'Bell',
+      responsavel: 'Bel',
       resumo:
         '“Se a vossa justiça não exceder a dos escribas e fariseus…” — Jesus não pede mais esforço na mesma direção, mas uma justiça de outra natureza, que nasce do coração e não do cumprimento externo da norma.',
     },
@@ -502,7 +502,7 @@ window.ESTUDO = {
         'Palavras transparentes e amor inextinguível (p. 230–240)',
         'A bondade é amor (p. 240–244)',
       ],
-      responsavel: 'Bell',
+      responsavel: 'Bel',
       resumo:
         'Falar a verdade sem juramentos, amar sem cálculo de retorno. O encerramento do capítulo mais longo do livro amarra tudo numa tese simples: a justiça do Reino é, no fim, amor em ação.',
     },
@@ -539,7 +539,7 @@ window.ESTUDO = {
         'Quando o bom se transforma em algo mortal (p. 293–296)',
         'Petição como a essência da comunhão (p. 297–306)',
       ],
-      responsavel: 'Bell',
+      responsavel: 'Bel',
       resumo:
         'Como uma comunidade deixa de condenar sem deixar de discernir? Willard separa o julgamento que destrói do discernimento que cuida — e mostra que a oração de petição é o que mantém a comunidade humilde diante de Deus.',
     },
@@ -569,7 +569,7 @@ window.ESTUDO = {
         'Quem é o nosso mestre? (p. 346–357)',
         'Como ser um discípulo (p. 358–369)',
       ],
-      responsavel: 'Bell',
+      responsavel: 'Bel',
       resumo:
         'Discípulo é aprendiz: alguém que está com Jesus para aprender a viver como ele viveria em seu lugar. Aqui o livro faz sua virada mais prática — do que cremos para como efetivamente se aprende.',
     },
@@ -603,7 +603,7 @@ window.ESTUDO = {
       modulo: 'conspiracao-divina',
       capitulo: '9. Um currículo para a imitação de Cristo',
       topicos: ['Três áreas indispensáveis de clareza intelectual (p. 412–431)'],
-      responsavel: 'Bell',
+      responsavel: 'Bel',
       resumo:
         'Não basta querer mudar; é preciso enxergar corretamente quem Deus é, quem somos e onde estamos. Este encontro trata das convicções que sustentam — ou sabotam — qualquer tentativa de crescimento espiritual.',
     },
@@ -634,7 +634,7 @@ window.ESTUDO = {
         'Visão geral do progresso: de hoje para a eternidade (p. 462–465)',
         'O currículo e a vida da igreja (p. 465–469)',
       ],
-      responsavel: 'Bell',
+      responsavel: 'Bel',
       resumo:
         'Como uma igreja inteira — e não apenas indivíduos motivados — organiza sua vida em torno da formação de discípulos. Encontro especialmente relevante para quem serve em algum ministério.',
     },
