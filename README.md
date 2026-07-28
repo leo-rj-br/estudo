@@ -115,6 +115,28 @@ violeta, laranja) só decora — ela numera os capítulos e nunca pinta um botã
 Newsreader entra como serifada editorial em poucos momentos — resumos e citações —
 no papel que a referência reserva à Lyon Text.
 
+### Logotipo
+
+Três recortes do material da marca, todos em SVG:
+
+| Arquivo | Onde aparece |
+|---|---|
+| `assets/img/marca.svg` | monograma do globo, no cabeçalho |
+| `assets/img/selo.svg` | selo circular, no rodapé |
+| `assets/img/lockup.svg` | lockup horizontal, usado no cartão social |
+| `assets/favicon.svg` | globo branco sobre o quadrado escuro da marca |
+
+Os dois primeiros são aplicados como **máscara CSS** com `background: currentColor`,
+e não como `<img>`. Assim um único arquivo serve os temas claro e escuro: o logotipo
+herda a cor da tinta e inverte sozinho, sem precisar de uma versão branca e outra preta.
+
+O monograma do cabeçalho teve o símbolo `©` removido — nas dimensões em que ele aparece
+viraria um borrão de um pixel. O selo e o lockup mantêm a arte original.
+
+`assets/img/og.png` é o cartão que aparece quando o link é compartilhado no WhatsApp
+ou nas redes. Para regerá-lo depois de mudar o livro em estudo, é só recriar a imagem
+com o novo título — as dimensões são 2400×1260.
+
 ---
 
 ## Estrutura
@@ -125,7 +147,7 @@ data/calendario.js       ← o conteúdo (o único arquivo a editar)
 assets/css/app.css       sistema visual
 assets/css/fonts.css     @font-face das fontes locais
 assets/fonts/            Inter e Newsreader (OFL 1.1)
-assets/img/              fotos em WebP, dois tamanhos cada
+assets/img/              fotos em WebP, logotipos em SVG e o cartão social
 assets/js/app.js         interface
 CNAME                    domínio para o GitHub Pages
 ```

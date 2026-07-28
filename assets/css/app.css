@@ -227,7 +227,16 @@ a { color: inherit; }
   text-decoration: none;
   min-width: 0;
 }
-.brand__logo { width: 1.6rem; height: 1.6rem; border-radius: var(--r-sm); flex: none; }
+/* A marca é servida como máscara: assim ela herda a cor da tinta e funciona
+   nos dois temas a partir de um único arquivo. */
+.brand__logo {
+  width: 2.7rem;
+  aspect-ratio: 1038 / 525;
+  flex: none;
+  background: currentColor;
+  -webkit-mask: url(../img/marca.svg) center / contain no-repeat;
+  mask: url(../img/marca.svg) center / contain no-repeat;
+}
 .brand__mark {
   font-size: var(--t-base);
   font-weight: 700;
@@ -999,8 +1008,23 @@ a { color: inherit; }
   background: var(--canvas-sunk);
   padding: var(--s-12) 0 var(--s-10);
 }
-.foot__in { display: grid; gap: var(--s-6); }
+.foot__in { display: grid; gap: var(--s-8); }
 @media (min-width: 48rem) { .foot__in { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: var(--s-12); } }
+
+.foot__brand { display: flex; align-items: center; gap: var(--s-6); flex-wrap: wrap; }
+
+.foot__selo {
+  width: 5.75rem;
+  aspect-ratio: 1;
+  flex: none;
+  background: currentColor;
+  color: var(--ink-muted);
+  -webkit-mask: url(../img/selo.svg) center / contain no-repeat;
+  mask: url(../img/selo.svg) center / contain no-repeat;
+  transition: color var(--dur) var(--ease), transform 400ms var(--ease);
+}
+.foot__selo:hover { color: var(--ink); transform: rotate(8deg); }
+.foot__selo:focus-visible { color: var(--ink); }
 
 .foot__word {
   font-family: var(--font-serif);
