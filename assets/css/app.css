@@ -439,22 +439,46 @@ a { color: inherit; }
 }
 .countdown__live { font-size: var(--t-title); font-weight: 700; color: var(--blue); letter-spacing: -0.02em; }
 
-/* Cartão do livro */
+/* Cartão do livro em estudo */
 .booklet {
+  display: grid;
+  gap: var(--s-4);
+  padding: var(--s-5);
   border-radius: var(--r-lg);
   background: var(--surface);
   border: 1px solid var(--hairline);
-  overflow: hidden;
 }
-.booklet__cover {
-  aspect-ratio: 16 / 9;
-  width: 100%;
+.booklet__top { display: flex; gap: var(--s-4); align-items: flex-start; }
+
+/* A capa se apoia na página como um exemplar de verdade */
+.booklet__capa {
+  width: 7rem;
+  aspect-ratio: 696 / 1000;
+  flex: none;
   object-fit: cover;
+  border-radius: 3px;
   background: var(--canvas-sunk);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.10), 0 8px 20px -6px rgba(0,0,0,0.28);
 }
-.booklet__body { padding: var(--s-5); display: grid; gap: var(--s-3); }
-.booklet__title { font-size: var(--t-h3); font-weight: 700; letter-spacing: -0.015em; }
-.booklet__author { font-size: var(--t-sm); color: var(--ink-muted); margin-top: -0.35rem; }
+:root[data-theme='dark'] .booklet__capa {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.5), 0 10px 24px -6px rgba(0,0,0,0.7);
+}
+
+.booklet__ident { display: grid; gap: 0.15rem; align-content: start; min-width: 0; }
+.booklet__ident .eyebrow { margin-bottom: var(--s-2); }
+.booklet__title {
+  font-size: var(--t-title);
+  font-weight: 700;
+  letter-spacing: -0.018em;
+  line-height: 1.2;
+}
+.booklet__sub {
+  font-family: var(--font-serif);
+  font-size: var(--t-sm);
+  line-height: 1.35;
+  color: var(--ink-muted);
+}
+.booklet__author { font-size: var(--t-sm); font-weight: 500; color: var(--ink-2); margin-top: var(--s-2); }
 .booklet__quote {
   font-family: var(--font-serif);
   font-size: var(--t-base);

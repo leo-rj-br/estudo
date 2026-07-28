@@ -68,8 +68,23 @@ padrão de nome.
 
 ### Começar um livro novo
 
-Adicione um item em `modulos` (`id`, `titulo`, `autor`, `periodo`, `capa`, `epigrafe`) e
-use esse `id` no campo `modulo` dos encontros. O site agrupa e destaca automaticamente.
+Adicione um item em `modulos` e use esse `id` no campo `modulo` dos encontros. O site
+agrupa e destaca automaticamente.
+
+| Campo do módulo | Descrição |
+|---|---|
+| `id` | identificador usado no campo `modulo` dos encontros |
+| `titulo` | nome do livro |
+| `subtitulo` | subtítulo da capa, se houver |
+| `autor` | autor |
+| `periodo` | ex.: `2026 · 2º semestre` |
+| `livro` | **capa do livro**, exibida no cartão "Estudando agora" |
+| `capa` | foto de ambiente, usada quando um encontro não define a sua |
+| `epigrafe` | frase curta que resume a tese do livro |
+
+Para a capa, salve duas larguras em `assets/img` — `<nome>-400.webp` e `<nome>-696.webp` —
+e informe só o nome-base em `livro`. Uma foto reta da capa, sem moldura nem fundo, é o
+que funciona: o site já aplica o canto arredondado e a sombra que dão volume de livro.
 
 ### Configuração geral
 
@@ -133,9 +148,13 @@ herda a cor da tinta e inverte sozinho, sem precisar de uma versão branca e out
 O monograma do cabeçalho teve o símbolo `©` removido — nas dimensões em que ele aparece
 viraria um borrão de um pixel. O selo e o lockup mantêm a arte original.
 
-`assets/img/og.png` é o cartão que aparece quando o link é compartilhado no WhatsApp
-ou nas redes. Para regerá-lo depois de mudar o livro em estudo, é só recriar a imagem
-com o novo título — as dimensões são 2400×1260.
+`assets/img/og.jpg` é o cartão que aparece quando o link é compartilhado no WhatsApp
+ou nas redes: lockup da igreja, o nome do estudo e a capa do livro do semestre. Ao
+trocar de livro, vale regerá-lo com o novo título e a nova capa — 1200×630.
+
+O favicon continua sendo o globo da Comunidade Manifesto, e não a capa do livro. O
+site atravessa vários semestres e vários livros; o ícone da aba é a identidade que
+permanece.
 
 ---
 

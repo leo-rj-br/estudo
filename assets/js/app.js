@@ -224,24 +224,30 @@
   }
 
   function bookletHTML(mod) {
+    const capa = mod.livro
+      ? `<img class="booklet__capa"
+             src="assets/img/${mod.livro}-400.webp"
+             srcset="assets/img/${mod.livro}-400.webp 400w, assets/img/${mod.livro}-696.webp 696w"
+             sizes="7rem"
+             alt="Capa de ${escape(mod.titulo)}"
+             width="400" height="575" loading="lazy" decoding="async">`
+      : '';
+
     return `
       <div class="booklet">
-        ${mod.capa ? `<img class="booklet__cover"
-            src="assets/img/${mod.capa}-800.webp"
-            srcset="assets/img/${mod.capa}-800.webp 800w, assets/img/${mod.capa}-1400.webp 1400w"
-            sizes="(max-width: 64rem) 100vw, 22rem"
-            alt="" width="800" height="450" loading="lazy" decoding="async">` : ''}
-        <div class="booklet__body">
-          <div>
-            <p class="eyebrow" style="margin-bottom:var(--s-2)">Estudando agora</p>
+        <div class="booklet__top">
+          ${capa}
+          <div class="booklet__ident">
+            <p class="eyebrow">Estudando agora</p>
             <p class="booklet__title">${escape(mod.titulo)}</p>
+            ${mod.subtitulo ? `<p class="booklet__sub">${escape(mod.subtitulo)}</p>` : ''}
             <p class="booklet__author">${escape(mod.autor || '')}</p>
           </div>
-          ${mod.epigrafe ? `<p class="booklet__quote">${escape(mod.epigrafe)}</p>` : ''}
-          <div class="meter">
-            <div class="meter__track"><div class="meter__fill" id="meterFill"></div></div>
-            <p class="meter__text" id="meterText"></p>
-          </div>
+        </div>
+        ${mod.epigrafe ? `<p class="booklet__quote">${escape(mod.epigrafe)}</p>` : ''}
+        <div class="meter">
+          <div class="meter__track"><div class="meter__fill" id="meterFill"></div></div>
+          <p class="meter__text" id="meterText"></p>
         </div>
       </div>`;
   }

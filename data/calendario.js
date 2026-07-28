@@ -44,8 +44,12 @@ window.ESTUDO = {
     {
       id: 'simplesmente-crente',
       titulo: 'Simplesmente Crente',
+      subtitulo: 'Por uma vida cristã comum',
       autor: 'Michael Horton',
       periodo: '2026 · 2º semestre',
+      // Capa do livro (arquivo em assets/img, sem o tamanho e a extensão).
+      livro: 'livro-simplesmente-crente',
+      // Foto de ambiente, usada quando um encontro não define a sua.
       capa: 'quintal',
       epigrafe:
         'Deus não nos chamou para sermos radicais, revolucionários ou extraordinários. Ele nos chamou para uma fidelidade comum, sustentável, que dura a vida inteira.',
