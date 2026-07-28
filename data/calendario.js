@@ -73,7 +73,7 @@ window.ESTUDO = {
       responsavel: 'Bell',
       foto: 'montanha',
       resumo:
-        'Horton abre o livro nomeando o clima que nos formou: uma espiritualidade que só se sente legítima quando é radical, épica, revolucionária. “Mesmice” virou sinônimo de fracasso — e é exatamente aí que ele coloca o dedo. Primeira aula do semestre: vale chegar de coração aberto, porque o diagnóstico é sobre nós.',
+        '“Radical. Épico. Revolucionário. Transformador.” Horton abre listando os adjetivos que viraram ruído de fundo na igreja, e cita Rod Dreher: “A mesmice é meu problema. É fácil pensar no que você faria se estourasse uma guerra… Muito mais difícil é saber como vai passar o dia de hoje sem se desesperar.” O alerta da primeira aula é duro: mudar o mundo pode ser justamente a forma de fugir das pessoas reais que Deus colocou à nossa frente — transformadas em “elenco de coadjuvantes para o filme da nossa vida”.',
     },
     {
       data: '2026-08-04',
@@ -86,7 +86,7 @@ window.ESTUDO = {
       responsavel: 'Alamo',
       foto: 'montanha',
       resumo:
-        'A objeção mais óbvia ao livro — “isso não é acomodação disfarçada?” — é enfrentada de frente. Horton responde que o oposto do radicalismo não é a preguiça, mas a fidelidade que dura. E apresenta uma de suas imagens centrais: maturidade e vínculo não se constroem em momentos intensos, e sim em tempo de quantidade.',
+        'Horton encara a objeção óbvia: isso não é acomodação disfarçada? Ele separa o ídolo do conforto do contentamento bíblico e conta o caso de um colega de faculdade que se esgotou tentando ser extraordinário até sofrer uma crise nervosa. Daí vem a virada do capítulo: contra o mantra do “tempo de qualidade”, ele defende o tempo de quantidade — apelidos inventados, a pergunta do filho no carro voltando da igreja, toques aparentemente insignificantes. É ali que a maior parte da vida é vivida.',
     },
     {
       data: '2026-08-11',
@@ -96,7 +96,7 @@ window.ESTUDO = {
       responsavel: 'Eduardo',
       foto: 'mesa',
       resumo:
-        'O capítulo desfaz o mal-entendido que mais atrapalha a tese do livro: ser comum não é ser relaxado. Horton mostra como a cultura da “excelência” acabou produzindo o contrário do que prometia — comparação, ansiedade e gente exausta dentro da igreja.',
+        '“Se as pessoas apreciarem o que é comum, não haveria gente como Steve Jobs, nem Martin Luther King Jr.” Horton antecipa a objeção e responde de frente: comum não é medíocre, e o livro não pede para fazer menos. Com Agostinho — o pecado como estar virado para dentro de si mesmo — ele mostra que excelência sem um objeto digno é inútil; ela só se sustenta no “glorificar a Deus e gozá-lo para sempre” do Breve Catecismo de Westminster.',
     },
     {
       data: '2026-08-18',
@@ -109,7 +109,7 @@ window.ESTUDO = {
       responsavel: 'Bell',
       foto: 'mesa',
       resumo:
-        'A diferença entre buscar excelência e viver refém do perfeccionismo. Encontro bem prático: termina com um chamado à ação que redefine o que conta como uma vida cristã bem-sucedida.',
+        'Dois perfeccionismos, e os dois adoecem. O aspirante se fecha e desiste quando falta aprovação; o iludido se intoxica com a ilusão da autojustiça quando o sucesso vem. Ambos vivem do aplauso de outros pecadores em vez da justificação em Cristo. Na segunda metade, o chamado à ação: “corriqueiro” não quer dizer passivo, mas o ativismo não perdoa pecados nem ressuscita mortos — quem faz isso é o evangelho (Rm 1.16).',
     },
     {
       data: '2026-08-25',
@@ -124,7 +124,7 @@ window.ESTUDO = {
       responsavel: 'Alamo',
       foto: 'jovens',
       resumo:
-        'Por que a igreja passou a organizar tanto da sua vida em torno da linguagem da juventude — e o que se perde quando amadurecer deixa de ser um objetivo. Horton contrapõe a lógica das “gerações” de mercado à visão bíblica de gerações que recebem e entregam uma herança.',
+        '“Agora somos todos adolescentes. Quando é que vamos crescer?” Com Thomas Bergler, Horton conta como as igrejas criaram grupos de jovens, depois cederam a eles e por fim viraram eles. Contra isso, Efésios 4: crescer até “não mais sermos como meninos, agitados de um lado para outro”. E a lógica pactual — Atos 2.39, a Páscoa de Êxodo 12 — em que os mais velhos entregam aos mais novos aquilo que viram e ouviram.',
     },
     {
       data: '2026-09-01',
@@ -138,7 +138,7 @@ window.ESTUDO = {
       responsavel: 'Eduardo',
       foto: 'jovens',
       resumo:
-        'Queremos autonomia total e comunidade profunda ao mesmo tempo — e as duas coisas não cabem juntas. A imagem do jet-ski contra o mergulho é uma das mais lembradas do livro: passamos a vida deslizando pela superfície de muita coisa, sem descer fundo em nada.',
+        'Por trás do culto à experiência imediata mora um niilismo: “comamos e bebamos, que amanhã morreremos”. Horton contrapõe o catecismo de Nietzsche ao de Agostinho e expõe a contradição que nos parte ao meio: exigimos autonomia total e ao mesmo tempo ansiamos por comunidade — e não dá para ter as duas. Daí a imagem que ficou do livro: vivemos numa era de jet-ski, deslizando pela superfície de muita coisa, quando o que forma alguém é mergulhar fundo.',
     },
     {
       data: '2026-09-08',
@@ -151,7 +151,7 @@ window.ESTUDO = {
       responsavel: 'Bell',
       foto: 'transito',
       resumo:
-        'A ironia que dá título ao capítulo: a obsessão pelo novo já é, ela mesma, uma tradição antiga. Horton faz aqui um trabalho histórico que ajuda a entender por que estamos sempre esperando o próximo avivamento, o próximo método, a próxima onda.',
+        'Setembro de 2003: a revista Adbusters lança seu próprio tênis “subversivo”. Dali em diante, diz Horton, ficou claro que a rebeldia não ameaça o sistema — ela é o sistema. E vem a ironia que dá nome ao capítulo: criado num meio que se julgava sem tradição, ele mostra que a corrida pela Próxima Grande Coisa é, ela mesma, uma tradição antiga, herdada do avivamentismo norte-americano.',
     },
     {
       data: '2026-09-15',
@@ -161,7 +161,7 @@ window.ESTUDO = {
       responsavel: 'Alamo',
       foto: 'transito',
       resumo:
-        'Uma leitura cuidadosa — e desconfortável — da história dos avivamentos. A pergunta de fundo é se buscamos a Deus ou buscamos a experiência, e o que acontece com uma igreja quando o extraordinário vira o padrão esperado.',
+        'Há duas maneiras de entender o avivamento. A de Edwards: uma “surpreendente obra de Deus”, bênção extraordinária sobre os seus meios ordinários de graça. E a de Finney: algo sob nosso controle, que se produz com os passos certos. Horton mostra que a segunda é uma abordagem tecnológica da religião — se até Deus obedece a causa e efeito, o culto vira técnica. Encontro desconfortável, e dos mais esclarecedores do semestre.',
     },
     {
       data: '2026-09-22',
@@ -174,7 +174,7 @@ window.ESTUDO = {
       responsavel: 'Eduardo',
       foto: 'transito',
       resumo:
-        'A alternativa que Horton propõe: a nutrição pactual — aquilo que Deus prometeu usar de maneira ordinária: Palavra, mesa, oração, comunidade. A pergunta que fecha o capítulo (“como foi a igreja hoje?”) reorganiza o que esperamos de um domingo.',
+        'A alternativa que Horton propõe: nutrição pactual — crescimento lento na mesma direção, em vez de picos no gráfico. E a pergunta que dá título à seção, “como foi a igreja hoje?”, que nossos antepassados não entenderiam, porque ninguém pergunta como foram as refeições da semana. O ponto é que no culto comum acontece algo nada comum: quem está presente é Deus, que julga, justifica, lava e alimenta pelos meios que prometeu usar.',
     },
     {
       data: '2026-09-29',
@@ -184,7 +184,7 @@ window.ESTUDO = {
       responsavel: 'Bell',
       foto: 'multidao',
       resumo:
-        'A Escritura trata ambição como vício — e nós a transformamos em virtude, inclusive dentro da igreja. Encontro que costuma incomodar, porque exige olhar para as próprias motivações no trabalho, no ministério e nos planos de vida.',
+        'Palavras trocam de valor com o tempo: “inquieto” já significou instável e pouco confiável. Com a ambição foi igual — virou virtude. Horton volta ao grego eritheia, lembra que os filósofos tinham a humildade como postura de escravo, e mostra em Filipenses 2 a “completa revolução moral” que muda tudo: onde a humanidade sobe em ambição, Deus desce em humildade.',
     },
     {
       data: '2026-10-06',
@@ -197,7 +197,7 @@ window.ESTUDO = {
       responsavel: 'Alamo',
       foto: 'multidao',
       resumo:
-        'Ícaro como parábola da nossa cultura de alta performance. Horton fecha o capítulo recusando qualquer solução cosmética: o evangelho não ajusta a ambição, ele a mata e ressuscita o desejo em outra direção.',
+        'Ícaro, na versão de Ovídio: as asas de cera derretem porque o filho quis subir até o sol, além do curso do pai. Horton usa a lenda para dizer o que a Escritura não permite negociar — a ambição egoísta não é um impulso que se canalize para o bem; está no coração do velho homem, que precisa morrer e ressuscitar em Cristo. Não é maquiagem. E a tragédia maior é que as igrejas ajudaram a promover a troca.',
     },
     {
       data: '2026-10-13',
@@ -211,7 +211,7 @@ window.ESTUDO = {
       responsavel: 'Eduardo',
       foto: 'travessia',
       resumo:
-        'Paulo enfrentando os “superapóstolos” de Corinto: líderes espetaculares, eloquentes, com currículo de poder. Horton usa o texto para falar da nossa própria idolatria de líderes — e do preço que pastores e igrejas pagam por ela.',
+        'Paulo diante dos “superapóstolos” de Corinto, e os discípulos discutindo qual deles era o maior — ao que Jesus responde: “o maior entre vós seja como o menor” (Lc 22.24-27). Horton mostra que a idolatria de líderes é antiga e cara. Hebreus 13.7 manda imitar a fé deles, não a personalidade; Jerônimo e Ambrósio lembravam que os presbíteros eram “todos iguais”; e Gregório Magno se ofendeu ao ser chamado de “papa universal”.',
     },
     {
       data: '2026-10-20',
@@ -224,7 +224,7 @@ window.ESTUDO = {
       responsavel: 'Bell',
       foto: 'travessia',
       resumo:
-        'O contraste entre a liderança que se submete e a que reina. Termina com uma palavra de consolo para igrejas pequenas: “não temais, pequeno rebanho” — tamanho nunca foi a medida da fidelidade.',
+        '“Trata-se do ministério, não do ministro.” Pastores vêm e vão, e são iguais e mutuamente responsáveis: a igreja é de Cristo, que governa por sua Palavra através de homens falíveis. O capítulo fecha tirando um peso das costas — “Eu edificarei a minha igreja” (Mt 16.18). Não é o seu ministério, sua igreja, seu povo. Encontro especialmente bom para quem serve em algum ministério e anda cansado.',
     },
     {
       data: '2026-10-27',
@@ -240,7 +240,7 @@ window.ESTUDO = {
       responsavel: 'Alamo',
       foto: 'fogueira',
       resumo:
-        'O capítulo mais longo do livro, e talvez o mais necessário. Contentamento aqui não é resignação: é a liberdade de quem parou de tratar a fé como contrato — “eu faço, Deus retribui” — e voltou a viver como filho dentro de um pacto.',
+        'A cura para a ambição inquieta é o contentamento — e Horton pega emprestado o vocabulário da ecologia: fé sustentável é a que não consome os próprios recursos. Com os dados de Tim Kasser (a renda por pessoa nos EUA dobrou desde 1957, enquanto a fatia dos que se dizem muito felizes caiu de 35% para 29%), ele expõe a ganância como irmã gêmea da ambição. A virada do capítulo é a distinção entre contrato e pacto: tratar o casamento — ou Deus — como contrato é tratar o outro como prestador de serviço.',
     },
     {
       data: '2026-11-03',
@@ -254,7 +254,7 @@ window.ESTUDO = {
       responsavel: 'Eduardo',
       foto: 'fogueira',
       resumo:
-        'A segunda metade desdobra o contentamento em três direções: com Cristo, com o modo comum como Deus sustenta a criação e com o modo comum como ele salva. É aqui que a tese do livro fica mais nítida — o ordinário é o lugar escolhido por Deus.',
+        '“Deus é um estranho economista, pelo menos segundo os nossos padrões.” O contentamento se desdobra em três direções: com Cristo e seu reino, com o modo comum como Deus sustenta a criação e com o modo comum como ele salva. O argumento decisivo é a encarnação — o Espírito operando por meios criaturais — e a resposta de Maria, “que se cumpra em mim conforme a tua palavra”, como retrato do ordinário que Deus escolheu para si.',
     },
     {
       data: '2026-11-10',
@@ -268,7 +268,7 @@ window.ESTUDO = {
       responsavel: 'Bell',
       foto: 'oracao',
       resumo:
-        'Horton questiona a linguagem de “transformar a cultura” e propõe algo menor e mais difícil: servir por amor, no lugar onde já estamos. Encontro importante para quem trabalha, estuda ou cria — é sobre vocação comum.',
+        'Horton começa discordando do próprio título: heróis são necessários, mas a coisa foi longe demais — e Cristo acaba reduzido a Herói Máximo, quando é muito mais que isso por nós. O capítulo questiona a linguagem de “transformar a cultura”, faz um balanço franco do fracasso da Direita Cristã e propõe a troca: serviço por amor, dentro do chamado comum que já temos. Encontro importante para quem trabalha, estuda ou cria.',
     },
     {
       data: '2026-11-17',
@@ -281,7 +281,7 @@ window.ESTUDO = {
       responsavel: 'Alamo',
       foto: 'oracao',
       resumo:
-        'A frase que resume o livro inteiro: é mais fácil se dedicar a uma causa do que ao vizinho concreto, com nome, que às vezes nos irrita. Horton mostra por que Deus insiste em nos santificar através de gente comum.',
+        '“Amar o próximo é mais difícil do que amar as causas.” É fácil transformar pessoas em atores coadjuvantes do filme da nossa vida; amar o vizinho concreto, todo dia, é bem mais corriqueiro e bem mais duro. Horton lembra 1Coríntios 1.26 — Deus escolheu as coisas loucas e fracas — e dá exemplos que não abalam o mundo: a mãe que decide levar a filha ao médico, a história antes de dormir, a ronda do enfermeiro, os trabalhos que o professor corrige.',
     },
     {
       data: '2026-11-24',
@@ -297,7 +297,7 @@ window.ESTUDO = {
       responsavel: 'Eduardo',
       foto: 'rua',
       resumo:
-        'A imagem do Reino como jardim: cresce devagar, por meios ordinários, num ritmo que não controlamos. O sábado aparece como o “cinturão verde” que protege a vida do cultivo predatório — um contraponto direto à nossa pressa.',
+        'Cada tradição imagina o Reino à sua maneira: escada, mosteiro, escola, mercado. Deus o imagina como jardim. E jardim não tem atalho — solo profundo, mato arrancado, poda, e um Mestre da Vinha que não quebra o ramo ferido (Is 42.3). O sábado entra como o “cinturão verde” que protege esse tempo do cultivo predatório, e o capítulo fecha com uma fórmula prática: reduzir as distrações, reutilizar o que Deus já nos deu, reciclar.',
     },
     {
       data: '2026-12-01',
@@ -310,7 +310,7 @@ window.ESTUDO = {
       responsavel: 'Bell',
       foto: 'rua',
       resumo:
-        'As disciplinas pessoais no lugar certo: não como motor da vida cristã, mas como o cuidado diário de quem já foi plantado. Encontro prático, com aplicação para começar na mesma semana.',
+        'A igreja antiga cresceu contra todos os prognósticos por meio da catequese: instrução paciente, em perguntas e respostas, que os novos aprendiam e os mais velhos aprofundavam. Horton cita Packer e Parrett — “jamais nos movemos saindo do Evangelho; vamos em frente para o Evangelho”. Depois trata dos filhos como ramos emergentes, num contraste que incomoda: o mercado sabe muito bem quanto vale formar alguém desde cedo.',
     },
     {
       data: '2026-12-08',
@@ -327,7 +327,7 @@ window.ESTUDO = {
       responsavel: 'Alamo',
       foto: 'vizinhanca',
       resumo:
-        'O convite mais direto do livro: parar de sonhar com o impacto que teríamos e amar quem está na nossa frente. Horton separa pessoas de projetos e distingue dois tipos de sacrifício — o que edifica e o que apenas nos consome.',
+        '“Vocês não vão mudar o mundo, portanto nem tentem” — a provocação de um discurso de formatura abre o capítulo mais direto do livro. Horton separa pessoas de projetos com uma pergunta que fica: será que gostamos do nosso vizinho? É bem mais fácil servi-lo do que ter prazer nele. Depois distingue os dois sacrifícios do Antigo Testamento, ação de graças e culpa, para mostrar que o Dia do Senhor é receber um reino — não construí-lo.',
     },
     {
       data: '2026-12-15',
@@ -343,7 +343,7 @@ window.ESTUDO = {
       responsavel: 'Eduardo',
       foto: 'quintal',
       resumo:
-        'O encerramento devolve a palavra “revolução” ao seu dono. A verdadeira grande coisa não é o próximo movimento, mas a volta de Cristo — e é ela que dá sentido a uma vida comum, fiel até o fim. Última aula do semestre.',
+        '“A Próxima Grande Coisa é a volta de Cristo.” O livro devolve a palavra revolução ao seu dono: nenhuma proclamação é mais radical quanto à miséria humana, nem mais alegre quanto a um cosmos inteiramente renovado (Ap 21.5). E responde à velha pergunta da igreja em que Horton cresceu — o que você faria se Jesus voltasse amanhã? — com a macieira atribuída a Lutero e com a última vocação de todas: morrer bem. Encerramento do semestre.',
     },
 
     /* -------------------------------------------------------------------

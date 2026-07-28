@@ -165,9 +165,10 @@ correção foi feita: na linha de 01/09 o Notion tinha dois tópicos colados num
 (*"Queremos tudo… (págs. 88-90)- Mergulhar em mares profundos…"*), que aqui aparecem
 separados. Vale corrigir também no Notion.
 
-**Resumos** — escritos a partir da estrutura de capítulos e seções do livro, não do PDF
-(que não chegou junto com os outros anexos). Se quiser que sejam derivados do texto
-integral, é só enviar o arquivo que eu refaço.
+**Resumos** — escritos a partir do texto integral do livro. O PDF foi lido e mapeado
+seção a seção (59 seções, do capítulo 1 ao 11), e cada resumo cobre exatamente as
+seções que o Notion atribui àquela semana, citando as imagens e os argumentos que
+Horton de fato usa ali.
 
 **A Conspiração Divina (2026.1)** — os 28 encontros do semestre anterior estão completos
 e servem de referência de preenchimento.
