@@ -133,7 +133,11 @@
         videoRaw: e.video || null,
         meet: e.meet || CFG.meetPadrao || '',
         tbd: !e.capitulo,
+        // "passado" agrupa por data, para o encontro de hoje seguir no topo até
+        // a virada do dia; "terminou" é o instante real do fim da aula, e é ele
+        // que decide se ainda faz sentido oferecer o Meet.
         passado: e.data < HOJE,
+        terminou: new Date(inicio.getTime() + (CFG.duracaoMin || 90) * 60000) < new Date(),
       };
     })
     .sort((a, b) => a.inicio - b.inicio);
@@ -420,10 +424,10 @@
     col1.insertAdjacentHTML('beforeend', `<dl class="enc__facts">${facts.join('')}</dl>`);
 
     const links = [];
-    if (!e.passado && e.meet) {
+    if (!e.terminou && e.meet) {
       links.push(`<a class="btn btn--primary" href="${escape(e.meet)}" target="_blank" rel="noopener">${ico.video} Entrar no Meet</a>`);
     }
-    if (!e.passado) links.push(`<button class="btn btn--quiet" data-ics="${e.data}">${ico.cal} Adicionar à agenda</button>`);
+    if (!e.terminou) links.push(`<button class="btn btn--quiet" data-ics="${e.data}">${ico.cal} Adicionar à agenda</button>`);
     if (e.material) links.push(`<a class="btn btn--quiet" href="${escape(e.material)}" target="_blank" rel="noopener">${ico.ext} Material</a>`);
     if (links.length) col1.insertAdjacentHTML('beforeend', `<div class="enc__links">${links.join('')}</div>`);
 
