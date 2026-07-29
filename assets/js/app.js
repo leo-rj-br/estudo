@@ -95,7 +95,12 @@
     if (m) return `https://drive.google.com/file/d/${m[1]}/preview`;
 
     m = s.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|live\/)|youtu\.be\/)([\w-]{11})/);
-    if (m) return `https://www.youtube-nocookie.com/embed/${m[1]}?rel=0`;
+    if (m) {
+      // playsinline evita que o iOS assuma a tela inteira sozinho; rel=0 mantém
+      // as sugestões do fim dentro do próprio canal.
+      return `https://www.youtube-nocookie.com/embed/${m[1]}` +
+             '?rel=0&modestbranding=1&playsinline=1&color=white';
+    }
 
     if (/^[\w-]{20,}$/.test(s)) return `https://drive.google.com/file/d/${s}/preview`;
     return s;
@@ -473,10 +478,7 @@
           </span>
         </button>
       </div>
-      <div class="player__foot">
-        <span>Gravação do encontro</span>
-        <a href="${escape(e.videoRaw)}" target="_blank" rel="noopener">Abrir no Drive &rarr;</a>
-      </div>`;
+      <div class="player__foot"><span>Gravação do encontro</span></div>`;
 
     // O player do Drive precisa de espaço: dentro da coluna do encontro os
     // controles se amontoam, ainda mais no celular. Por isso a gravação abre
@@ -497,8 +499,10 @@
       <div class="lb__bar">
         <p class="lb__titulo"></p>
         <div class="lb__acoes">
-          <a class="lb__drive" target="_blank" rel="noopener">Abrir no Drive ${ico.ext}</a>
-          <button class="icon-btn lb__fechar" type="button" aria-label="Fechar a gravação">${ico.x}</button>
+          <a class="icon-btn lb__drive" target="_blank" rel="noopener"
+             title="Abrir no Google Drive" aria-label="Abrir no Google Drive">${ico.ext}</a>
+          <button class="icon-btn lb__fechar" type="button" autofocus
+                  aria-label="Fechar a gravação">${ico.x}</button>
         </div>
       </div>
       <div class="lb__frame"></div>
