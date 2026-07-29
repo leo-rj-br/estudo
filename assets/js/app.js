@@ -478,19 +478,55 @@
         <a href="${escape(e.videoRaw)}" target="_blank" rel="noopener">Abrir no Drive &rarr;</a>
       </div>`;
 
-    const frame = $('.player__frame', wrap);
-    $('.player__poster', wrap).addEventListener('click', () => {
-      if (frame.classList.contains('is-live')) return;
-      const f = document.createElement('iframe');
-      f.src = e.video;
-      f.title = `Gravação — ${e.capitulo || fmtLong(e.data)}`;
-      f.allow = 'autoplay; encrypted-media; fullscreen; picture-in-picture';
-      f.allowFullscreen = true;
-      frame.prepend(f);
-      frame.classList.add('is-live');
-    });
+    // O player do Drive precisa de espaço: dentro da coluna do encontro os
+    // controles se amontoam, ainda mais no celular. Por isso a gravação abre
+    // num visor grande, por cima da página.
+    $('.player__poster', wrap).addEventListener('click', () => abrirVisor(e));
 
     return wrap;
+  }
+
+  /* -- Visor da gravação ---------------------------------------------------- */
+
+  let visor;
+
+  function montarVisor() {
+    visor = document.createElement('dialog');
+    visor.className = 'lb';
+    visor.innerHTML = `
+      <div class="lb__bar">
+        <p class="lb__titulo"></p>
+        <div class="lb__acoes">
+          <a class="lb__drive" target="_blank" rel="noopener">Abrir no Drive ${ico.ext}</a>
+          <button class="icon-btn lb__fechar" type="button" aria-label="Fechar a gravação">${ico.x}</button>
+        </div>
+      </div>
+      <div class="lb__frame"></div>
+      <p class="lb__dica">Para assistir maior, toque em tela cheia no player e gire o aparelho.</p>`;
+    document.body.appendChild(visor);
+
+    $('.lb__fechar', visor).addEventListener('click', () => visor.close());
+    // clicar fora do conteúdo fecha
+    visor.addEventListener('click', (ev) => { if (ev.target === visor) visor.close(); });
+    // ao fechar, remove o iframe para a reprodução parar de fato
+    visor.addEventListener('close', () => { $('.lb__frame', visor).innerHTML = ''; });
+  }
+
+  function abrirVisor(e) {
+    if (!visor) montarVisor();
+
+    $('.lb__titulo', visor).textContent = e.tbd ? fmtLong(e.data) : e.cap.titulo;
+    const drive = $('.lb__drive', visor);
+    drive.href = e.videoRaw;
+
+    const f = document.createElement('iframe');
+    f.src = e.video;
+    f.title = `Gravação — ${e.capitulo || fmtLong(e.data)}`;
+    f.allow = 'autoplay; encrypted-media; fullscreen; picture-in-picture';
+    f.allowFullscreen = true;
+    $('.lb__frame', visor).replaceChildren(f);
+
+    visor.showModal();
   }
 
   /* -- Abrir / fechar ------------------------------------------------------- */

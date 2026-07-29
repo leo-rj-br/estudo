@@ -35,8 +35,21 @@ Não é preciso mexer em HTML, CSS ou JavaScript.
 },
 ```
 
-O site converte o link sozinho para o formato de player. **Links do YouTube também
-funcionam** (`watch?v=`, `youtu.be/`, `/live/`).
+O site converte o link sozinho para o formato de player. A gravação abre num visor
+grande sobre a página — no celular, ocupa a tela inteira —, porque os controles do
+Drive não cabem bem numa moldura pequena.
+
+### Drive ou YouTube?
+
+**Links do YouTube também funcionam** (`watch?v=`, `youtu.be/`, `/live/`), e para
+gravações longas eles são bem melhores. O Drive entrega sempre o mesmo arquivo, do
+tamanho que ele foi gravado; se a conexão de quem assiste não acompanhar, o vídeo
+trava. O YouTube reprocessa em várias qualidades e escolhe a que cabe na conexão do
+momento — é o que evita o travamento numa aula de hora e meia.
+
+Se quiser migrar: suba a gravação no YouTube como **"não listada"** (não aparece em
+buscas nem no canal, só abre por link) e cole esse link no campo `video`. O restante
+do site funciona igual.
 
 ### Campos de cada encontro
 
