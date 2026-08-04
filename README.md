@@ -39,17 +39,23 @@ O site converte o link sozinho para o formato de player. A gravação abre num v
 grande sobre a página — no celular, ocupa a tela inteira —, porque os controles do
 Drive não cabem bem numa moldura pequena.
 
-### Drive ou YouTube?
+### Prefira o YouTube ao Drive
 
-**Links do YouTube também funcionam** (`watch?v=`, `youtu.be/`, `/live/`), e para
-gravações longas eles são bem melhores. O Drive entrega sempre o mesmo arquivo, do
-tamanho que ele foi gravado; se a conexão de quem assiste não acompanhar, o vídeo
-trava. O YouTube reprocessa em várias qualidades e escolhe a que cabe na conexão do
-momento — é o que evita o travamento numa aula de hora e meia.
+Os dois funcionam — `drive.google.com/file/d/…`, `watch?v=`, `youtu.be/`, `/live/` —
+mas para gravações de hora e meia o YouTube é bem melhor, por dois motivos:
 
-Se quiser migrar: suba a gravação no YouTube como **"não listada"** (não aparece em
-buscas nem no canal, só abre por link) e cole esse link no campo `video`. O restante
-do site funciona igual.
+- **Não trava.** O Drive entrega sempre o arquivo original, do tamanho em que foi
+  gravado; se a conexão de quem assiste não acompanhar, o vídeo engasga. O YouTube
+  reprocessa em várias qualidades e escolhe a que cabe na conexão do momento.
+- **O player é decente em qualquer tamanho.** O do Drive quebra o próprio layout em
+  molduras baixas: joga a barra de progresso para cima do vídeo e esconde os botões.
+
+Suba como **"não listado"**: não aparece em buscas nem no canal, só abre por link —
+mesma privacidade do Drive com link aberto. Depois é só colar o link no campo `video`.
+
+O site reconhece o provedor sozinho e ajusta o visor: o YouTube fica em 16:9, e o
+Drive recebe toda a altura da tela no celular, que é o que ele precisa para montar
+os controles. Os embeds do YouTube usam o domínio `youtube-nocookie.com`.
 
 ### Campos de cada encontro
 

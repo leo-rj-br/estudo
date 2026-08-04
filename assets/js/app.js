@@ -136,6 +136,8 @@
         foto: e.foto || (mod && mod.capa) || null,
         video: embedUrl(e.video),
         videoRaw: e.video || null,
+        videoTipo: /youtu\.?be/.test(e.video || '') ? 'youtube'
+                 : /drive\.google/.test(e.video || '') ? 'drive' : 'outro',
         meet: e.meet || CFG.meetPadrao || '',
         tbd: !e.capitulo,
         // "passado" agrupa por data, para o encontro de hoje seguir no topo até
@@ -520,8 +522,16 @@
     if (!visor) montarVisor();
 
     $('.lb__titulo', visor).textContent = e.tbd ? fmtLong(e.data) : e.cap.titulo;
-    const drive = $('.lb__drive', visor);
-    drive.href = e.videoRaw;
+
+    // O player do Drive precisa de altura sobrando para montar seus controles;
+    // o do YouTube se vira bem em 16:9 e sobrepõe os controles ao vídeo.
+    visor.dataset.tipo = e.videoTipo;
+
+    const saida = $('.lb__drive', visor);
+    saida.href = e.videoRaw;
+    const onde = e.videoTipo === 'youtube' ? 'no YouTube' : 'no Google Drive';
+    saida.title = `Abrir ${onde}`;
+    saida.setAttribute('aria-label', `Abrir ${onde}`);
 
     const f = document.createElement('iframe');
     f.src = e.video;

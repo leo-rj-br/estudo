@@ -76,7 +76,7 @@ window.ESTUDO = {
       topicos: ['Introdução (p. 17–24)', 'Meu problema é a mesmice (p. 24–29)'],
       responsavel: 'Bel',
       foto: 'montanha',
-      video: 'https://drive.google.com/file/d/1u5Qn5WRm0RqrfYZOOT4rw1_YEf5lid0u/view?usp=sharing',
+      video: 'https://www.youtube.com/watch?v=txmvDB4Ern0',
       resumo:
         '“Radical. Épico. Revolucionário. Transformador.” Horton abre listando os adjetivos que viraram ruído de fundo na igreja, e cita Rod Dreher: “A mesmice é meu problema. É fácil pensar no que você faria se estourasse uma guerra… Muito mais difícil é saber como vai passar o dia de hoje sem se desesperar.” O alerta da primeira aula é duro: mudar o mundo pode ser justamente a forma de fugir das pessoas reais que Deus colocou à nossa frente — transformadas em “elenco de coadjuvantes para o filme da nossa vida”.',
     },

@@ -922,8 +922,12 @@ a { color: inherit; }
     flex-direction: column;
   }
   .lb__bar { flex: none; }
-  .lb__frame { flex: 1 1 auto; aspect-ratio: auto; min-height: 0; }
   .lb__dica { flex: none; }
+
+  /* Só o Drive precisa desse esticão. O YouTube fica melhor em 16:9, com os
+     controles sobrepostos ao vídeo e sem tarjas pretas enormes em volta. */
+  .lb { justify-content: center; }
+  .lb[data-tipo='drive'] .lb__frame { flex: 1 1 auto; aspect-ratio: auto; min-height: 0; }
 }
 
 .player__foot {
