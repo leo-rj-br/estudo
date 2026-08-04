@@ -106,6 +106,12 @@
     return s;
   }
 
+  const idYoutube = (s) => {
+    const m = String(s || '').match(
+      /(?:youtube\.com\/(?:watch\?v=|embed\/|live\/)|youtu\.be\/)([\w-]{11})/);
+    return m ? m[1] : null;
+  };
+
   /* -- Imagens ------------------------------------------------------------- */
 
   function imgHTML(slug, alt, sizes) {
@@ -138,6 +144,7 @@
         videoRaw: e.video || null,
         videoTipo: /youtu\.?be/.test(e.video || '') ? 'youtube'
                  : /drive\.google/.test(e.video || '') ? 'drive' : 'outro',
+        videoId: idYoutube(e.video),
         meet: e.meet || CFG.meetPadrao || '',
         tbd: !e.capitulo,
         // "passado" agrupa por data, para o encontro de hoje seguir no topo até
@@ -446,6 +453,48 @@
 
   const SIZES_MEDIA = '(max-width: 58rem) 92vw, 34rem';
 
+  /* -- Cartaz da gravação ---------------------------------------------------
+   * Num vídeo do YouTube o cartaz é a própria miniatura publicada lá, para o
+   * site mostrar exatamente a mesma capa. As versões em 16:9 vêm em ordem de
+   * qualidade; se nenhuma existir, cai na foto do capítulo, que é local.
+   * -------------------------------------------------------------------- */
+
+  const MINIATURAS = ['maxresdefault', 'hq720', 'mqdefault'];
+
+  function cartazHTML(e) {
+    if (e.videoTipo === 'youtube' && e.videoId) {
+      return `<img src="https://i.ytimg.com/vi/${e.videoId}/${MINIATURAS[0]}.jpg"
+                   alt="" loading="lazy" decoding="async"
+                   referrerpolicy="no-referrer" data-passo="0">`;
+    }
+    return imgHTML(e.foto, '', SIZES_MEDIA);
+  }
+
+  function ligarCartaz(e, poster) {
+    const img = $('img', poster);
+    if (!img || !img.dataset.passo) return;
+
+    const cair = () => {
+      const passo = Number(img.dataset.passo) + 1;
+      if (passo < MINIATURAS.length) {
+        img.dataset.passo = String(passo);
+        img.src = `https://i.ytimg.com/vi/${e.videoId}/${MINIATURAS[passo]}.jpg`;
+        return;
+      }
+      // Acabaram as miniaturas: volta para a foto do capítulo.
+      delete img.dataset.passo;
+      img.removeAttribute('srcset');
+      img.src = `assets/img/${e.foto}-800.webp`;
+    };
+
+    img.addEventListener('error', cair);
+    // O YouTube devolve um espaço reservado de 120px quando a miniatura pedida
+    // não existe, em vez de responder com erro — daí a checagem de largura.
+    img.addEventListener('load', () => {
+      if (img.dataset.passo && img.naturalWidth <= 120) cair();
+    });
+  }
+
   function midiaEl(e) {
     // Sem gravação: mostra a foto do capítulo (ou nada, se não houver).
     if (!e.video) {
@@ -471,9 +520,10 @@
     wrap.className = 'player';
     wrap.innerHTML = `
       <div class="player__frame">
-        <button class="player__poster" type="button"
+        <button class="player__poster${e.videoTipo === 'youtube' && e.videoId ? ' player__poster--capa' : ''}"
+                type="button"
                 aria-label="Reproduzir a gravação de ${escape(fmtLong(e.data))}">
-          ${imgHTML(e.foto, '', SIZES_MEDIA)}
+          ${cartazHTML(e)}
           <span class="player__cta">
             <span class="player__play">${ico.play}</span>
             <span class="player__hint">Assistir à gravação</span>
@@ -481,6 +531,8 @@
         </button>
       </div>
       <div class="player__foot"><span>Gravação do encontro</span></div>`;
+
+    ligarCartaz(e, $('.player__poster', wrap));
 
     // O player do Drive precisa de espaço: dentro da coluna do encontro os
     // controles se amontoam, ainda mais no celular. Por isso a gravação abre

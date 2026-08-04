@@ -828,6 +828,22 @@ a { color: inherit; }
 }
 .player__poster:hover img { transform: scale(1.035); filter: brightness(0.62) saturate(1); }
 
+/* Quando o cartaz é a capa publicada no YouTube, escurece bem menos: a arte
+   foi feita para ser vista, e o botão de play já tem disco branco por trás. */
+.player__poster--capa img { filter: brightness(0.92) saturate(1); }
+.player__poster--capa:hover img { filter: brightness(0.8) saturate(1); }
+.player__poster--capa::after { background: linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.3)); }
+/* A capa pode ser clara, então o rótulo ganha um apoio próprio em vez de
+   depender só da sombra do texto. */
+.player__poster--capa .player__hint {
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--r-full);
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  text-shadow: none;
+}
+
 .player__cta {
   position: absolute;
   inset: 0;
