@@ -100,7 +100,7 @@ window.ESTUDO = {
       topicos: ['Introdução (p. 43–44)', 'Excelência distorcida (p. 44–53)'],
       responsavel: 'Eduardo',
       foto: 'mesa',
-      video: 'https://www.youtube.com/watch?v=xy0rhPH7ooI',
+      video: 'https://youtu.be/X8DZCiBS8b8',
       resumo:
         '“Se as pessoas apreciarem o que é comum, não haveria gente como Steve Jobs, nem Martin Luther King Jr.” Horton antecipa a objeção e responde de frente: comum não é medíocre, e o livro não pede para fazer menos. Com Agostinho — o pecado como estar virado para dentro de si mesmo — ele mostra que excelência sem um objeto digno é inútil; ela só se sustenta no “glorificar a Deus e gozá-lo para sempre” do Breve Catecismo de Westminster.',
     },
@@ -114,6 +114,7 @@ window.ESTUDO = {
       ],
       responsavel: 'Bel',
       foto: 'mesa',
+      video: 'https://youtu.be/xy0rhPH7ooI',
       resumo:
         'Dois perfeccionismos, e os dois adoecem. O aspirante se fecha e desiste quando falta aprovação; o iludido se intoxica com a ilusão da autojustiça quando o sucesso vem. Ambos vivem do aplauso de outros pecadores em vez da justificação em Cristo. Na segunda metade, o chamado à ação: “corriqueiro” não quer dizer passivo, mas o ativismo não perdoa pecados nem ressuscita mortos — quem faz isso é o evangelho (Rm 1.16).',
     },
