@@ -114,7 +114,7 @@ window.ESTUDO = {
       ],
       responsavel: 'Bel',
       foto: 'mesa',
-      video: 'https://youtu.be/xy0rhPH7ooI',
+      video: 'https://www.youtube.com/watch?v=JZihXB5ZuTo',
       resumo:
         'Dois perfeccionismos, e os dois adoecem. O aspirante se fecha e desiste quando falta aprovação; o iludido se intoxica com a ilusão da autojustiça quando o sucesso vem. Ambos vivem do aplauso de outros pecadores em vez da justificação em Cristo. Na segunda metade, o chamado à ação: “corriqueiro” não quer dizer passivo, mas o ativismo não perdoa pecados nem ressuscita mortos — quem faz isso é o evangelho (Rm 1.16).',
     },
