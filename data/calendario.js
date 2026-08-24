@@ -76,7 +76,7 @@ window.ESTUDO = {
       topicos: ['Introdução (p. 17–24)', 'Meu problema é a mesmice (p. 24–29)'],
       responsavel: 'Bel',
       foto: 'montanha',
-      video: 'https://www.youtube.com/watch?v=txmvDB4Ern0',
+      video: 'https://youtu.be/txmvDB4Ern0',
       resumo:
         '“Radical. Épico. Revolucionário. Transformador.” Horton abre listando os adjetivos que viraram ruído de fundo na igreja, e cita Rod Dreher: “A mesmice é meu problema. É fácil pensar no que você faria se estourasse uma guerra… Muito mais difícil é saber como vai passar o dia de hoje sem se desesperar.” O alerta da primeira aula é duro: mudar o mundo pode ser justamente a forma de fugir das pessoas reais que Deus colocou à nossa frente — transformadas em “elenco de coadjuvantes para o filme da nossa vida”.',
     },
@@ -90,6 +90,7 @@ window.ESTUDO = {
       ],
       responsavel: 'Alamo',
       foto: 'montanha',
+      video: 'https://youtu.be/X8DZCiBS8b8'
       resumo:
         'Horton encara a objeção óbvia: isso não é acomodação disfarçada? Ele separa o ídolo do conforto do contentamento bíblico e conta o caso de um colega de faculdade que se esgotou tentando ser extraordinário até sofrer uma crise nervosa. Daí vem a virada do capítulo: contra o mantra do “tempo de qualidade”, ele defende o tempo de quantidade — apelidos inventados, a pergunta do filho no carro voltando da igreja, toques aparentemente insignificantes. É ali que a maior parte da vida é vivida.',
     },
@@ -100,7 +101,7 @@ window.ESTUDO = {
       topicos: ['Introdução (p. 43–44)', 'Excelência distorcida (p. 44–53)'],
       responsavel: 'Eduardo',
       foto: 'mesa',
-      video: 'https://youtu.be/X8DZCiBS8b8',
+      video: 'https://youtu.be/xy0rhPH7ooI',
       resumo:
         '“Se as pessoas apreciarem o que é comum, não haveria gente como Steve Jobs, nem Martin Luther King Jr.” Horton antecipa a objeção e responde de frente: comum não é medíocre, e o livro não pede para fazer menos. Com Agostinho — o pecado como estar virado para dentro de si mesmo — ele mostra que excelência sem um objeto digno é inútil; ela só se sustenta no “glorificar a Deus e gozá-lo para sempre” do Breve Catecismo de Westminster.',
     },
@@ -114,7 +115,7 @@ window.ESTUDO = {
       ],
       responsavel: 'Bel',
       foto: 'mesa',
-      video: 'https://www.youtube.com/watch?v=JZihXB5ZuTo',
+      video: 'https://youtu.be/JZihXB5ZuTo',
       resumo:
         'Dois perfeccionismos, e os dois adoecem. O aspirante se fecha e desiste quando falta aprovação; o iludido se intoxica com a ilusão da autojustiça quando o sucesso vem. Ambos vivem do aplauso de outros pecadores em vez da justificação em Cristo. Na segunda metade, o chamado à ação: “corriqueiro” não quer dizer passivo, mas o ativismo não perdoa pecados nem ressuscita mortos — quem faz isso é o evangelho (Rm 1.16).',
     },
