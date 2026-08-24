@@ -100,6 +100,7 @@ window.ESTUDO = {
       topicos: ['Introdução (p. 43–44)', 'Excelência distorcida (p. 44–53)'],
       responsavel: 'Eduardo',
       foto: 'mesa',
+      video: 'https://www.youtube.com/watch?v=xy0rhPH7ooI',
       resumo:
         '“Se as pessoas apreciarem o que é comum, não haveria gente como Steve Jobs, nem Martin Luther King Jr.” Horton antecipa a objeção e responde de frente: comum não é medíocre, e o livro não pede para fazer menos. Com Agostinho — o pecado como estar virado para dentro de si mesmo — ele mostra que excelência sem um objeto digno é inútil; ela só se sustenta no “glorificar a Deus e gozá-lo para sempre” do Breve Catecismo de Westminster.',
     },
