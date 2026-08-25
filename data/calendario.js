@@ -90,7 +90,7 @@ window.ESTUDO = {
       ],
       responsavel: 'Alamo',
       foto: 'montanha',
-      video: 'https://youtu.be/X8DZCiBS8b8'
+      video: 'https://youtu.be/X8DZCiBS8b8',
       resumo:
         'Horton encara a objeção óbvia: isso não é acomodação disfarçada? Ele separa o ídolo do conforto do contentamento bíblico e conta o caso de um colega de faculdade que se esgotou tentando ser extraordinário até sofrer uma crise nervosa. Daí vem a virada do capítulo: contra o mantra do “tempo de qualidade”, ele defende o tempo de quantidade — apelidos inventados, a pergunta do filho no carro voltando da igreja, toques aparentemente insignificantes. É ali que a maior parte da vida é vivida.',
     },
