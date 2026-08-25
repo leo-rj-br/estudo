@@ -1,0 +1,52 @@
+name: Validar e publicar o site
+
+# Este workflow substitui a publicação automática "por branch" do GitHub Pages.
+# Diferença que importa: agora, se data/calendario.js tiver um erro, a
+# publicação é BLOQUEADA e o site continua no ar na última versão boa — em
+# vez de ficar em branco, como aconteceu quando uma vírgula faltou.
+#
+# Passo único de configuração (uma vez só): em Settings → Pages → Build and
+# deployment → Source, trocar de "Deploy from a branch" para "GitHub Actions".
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # permite publicar manualmente pela aba Actions, se precisar
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+
+      - name: Validar data/calendario.js
+        run: node scripts/validar-calendario.js
+
+      - name: Preparar o Pages
+        uses: actions/configure-pages@v5
+
+      - name: Empacotar o site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicar no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

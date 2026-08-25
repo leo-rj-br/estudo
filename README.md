@@ -15,6 +15,22 @@ do vídeo, que toca dentro da própria página**, sem precisar sair para o Drive
 **Só existe um arquivo para editar: [`data/calendario.js`](data/calendario.js).**
 Não é preciso mexer em HTML, CSS ou JavaScript.
 
+**Antes de commitar, sempre rode:**
+
+```bash
+node scripts/validar-calendario.js
+```
+
+Esse comando pega o tipo de erro que mais acontece ao editar à mão — uma vírgula
+faltando, uma data duplicada, um link sem `http`. É o mesmo comando que roda
+automaticamente a cada push (veja [Publicar e a rede de segurança](#publicar-e-a-rede-de-segurança)
+abaixo); rodar antes economiza a volta de descobrir pelo GitHub que a publicação
+falhou.
+
+Uma vírgula faltando nesse arquivo já derrubou o site inteiro — não só o encontro
+editado, a página toda ficava em branco. Foi esse incidente que motivou a validação
+automática descrita mais abaixo.
+
 ### Publicar a gravação de um encontro
 
 1. No Google Drive, botão direito no arquivo → **Compartilhar**
@@ -206,14 +222,39 @@ no Unsplash.
 
 ---
 
-## Publicar
+## Publicar e a rede de segurança
 
-**GitHub Pages** — em *Settings → Pages*, publicar a partir da branch desejada (raiz `/`).
-O arquivo `CNAME` já aponta para `estudo.comunidademanifesto.com`; no DNS, criar um
-`CNAME` de `estudo` para `<usuário>.github.io`.
+O site é publicado pelo workflow [`.github/workflows/pages.yml`](.github/workflows/pages.yml),
+a cada push na `main`. Ele faz duas coisas, nessa ordem:
+
+1. Roda `node scripts/validar-calendario.js`
+2. Só se passar, publica no GitHub Pages
+
+**Se a validação falhar, a publicação não acontece — o site continua no ar na
+última versão que passou.** Antes disso existia, um erro de sintaxe em
+`data/calendario.js` deixava o site inteiro em branco até alguém notar e corrigir
+manualmente. Para ver o resultado de cada validação, ou publicar de novo sem um
+novo commit: aba **Actions** do repositório no GitHub.
+
+**Configuração (uma vez só):** em *Settings → Pages → Build and deployment → Source*,
+selecionar **"GitHub Actions"** — não mais "Deploy from a branch". O arquivo `CNAME`
+já aponta para `estudo.comunidademanifesto.com`; no DNS, um `CNAME` de `estudo` para
+`<usuário>.github.io`.
 
 **Vercel / Netlify / Cloudflare Pages** — importar o repositório, sem comando de build,
-com o diretório de saída na raiz. Depois adicionar o domínio no painel.
+com o diretório de saída na raiz. Depois adicionar o domínio no painel. Nesse caso o
+`pages.yml` não se aplica; vale rodar o validador manualmente antes de cada commit.
+
+### Automatizando a atualização (upload de gravação, por exemplo)
+
+Qualquer processo que vá commitar neste repositório — uma automação, um script, outra
+sessão do Claude — precisa de **acesso de escrita (push)** ao repositório, não só
+leitura. Sem isso, o commit falha silenciosamente ou com erro de permissão; foi o que
+aconteceu com a automação semanal deste projeto antes de identificarmos a causa.
+
+Antes de um processo automatizado commitar, ele deve rodar o mesmo validador que o
+CI roda: `node scripts/validar-calendario.js`. Assim um erro é pego ali mesmo, sem
+nem chegar a virar um push — mais rápido que esperar o workflow falhar no GitHub.
 
 ### Rodar localmente
 
