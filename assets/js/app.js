@@ -32,6 +32,7 @@
     arrowR: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>',
     sun: '<svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M18.7 5.3l-1.4 1.4M6.7 17.3l-1.4 1.4"/></svg>',
     moon: '<svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>',
+    book: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4.8A2.3 2.3 0 0 1 6.3 2.5H20V19H6.3A2.3 2.3 0 0 0 4 21.3V4.8Z"/><path d="M4 19A2.3 2.3 0 0 1 6.3 16.7H20"/></svg>',
   };
 
   /* -- Datas --------------------------------------------------------------- */
@@ -121,6 +122,27 @@
                  sizes="${sizes}" alt="${escape(alt)}" loading="lazy" decoding="async">`;
   }
 
+  // Capa de um módulo/livro: usa a arte da capa quando existe, cai para a
+  // foto de ambiente, e por fim para um ícone — usado no cartão "Estudando
+  // agora" e na estante de estudos.
+  function capaModuloHTML(mod, classe) {
+    if (!mod) return `<span class="${classe} ${classe}--vazia">${ico.book}</span>`;
+    if (mod.livro) {
+      return `<img class="${classe}"
+             src="assets/img/${mod.livro}-400.webp"
+             srcset="assets/img/${mod.livro}-400.webp 400w, assets/img/${mod.livro}-696.webp 696w"
+             sizes="7rem"
+             alt="Capa de ${escape(mod.titulo)}"
+             width="400" height="575" loading="lazy" decoding="async">`;
+    }
+    if (mod.capa) {
+      return `<img class="${classe} ${classe}--foto"
+             src="assets/img/${mod.capa}-800.webp"
+             alt="" loading="lazy" decoding="async">`;
+    }
+    return `<span class="${classe} ${classe}--vazia">${ico.book}</span>`;
+  }
+
   /* -- Normalização dos encontros ------------------------------------------ */
 
   const modulos = new Map((DATA.modulos || []).map((m) => [m.id, m]));
@@ -163,10 +185,31 @@
     view: 'agenda',
     busca: '',
     filtro: 'todos',
+    livro: 'todos', // 'todos' ou o id de um módulo — filtra agenda, calendário e busca
     ano: (proximo ? proximo.inicio : new Date()).getFullYear(),
     aberto: null,
     mostrarPassado: false,
   };
+
+  const correspondeEscopo = (e) => ui.livro === 'todos' || e.modulo === ui.livro;
+
+  /* -- Estante de estudos: um cartão por livro, com estatísticas derivadas -- */
+
+  const CATALOGO = (DATA.modulos || []).map((mod) => {
+    const doModulo = encontros.filter((e) => e.modulo === mod.id);
+    const emAndamento = doModulo.some((e) => !e.passado);
+    const ultima = doModulo.reduce((max, e) => (e.data > max ? e.data : max), '');
+    return {
+      mod,
+      total: doModulo.length,
+      gravados: doModulo.filter((e) => e.video).length,
+      emAndamento,
+      ultima,
+    };
+  }).sort((a, b) => {
+    if (a.emAndamento !== b.emAndamento) return a.emAndamento ? -1 : 1;
+    return b.ultima < a.ultima ? -1 : b.ultima > a.ultima ? 1 : 0;
+  });
 
   /* ======================================================================
      HERÓI — próxima aula
@@ -242,19 +285,10 @@
   }
 
   function bookletHTML(mod) {
-    const capa = mod.livro
-      ? `<img class="booklet__capa"
-             src="assets/img/${mod.livro}-400.webp"
-             srcset="assets/img/${mod.livro}-400.webp 400w, assets/img/${mod.livro}-696.webp 696w"
-             sizes="7rem"
-             alt="Capa de ${escape(mod.titulo)}"
-             width="400" height="575" loading="lazy" decoding="async">`
-      : '';
-
     return `
       <div class="booklet">
         <div class="booklet__top">
-          ${capa}
+          ${capaModuloHTML(mod, 'booklet__capa')}
           <div class="booklet__ident">
             <p class="eyebrow">Estudando agora</p>
             <p class="booklet__title">${escape(mod.titulo)}</p>
@@ -267,6 +301,9 @@
           <div class="meter__track"><div class="meter__fill" id="meterFill"></div></div>
           <p class="meter__text" id="meterText"></p>
         </div>
+        <button class="booklet__ver" type="button" data-estudo="${escape(mod.id)}">
+          Ver todos os encontros deste livro ${ico.arrowR}
+        </button>
       </div>`;
   }
 
@@ -293,12 +330,51 @@
   }
 
   /* ======================================================================
+     ESTANTE DE ESTUDOS — encontrar por título/livro
+     ==================================================================== */
+
+  function renderEstudos() {
+    const host = $('#estudos');
+    if (!host || CATALOGO.length < 2) { if (host) host.innerHTML = ''; return; }
+
+    const cartaoTudo = `
+      <button class="chip chip--tudo" type="button" data-limpar-estudo
+              aria-pressed="${ui.livro === 'todos'}">
+        Todos os estudos
+      </button>`;
+
+    const cartoes = CATALOGO.map(({ mod, total, gravados, emAndamento }) => `
+      <button class="estudo-card${ui.livro === mod.id ? ' is-ativo' : ''}" type="button"
+              data-estudo="${escape(mod.id)}" aria-pressed="${ui.livro === mod.id}">
+        ${capaModuloHTML(mod, 'estudo-card__capa')}
+        <span class="estudo-card__corpo">
+          <span class="estudo-card__titulo">${escape(mod.titulo)}</span>
+          <span class="estudo-card__autor">${escape(mod.autor || '')}</span>
+          <span class="estudo-card__stats">
+            ${total} ${total === 1 ? 'aula' : 'aulas'} · ${gravados} ${gravados === 1 ? 'gravada' : 'gravadas'}
+          </span>
+          <span class="badge ${emAndamento ? 'badge--next' : 'badge--concluido'}">
+            ${emAndamento ? 'Em andamento' : 'Concluído'}
+          </span>
+        </span>
+      </button>`).join('');
+
+    host.innerHTML = `
+      <div class="estudos__head">
+        <p class="eyebrow">Estudos</p>
+        ${cartaoTudo}
+      </div>
+      <div class="estudos__grade" role="group" aria-label="Filtrar por estudo">${cartoes}</div>`;
+  }
+
+  /* ======================================================================
      AGENDA
      ==================================================================== */
 
   function visiveis() {
     const q = ui.busca.trim().toLowerCase();
     return encontros.filter((e) => {
+      if (!correspondeEscopo(e)) return false;
       if (ui.filtro === 'proximos' && e.passado) return false;
       if (ui.filtro === 'anteriores' && !e.passado) return false;
       if (ui.filtro === 'gravados' && !e.video) return false;
@@ -635,12 +711,15 @@
     setView('agenda');
     ui.filtro = 'todos';
     ui.busca = '';
+    // Um link direto pra data precisa funcionar mesmo com um livro filtrado.
+    if (ui.livro !== 'todos' && e.modulo !== ui.livro) ui.livro = 'todos';
     if (e.passado) ui.mostrarPassado = true;
 
     const busca = $('#busca');
     if (busca) { busca.value = ''; $('.search').classList.remove('has-value'); }
     $$('.chip').forEach((c) => c.setAttribute('aria-pressed', String(c.dataset.filtro === 'todos')));
 
+    renderEstudos();
     renderAgenda();
     abrir(iso, true);
   }
@@ -658,14 +737,19 @@
      CALENDÁRIO — apenas os dias de estudo
      ==================================================================== */
 
-  const anos = [...new Set(encontros.map((e) => toDate(e.data).getFullYear()))].sort();
+  const anosDoEscopo = () =>
+    [...new Set(encontros.filter(correspondeEscopo).map((e) => toDate(e.data).getFullYear()))].sort();
 
   function renderCalendario() {
     const host = $('#calendario');
+    const anos = anosDoEscopo();
+    // Se o ano escolhido não existe mais neste recorte (trocou de livro), cai
+    // para o ano mais recente disponível.
+    if (!anos.includes(ui.ano)) ui.ano = anos[anos.length - 1];
     const ano = ui.ano;
     const i = anos.indexOf(ano);
 
-    const doAno = encontros.filter((e) => toDate(e.data).getFullYear() === ano);
+    const doAno = encontros.filter((e) => correspondeEscopo(e) && toDate(e.data).getFullYear() === ano);
 
     // Só os meses que têm encontro — nada de grade vazia.
     const meses = [];
@@ -759,6 +843,13 @@
     posicionarPill();
     if (v === 'calendario') renderCalendario();
     if (foco) $('#programa').scrollIntoView({ behavior: prefersMotion() ? 'smooth' : 'auto', block: 'start' });
+  }
+
+  // Redesenha a vista atual — usado depois de mudar o livro em foco, para
+  // não ter que saber de fora se estamos na agenda ou no calendário.
+  function atualizarListagens() {
+    if (ui.view === 'agenda') renderAgenda();
+    else if (ui.view === 'calendario') renderCalendario();
   }
 
   function posicionarPill() {
@@ -867,6 +958,23 @@
         return;
       }
 
+      const limparEstudo = ev.target.closest('[data-limpar-estudo]');
+      if (limparEstudo) {
+        ui.livro = 'todos';
+        renderEstudos();
+        atualizarListagens();
+        return;
+      }
+
+      const estudoBtn = ev.target.closest('[data-estudo]');
+      if (estudoBtn) {
+        ui.livro = estudoBtn.dataset.estudo;
+        renderEstudos();
+        atualizarListagens();
+        $('#programa').scrollIntoView({ behavior: prefersMotion() ? 'smooth' : 'auto', block: 'start' });
+        return;
+      }
+
       const ics = ev.target.closest('[data-ics]');
       if (ics) { baixarIcs(ics.dataset.ics); return; }
 
@@ -955,6 +1063,7 @@
     $('[data-view="calendario"]').insertAdjacentHTML('afterbegin', ico.cal);
 
     renderHero();
+    renderEstudos();
     renderAgenda();
     setView('agenda');
     bind();

@@ -57,8 +57,10 @@ window.ESTUDO = {
     {
       id: 'conspiracao-divina',
       titulo: 'A Conspiração Divina',
+      subtitulo: 'Redescobrindo nossa vida oculta em Deus',
       autor: 'Dallas Willard',
       periodo: '2026 · 1º semestre',
+      livro: 'livro-a-conspiracao-divina',
       capa: 'oracao',
       epigrafe:
         'O Reino de Deus não é um lugar para onde se vai depois de morrer, mas o governo real de Deus disponível aqui e agora, para quem quiser aprender a viver nele.',
@@ -364,6 +366,7 @@ window.ESTUDO = {
       capitulo: '1. Entrando desde já no tipo eterno de vida',
       topicos: ['Vida no escuro (p. 22–34)'],
       responsavel: 'Eduardo',
+      video: 'https://drive.google.com/file/d/1ZTGZ5Ox5q0GoqwFd0BGA03T0uI48tHRY/view?usp=sharing',
       resumo:
         'Willard abre o livro com um diagnóstico incômodo: vivemos num mundo que perdeu a capacidade de enxergar a realidade espiritual, e por isso trata a vida com Deus como assunto particular e sem consequências. A primeira aula estabelece a pergunta que atravessa todo o estudo — o que Jesus realmente ofereceu quando disse que o Reino estava próximo?',
     },
@@ -373,6 +376,7 @@ window.ESTUDO = {
       capitulo: '1. Entrando desde já no tipo eterno de vida',
       topicos: ['Mensagem sobre uma realidade diferente (p. 34–46)'],
       responsavel: 'Bel',
+      video: 'https://drive.google.com/file/d/1gBSmSKOcdGL93kN4O4_ijdqloBy9hhQ6/view?usp=sharing',
       resumo:
         'O evangelho não é uma mensagem sobre como escapar deste mundo, mas o anúncio de uma realidade diferente disponível agora. Aqui o autor distingue a vida eterna como qualidade de vida presente — conhecer a Deus — da ideia reduzida de sobrevivência após a morte.',
     },
@@ -385,6 +389,7 @@ window.ESTUDO = {
         'No meio de muitos reinos (p. 55–61)',
       ],
       responsavel: 'Alamo',
+      video: 'https://drive.google.com/file/d/1pcyueQSD9YeDf5aXQk-vWb3j--pHbk7t/view?usp=sharing',
       resumo:
         'Fomos criados para governar — não para dominar pessoas, mas para exercer responsabilidade criativa sobre aquilo que nos foi confiado. Willard mostra que todo ser humano já administra um pequeno reino, e que a questão decisiva é se esse reino está ou não sob o Reino de Deus.',
     },
@@ -397,6 +402,7 @@ window.ESTUDO = {
         'O evangelho de direita (p. 71–80)',
       ],
       responsavel: 'Eduardo',
+      video: 'https://drive.google.com/file/d/1gHPzafXt1seM1OWO0ruPXSWipvl-MG4M/view?usp=sharing',
       resumo:
         'Um dos capítulos mais confrontadores do livro. Quando o evangelho é reduzido à gestão da culpa, ele passa a responder apenas à pergunta “como ser perdoado?” e deixa de responder “como viver?”. O resultado é uma fé que garante o destino final sem transformar o cotidiano.',
     },
@@ -409,6 +415,7 @@ window.ESTUDO = {
         'Rumo à integração de vida e fé (p. 87–92)',
       ],
       responsavel: 'Bel',
+      video: 'https://drive.google.com/file/d/1H_W63Y57pMb8KZmBGOJlmRNWd9ks5WkI/view?usp=sharing',
       resumo:
         'A crítica agora vira para o outro lado: a fé reduzida a ação social sem transformação interior. Willard recusa os dois atalhos e propõe a integração — uma vida em que crer, ser e agir deixam de ocupar compartimentos separados.',
     },
@@ -421,6 +428,7 @@ window.ESTUDO = {
         'O céu como habitat humano (p. 100–109)',
       ],
       responsavel: 'Alamo',
+      video: 'https://drive.google.com/file/d/1pZYu2SAEnNcEm4cxQejt66mpqq2XDI2J/view?usp=sharing',
       resumo:
         'Se Deus está realmente presente e ativo neste mundo, isso muda tudo — inclusive a maneira como oramos, trabalhamos e tomamos decisões. Este encontro recupera a visão bíblica dos “céus” como o espaço imediatamente ao nosso redor, e não como um endereço distante.',
     },
@@ -433,6 +441,7 @@ window.ESTUDO = {
         'Todas as coisas visíveis e invisíveis (p. 115–122)',
       ],
       responsavel: 'Eduardo',
+      video: 'https://drive.google.com/file/d/1Zl-L0aVB4S4w0w0URFSJjBtdI8RWrrFF/view?usp=sharing',
       resumo:
         'A realidade é maior do que aquilo que se pode medir. Willard argumenta que a fé cristã não pede que ignoremos o mundo material, mas que paremos de tratá-lo como se fosse tudo o que existe.',
     },
@@ -446,6 +455,7 @@ window.ESTUDO = {
         'Jesus: Senhor do intelecto (p. 131–137)',
       ],
       responsavel: 'Bel',
+      video: 'https://drive.google.com/file/d/1pY1ajzRyXFCgYF-xWf9MtOdes6hLVrLk/view?usp=sharing',
       resumo:
         'Uma afirmação central e frequentemente esquecida: Jesus é a pessoa mais inteligente que já viveu. Reconhecer isso significa deixar de tratar a fé como sentimento privado e passar a confiar em Cristo também naquilo que pensamos sobre a realidade.',
     },
@@ -458,6 +468,7 @@ window.ESTUDO = {
         'Lidando com a profundidade da alma (p. 151–160)',
       ],
       responsavel: 'Alamo',
+      video: 'https://drive.google.com/file/d/1fwXpUh8jWKJPs-nPnGQD5jKrJAoqkhGN/view?usp=sharing',
       resumo:
         'As bem-aventuranças não são uma lista de virtudes a conquistar, nem um manual de comportamento exemplar. Willard as lê como o anúncio escandaloso de que o Reino está disponível justamente para quem o mundo considera descartável.',
     },
@@ -470,6 +481,7 @@ window.ESTUDO = {
         'Tornando a mensagem pessoal para nós (p. 169–175)',
       ],
       responsavel: 'Eduardo',
+      video: 'https://drive.google.com/file/d/1KZIO9g6un1XzRJSTQ9zQuSCQCaS58Ztm/view?usp=sharing',
       resumo:
         'Depois de desfazer a leitura moralista, o autor devolve o texto ao ouvinte: quem, hoje, na nossa cidade e na nossa igreja, ocuparia o lugar dos “pobres de espírito”? Um encontro que costuma reposicionar a forma como enxergamos os que estão à margem.',
     },
@@ -482,6 +494,7 @@ window.ESTUDO = {
         'Lei e alma (p. 189–198)',
       ],
       responsavel: 'Bel',
+      video: 'https://drive.google.com/file/d/1D4GwnVVLSJ4qfhzatyws6bJEgf_B9-Gk/view?usp=sharing',
       resumo:
         '“Se a vossa justiça não exceder a dos escribas e fariseus…” — Jesus não pede mais esforço na mesma direção, mas uma justiça de outra natureza, que nasce do coração e não do cumprimento externo da norma.',
     },
@@ -491,6 +504,7 @@ window.ESTUDO = {
       capitulo: '5. A justiça e o coração do Reino',
       topicos: ['No caldeirão da ira e do desprezo (p. 198–212)'],
       responsavel: 'Alamo',
+      video: 'https://drive.google.com/file/d/1qNwj0-Ghbi41niNhV_Ob9aVraw5pij4r/view?usp=sharing',
       resumo:
         'Ira e desprezo são tratados por Jesus como parentes próximos do homicídio. Willard mostra por que o desprezo — o gesto de reduzir alguém a nada — é especialmente destrutivo para a comunidade cristã, e o que significa desmontá-lo na prática.',
     },
@@ -500,6 +514,7 @@ window.ESTUDO = {
       capitulo: '5. A justiça e o coração do Reino',
       topicos: ['O poder destrutivo do desejo fantasioso (p. 212–229)'],
       responsavel: 'Eduardo',
+      video: 'https://drive.google.com/file/d/1J8qbbAggSWnyWMh7r9kRRRGsnqwdT02y/view?usp=sharing',
       resumo:
         'Sobre a concupiscência e a vida da imaginação. O ponto do autor é pastoral e direto: o problema não é o desejo em si, mas o hábito de cultivar mentalmente aquilo que não devemos viver — e o modo como esse hábito corrói o caráter em silêncio.',
     },
@@ -512,6 +527,7 @@ window.ESTUDO = {
         'A bondade é amor (p. 240–244)',
       ],
       responsavel: 'Bel',
+      video: 'https://drive.google.com/file/d/1-bNV9ZgoWLsSCd7pYxp0hjQlgp14RS7Q/view?usp=sharing',
       resumo:
         'Falar a verdade sem juramentos, amar sem cálculo de retorno. O encerramento do capítulo mais longo do livro amarra tudo numa tese simples: a justiça do Reino é, no fim, amor em ação.',
     },
@@ -524,6 +540,7 @@ window.ESTUDO = {
         'A armadilha da respeitabilidade (p. 247–264)',
       ],
       responsavel: 'Alamo',
+      video: 'https://drive.google.com/file/d/1dhe9eXBm-8X2GatlPRMsqBWU98ouxwgr/view?usp=sharing',
       resumo:
         'A religiosidade praticada para ser vista já recebeu sua recompensa. Este encontro expõe como a busca por reputação — inclusive reputação de piedade — esvazia por dentro a vida com Deus.',
     },
@@ -536,6 +553,7 @@ window.ESTUDO = {
         'Neste mundo vocês terão aflições (p. 276–277)',
       ],
       responsavel: 'Eduardo',
+      video: 'https://drive.google.com/file/d/16NSs1SyXxyrjf3BdxP89v0Px4RqAiPNH/view?usp=sharing',
       resumo:
         'Não se trata de condenar o dinheiro, mas de identificar a ansiedade que ele promete curar e nunca cura. Willard trata a confiança na provisão do Pai como a alternativa concreta — e difícil — à lógica do acúmulo.',
     },
@@ -549,6 +567,7 @@ window.ESTUDO = {
         'Petição como a essência da comunhão (p. 297–306)',
       ],
       responsavel: 'Bel',
+      video: 'https://drive.google.com/file/d/1zhdq1wdIMJcXtuE-03Rf_ZyflGQGHKDw/view?usp=sharing',
       resumo:
         'Como uma comunidade deixa de condenar sem deixar de discernir? Willard separa o julgamento que destrói do discernimento que cuida — e mostra que a oração de petição é o que mantém a comunidade humilde diante de Deus.',
     },
@@ -558,6 +577,7 @@ window.ESTUDO = {
       capitulo: '7. A comunidade de amor e oração',
       topicos: ['A oração no contexto cósmico (p. 306–324)'],
       responsavel: 'Alamo',
+      video: 'https://drive.google.com/file/d/10FIOwbcrZDnQlfjwrynjL_a9dyxyv2Wh/view?usp=sharing',
       resumo:
         'Se Deus já sabe de tudo, por que orar? A resposta do autor é que a oração é o meio pelo qual Deus nos faz participantes reais do seu governo — não um ritual de persuasão, mas uma conversa que de fato move a história.',
     },
@@ -567,6 +587,7 @@ window.ESTUDO = {
       capitulo: '7. A comunidade de amor e oração',
       topicos: ['A maior oração de todas (p. 325–344)'],
       responsavel: 'Eduardo',
+      video: 'https://drive.google.com/file/d/1kICjIRNie3s3XooaARGKkZ9pvmBIndXN/view?usp=sharing',
       resumo:
         'Uma leitura frase a frase do Pai Nosso. Vale a pena revisitar este encontro: a oração que a maioria de nós repete de cor é reapresentada como o mapa completo da vida no Reino.',
     },
@@ -579,6 +600,7 @@ window.ESTUDO = {
         'Como ser um discípulo (p. 358–369)',
       ],
       responsavel: 'Bel',
+      video: 'https://drive.google.com/file/d/1cDOPj5i-Lb8PSMjJ9qX4uZfkw7TzTFUS/view?usp=sharing',
       resumo:
         'Discípulo é aprendiz: alguém que está com Jesus para aprender a viver como ele viveria em seu lugar. Aqui o livro faz sua virada mais prática — do que cremos para como efetivamente se aprende.',
     },
@@ -591,6 +613,7 @@ window.ESTUDO = {
         'Ajudando outros a encontrar seu caminho para o discipulado (p. 379–392)',
       ],
       responsavel: 'Alamo',
+      video: 'https://drive.google.com/file/d/1gcGuQr2voZYHuRjKUaGKBXY4PkBmMlNG/view?usp=sharing',
       resumo:
         'A crítica de Willard à igreja contemporânea aparece com toda a força: fizemos convertidos sem fazer discípulos. O encontro trata do que muda na vida da comunidade quando o discipulado deixa de ser um programa opcional.',
     },
@@ -604,6 +627,7 @@ window.ESTUDO = {
         'Uma mente deslumbrada com Deus (p. 408–412)',
       ],
       responsavel: 'Eduardo',
+      video: 'https://drive.google.com/file/d/1fGCWWzmjAfi3ec8J4tuU6q2xevmvT-T0/view?usp=sharing',
       resumo:
         'Transformação não acontece por acidente. Willard propõe um currículo — dois objetivos claros, e meios concretos para alcançá-los — para quem quer levar a sério o convite de aprender com Jesus.',
     },
@@ -613,6 +637,7 @@ window.ESTUDO = {
       capitulo: '9. Um currículo para a imitação de Cristo',
       topicos: ['Três áreas indispensáveis de clareza intelectual (p. 412–431)'],
       responsavel: 'Bel',
+      video: 'https://drive.google.com/file/d/1ls8KTE24vbx4J_PUd1onNyfYfkRT8tL_/view?usp=sharing',
       resumo:
         'Não basta querer mudar; é preciso enxergar corretamente quem Deus é, quem somos e onde estamos. Este encontro trata das convicções que sustentam — ou sabotam — qualquer tentativa de crescimento espiritual.',
     },
@@ -622,6 +647,7 @@ window.ESTUDO = {
       capitulo: '9. Um currículo para a imitação de Cristo',
       topicos: ['Adquirindo hábitos de bondade (p. 431–445)'],
       responsavel: 'Alamo',
+      video: 'https://drive.google.com/file/d/1cBGWqAZs8WHain2XzdS_FhRDUTgO-TjI/view?usp=sharing',
       resumo:
         'Caráter é hábito consolidado. A proposta é substituir a tentativa de “tentar mais” pelo treino inteligente — aquilo que fazemos fora do momento da prova é o que nos sustenta durante a prova.',
     },
@@ -631,6 +657,7 @@ window.ESTUDO = {
       capitulo: '9. Um currículo para a imitação de Cristo',
       topicos: ['Plano de disciplinas para um novo coração (p. 445–459)'],
       responsavel: 'Eduardo',
+      video: 'https://drive.google.com/file/d/1tvpDV0MCLUDPs0Qwh9BjC8NePWTt1g6Z/view?usp=sharing',
       resumo:
         'As disciplinas espirituais como treino, e não como mérito: solitude, silêncio, jejum, estudo, serviço. Um dos encontros mais aplicáveis do semestre, com sugestões que dá para começar na mesma semana.',
     },
@@ -644,6 +671,7 @@ window.ESTUDO = {
         'O currículo e a vida da igreja (p. 465–469)',
       ],
       responsavel: 'Bel',
+      video: 'https://drive.google.com/file/d/1lMBqyaVxkDKZcICL637SZTFGXfc48sVy/view?usp=sharing',
       resumo:
         'Como uma igreja inteira — e não apenas indivíduos motivados — organiza sua vida em torno da formação de discípulos. Encontro especialmente relevante para quem serve em algum ministério.',
     },
@@ -656,6 +684,7 @@ window.ESTUDO = {
         'Mudanças que virão (p. 494–500)',
       ],
       responsavel: 'Alamo',
+      video: 'https://drive.google.com/file/d/1IRZrLBRhUUJpW5OEybi_OjT9F7XGS-7_/view?usp=sharing',
       resumo:
         'O livro termina olhando para a frente: a esperança cristã não é fuga do mundo, mas a promessa de que este mundo será restaurado — e de que o trabalho fiel de hoje tem lugar nesse futuro.',
     },
@@ -665,6 +694,7 @@ window.ESTUDO = {
       capitulo: 'Aula de conclusão do livro',
       topicos: ['Retrospectiva geral e conversa aberta'],
       responsavel: 'Eduardo',
+      video: 'https://drive.google.com/file/d/1PW3Wh8fMO2LNOElGmUaV_MzdG7kLTxuA/view?usp=sharing',
       resumo:
         'Encerramento do semestre: uma retomada dos fios principais do livro e um espaço aberto para o que ficou pendente, o que incomodou e o que já começou a mudar na prática de cada um.',
     },
