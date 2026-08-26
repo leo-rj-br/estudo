@@ -131,6 +131,7 @@ window.ESTUDO = {
       ],
       responsavel: 'Alamo',
       foto: 'jovens',
+      video: 'https://www.youtube.com/watch?v=XYeKGqlg9oQ',
       resumo:
         '“Agora somos todos adolescentes. Quando é que vamos crescer?” Com Thomas Bergler, Horton conta como as igrejas criaram grupos de jovens, depois cederam a eles e por fim viraram eles. Contra isso, Efésios 4: crescer até “não mais sermos como meninos, agitados de um lado para outro”. E a lógica pactual — Atos 2.39, a Páscoa de Êxodo 12 — em que os mais velhos entregam aos mais novos aquilo que viram e ouviram.',
     },
