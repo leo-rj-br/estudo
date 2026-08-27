@@ -113,6 +113,16 @@
     return m ? m[1] : null;
   };
 
+  const idDrive = (s) => {
+    const str = String(s || '');
+    let m = str.match(/drive\.google\.com\/file\/d\/([\w-]{10,})/);
+    if (m) return m[1];
+    m = str.match(/drive\.google\.com\/(?:open|uc)\?[^#]*[?&]?id=([\w-]{10,})/);
+    if (m) return m[1];
+    if (/^[\w-]{20,}$/.test(str)) return str;
+    return null;
+  };
+
   /* -- Imagens ------------------------------------------------------------- */
 
   function imgHTML(slug, alt, sizes) {
@@ -167,6 +177,7 @@
         videoTipo: /youtu\.?be/.test(e.video || '') ? 'youtube'
                  : /drive\.google/.test(e.video || '') ? 'drive' : 'outro',
         videoId: idYoutube(e.video),
+        videoDriveId: idDrive(e.video),
         meet: e.meet || CFG.meetPadrao || '',
         tbd: !e.capitulo,
         // "passado" agrupa por data, para o encontro de hoje seguir no topo até
@@ -530,16 +541,28 @@
   const SIZES_MEDIA = '(max-width: 58rem) 92vw, 34rem';
 
   /* -- Cartaz da gravação ---------------------------------------------------
-   * Num vídeo do YouTube o cartaz é a própria miniatura publicada lá, para o
-   * site mostrar exatamente a mesma capa. As versões em 16:9 vêm em ordem de
-   * qualidade; se nenhuma existir, cai na foto do capítulo, que é local.
+   * O cartaz é sempre a própria capa publicada do vídeo, para o site mostrar
+   * exatamente o que aparece lá — nunca uma foto de ambiente genérica.
+   * YouTube tem várias resoluções em ordem de qualidade; Drive tem uma única
+   * miniatura. Se nenhuma candidata carregar, cai na foto do capítulo, local.
    * -------------------------------------------------------------------- */
 
   const MINIATURAS = ['maxresdefault', 'hq720', 'mqdefault'];
 
-  function cartazHTML(e) {
+  function candidatosCartaz(e) {
     if (e.videoTipo === 'youtube' && e.videoId) {
-      return `<img src="https://i.ytimg.com/vi/${e.videoId}/${MINIATURAS[0]}.jpg"
+      return MINIATURAS.map((tam) => `https://i.ytimg.com/vi/${e.videoId}/${tam}.jpg`);
+    }
+    if (e.videoTipo === 'drive' && e.videoDriveId) {
+      return [`https://drive.google.com/thumbnail?id=${e.videoDriveId}&sz=w1000`];
+    }
+    return [];
+  }
+
+  function cartazHTML(e) {
+    const candidatos = candidatosCartaz(e);
+    if (candidatos.length) {
+      return `<img src="${candidatos[0]}"
                    alt="" loading="lazy" decoding="async"
                    referrerpolicy="no-referrer" data-passo="0">`;
     }
@@ -549,15 +572,16 @@
   function ligarCartaz(e, poster) {
     const img = $('img', poster);
     if (!img || !img.dataset.passo) return;
+    const candidatos = candidatosCartaz(e);
 
     const cair = () => {
       const passo = Number(img.dataset.passo) + 1;
-      if (passo < MINIATURAS.length) {
+      if (passo < candidatos.length) {
         img.dataset.passo = String(passo);
-        img.src = `https://i.ytimg.com/vi/${e.videoId}/${MINIATURAS[passo]}.jpg`;
+        img.src = candidatos[passo];
         return;
       }
-      // Acabaram as miniaturas: volta para a foto do capítulo.
+      // Acabaram as candidatas: volta para a foto do capítulo.
       delete img.dataset.passo;
       img.removeAttribute('srcset');
       img.src = `assets/img/${e.foto}-800.webp`;
@@ -596,7 +620,7 @@
     wrap.className = 'player';
     wrap.innerHTML = `
       <div class="player__frame">
-        <button class="player__poster${e.videoTipo === 'youtube' && e.videoId ? ' player__poster--capa' : ''}"
+        <button class="player__poster${candidatosCartaz(e).length ? ' player__poster--capa' : ''}"
                 type="button"
                 aria-label="Reproduzir a gravação de ${escape(fmtLong(e.data))}">
           ${cartazHTML(e)}

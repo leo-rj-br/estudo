@@ -73,12 +73,13 @@ O site reconhece o provedor sozinho e ajusta o visor: o YouTube fica em 16:9, e 
 Drive recebe toda a altura da tela no celular, que é o que ele precisa para montar
 os controles. Os embeds do YouTube usam o domínio `youtube-nocookie.com`.
 
-**Nos vídeos do YouTube o cartaz é a própria miniatura publicada lá.** Não é preciso
-enviar imagem nenhuma: trocou a capa no YouTube, o site acompanha. Ele busca a versão
-em maior qualidade e, se ela não existir, tenta as menores; se nenhuma responder, cai
-na foto do capítulo. Essa é a única imagem do site que vem de fora (`i.ytimg.com`), e
-ela é pedida sem enviar o endereço da página. Gravações no Drive continuam usando a
-foto do capítulo como cartaz, porque o Drive não publica miniatura.
+**O cartaz de qualquer gravação é a própria capa publicada do vídeo — nunca uma foto
+de ambiente genérica.** Não é preciso enviar imagem nenhuma: trocou a capa lá (YouTube
+ou Drive), o site acompanha. No YouTube busca a versão em maior qualidade e, se ela
+não existir, tenta as menores (`i.ytimg.com`); no Drive busca a miniatura publicada do
+arquivo (`drive.google.com/thumbnail`). Se nenhuma candidata responder — vídeo privado,
+miniatura ainda não gerada — cai na foto do capítulo, que é local. Essas são as únicas
+imagens do site que vêm de fora, e são pedidas sem enviar o endereço da página.
 
 ### Campos de cada encontro
 
