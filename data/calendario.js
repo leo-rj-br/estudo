@@ -65,6 +65,17 @@ window.ESTUDO = {
       epigrafe:
         'O Reino de Deus não é um lugar para onde se vai depois de morrer, mas o governo real de Deus disponível aqui e agora, para quem quiser aprender a viver nele.',
     },
+    {
+      id: 'aconselhando-uns-aos-outros',
+      titulo: 'Aconselhando uns aos outros',
+      subtitulo: '8 maneiras de cultivar relacionamentos saudáveis dentro da igreja',
+      autor: 'Edward T. Welch',
+      periodo: '2025 · 2º semestre',
+      livro: 'livro-aconselhando-uns-aos-outros',
+      capa: 'mesa',
+      epigrafe:
+        'Deus toma a iniciativa e se aproxima de nós; nós tomamos a iniciativa e nos aproximamos de outras pessoas — um ensino simples com incontáveis aplicações.',
+    },
   ],
 
   encontros: [
@@ -697,6 +708,90 @@ window.ESTUDO = {
       video: 'https://drive.google.com/file/d/1PW3Wh8fMO2LNOElGmUaV_MzdG7kLTxuA/view?usp=sharing',
       resumo:
         'Encerramento do semestre: uma retomada dos fios principais do livro e um espaço aberto para o que ficou pendente, o que incomodou e o que já começou a mudar na prática de cada um.',
+    },
+    {
+      data: '2025-11-04',
+      modulo: 'aconselhando-uns-aos-outros',
+      capitulo: '1. Com toda a humildade',
+      topicos: [
+        'Nossa necessidade de cuidado',
+        'Humildade como base da comunidade (Ef 4.1-3)',
+      ],
+      video: 'https://drive.google.com/file/d/1g3-BBfpG305jeYaLml3Ype2yX-ogeAsG/view?usp=sharing',
+      resumo:
+        'O cuidado uns dos outros começa pela humildade de admitir a própria necessidade de cuidado — por isso a primeira prática sugerida é simplesmente pedir que orem por nós. Paulo ora por esse tipo de comunidade em Efésios 3 e ensina como alcançá-la: "com toda a humildade e mansidão... suportando-vos uns aos outros em amor" (Ef 4.1-3).',
+    },
+    {
+      data: '2025-11-11',
+      modulo: 'aconselhando-uns-aos-outros',
+      capitulo: '2. Aproxime-se das pessoas',
+      topicos: [
+        'Deus se aproxima primeiro (Ez 34.11; Jo 4)',
+        'A parábola da ovelha perdida (Lc 15.4-6)',
+      ],
+      video: 'https://drive.google.com/file/d/1EchufBk8zW6QJPPj_VcXcmvpHeCVYnT1/view?usp=sharing',
+      resumo:
+        'Deus sempre dá o primeiro passo — busca as ovelhas perdidas (Ez 34.11), vai ao encontro da mulher samaritana (Jo 4) e sai à procura de quem se desgarrou (Lc 15.4-6). Por isso também nos aproximamos uns dos outros: reis recebem visitas, mas o Rei Jesus é quem vai até nós.',
+    },
+    {
+      data: '2025-11-18',
+      modulo: 'aconselhando-uns-aos-outros',
+      capitulo: '3. Conheça o coração',
+      topicos: [
+        'Além da conversa trivial',
+        'O coração como raízes, águas profundas e tesouro (Jr 17.5-8; Pv 20.5; Mt 6.20)',
+      ],
+      video: 'https://drive.google.com/file/d/1kLvVZF48YlKFOAV-LhEmuHSCtbfMUyzm/view?usp=sharing',
+      resumo:
+        'Conhecer alguém de verdade exige ir além dos cumprimentos de praxe e chegar ao domínio do coração — comparado às raízes de uma árvore (Jr 17.5-8), a águas profundas (Pv 20.5) e a um tesouro a ser buscado (Mt 6.20). É um terreno vasto, que pede tempo e confiança para ser revelado.',
+    },
+    {
+      data: '2025-11-25',
+      modulo: 'aconselhando-uns-aos-outros',
+      capitulo: '4. Conheça as influências decisivas',
+      topicos: [
+        'O diagrama do coração e o mundo ao redor',
+        'O impacto de outras pessoas e do corpo',
+      ],
+      video: 'https://drive.google.com/file/d/10zwRb6_cPOc-yHY3qQma8gXndKmhQENA/view?usp=sharing',
+      resumo:
+        'Para ajudar sabiamente é preciso conhecer não só o coração, mas o que mais o influencia — sobretudo as outras pessoas e o próprio corpo. Um diagrama de setas em dois sentidos mostra mundo e coração em constante transação, com Deus acima e no meio de tudo.',
+    },
+    {
+      data: '2025-12-02',
+      modulo: 'aconselhando-uns-aos-outros',
+      capitulo: '5. Seja pessoal e ore',
+      topicos: [
+        'Ser pessoal como Deus é pessoal',
+        'Oração como habilidade a dominar',
+      ],
+      video: 'https://drive.google.com/file/d/19uResDrbdMX7Z4k9270SXwngLckUn6eW/view?usp=sharing',
+      resumo:
+        'A ajuda de verdade raramente vem de grandes insights, mas do envolvimento pessoal, do foco em Cristo e da oração. Ser pessoal significa imitar o próprio Deus, que se aproxima, fala, ouve e se deixa influenciar pelo que dizemos.',
+    },
+    {
+      data: '2025-12-09',
+      modulo: 'aconselhando-uns-aos-outros',
+      capitulo: '6. Converse sobre sofrimento',
+      topicos: [
+        'A narrativa do êxodo como história-mestra',
+        'Aflições são únicas, mas todas doloridas',
+      ],
+      video: 'https://drive.google.com/file/d/1iTaMvhCVYqOCM6P9dTJLBzrORO3jg5Z_/view?usp=sharing',
+      resumo:
+        'Como a Escritura fala de sofrimento em quase cada página, a narrativa do êxodo — a compaixão de Deus ouvindo o clamor do povo (Êx 2.23-24) — serve de história-mestra para conversar sobre aflição. Toda aflição é única, mas todas compartilham a mesma dor, o que explica por que um único salmo consegue falar de tantas tribulações diferentes.',
+    },
+    {
+      data: '2025-12-16',
+      modulo: 'aconselhando-uns-aos-outros',
+      capitulo: '7. Converse sobre pecado / 8. Lembre-se e reflita',
+      topicos: [
+        'Falar do que há de bom antes do pecado (1Co 1.4-7)',
+        'Retomada de Efésios 4.1-3 e 4.11-14',
+      ],
+      video: 'https://drive.google.com/file/d/15gyGI8ruml1h1cf9dKn8bAdqP8q5FJGH/view?usp=sharing',
+      resumo:
+        'Conversar sobre pecado pede a mesma cautela que conversar sobre sofrimento: primeiro se reconhece o que há de bom, como Paulo faz antes de tratar dos pecados graves da igreja de Corinto (1Co 1.4-7). O livro se encerra retomando Efésios 4 — o chamado a "desempenhar o serviço" de uns para com os outros, com toda a humildade, um passo de cada vez, até a edificação de todo o corpo de Cristo.',
     },
   ],
 };
