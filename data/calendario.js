@@ -76,6 +76,15 @@ window.ESTUDO = {
       epigrafe:
         'Deus toma a iniciativa e se aproxima de nós; nós tomamos a iniciativa e nos aproximamos de outras pessoas — um ensino simples com incontáveis aplicações.',
     },
+    {
+      id: 'brecha-em-nossa-santidade',
+      titulo: 'A Brecha em Nossa Santidade',
+      autor: 'Kevin DeYoung',
+      periodo: '2025 · 2º semestre',
+      livro: 'livro-brecha-em-nossa-santidade',
+      capa: 'travessia',
+      epigrafe: 'A brecha em sua santidade é que você não se importa muito com ela.',
+    },
   ],
 
   encontros: [
@@ -717,6 +726,7 @@ window.ESTUDO = {
         'Nossa necessidade de cuidado',
         'Humildade como base da comunidade (Ef 4.1-3)',
       ],
+      responsavel: 'Bel',
       video: 'https://drive.google.com/file/d/1g3-BBfpG305jeYaLml3Ype2yX-ogeAsG/view?usp=sharing',
       resumo:
         'O cuidado uns dos outros começa pela humildade de admitir a própria necessidade de cuidado — por isso a primeira prática sugerida é simplesmente pedir que orem por nós. Paulo ora por esse tipo de comunidade em Efésios 3 e ensina como alcançá-la: "com toda a humildade e mansidão... suportando-vos uns aos outros em amor" (Ef 4.1-3).',
@@ -729,6 +739,7 @@ window.ESTUDO = {
         'Deus se aproxima primeiro (Ez 34.11; Jo 4)',
         'A parábola da ovelha perdida (Lc 15.4-6)',
       ],
+      responsavel: 'Eduardo',
       video: 'https://drive.google.com/file/d/1EchufBk8zW6QJPPj_VcXcmvpHeCVYnT1/view?usp=sharing',
       resumo:
         'Deus sempre dá o primeiro passo — busca as ovelhas perdidas (Ez 34.11), vai ao encontro da mulher samaritana (Jo 4) e sai à procura de quem se desgarrou (Lc 15.4-6). Por isso também nos aproximamos uns dos outros: reis recebem visitas, mas o Rei Jesus é quem vai até nós.',
@@ -741,6 +752,7 @@ window.ESTUDO = {
         'Além da conversa trivial',
         'O coração como raízes, águas profundas e tesouro (Jr 17.5-8; Pv 20.5; Mt 6.20)',
       ],
+      responsavel: 'Bel',
       video: 'https://drive.google.com/file/d/1kLvVZF48YlKFOAV-LhEmuHSCtbfMUyzm/view?usp=sharing',
       resumo:
         'Conhecer alguém de verdade exige ir além dos cumprimentos de praxe e chegar ao domínio do coração — comparado às raízes de uma árvore (Jr 17.5-8), a águas profundas (Pv 20.5) e a um tesouro a ser buscado (Mt 6.20). É um terreno vasto, que pede tempo e confiança para ser revelado.',
@@ -753,6 +765,7 @@ window.ESTUDO = {
         'O diagrama do coração e o mundo ao redor',
         'O impacto de outras pessoas e do corpo',
       ],
+      responsavel: 'Eduardo',
       video: 'https://drive.google.com/file/d/10zwRb6_cPOc-yHY3qQma8gXndKmhQENA/view?usp=sharing',
       resumo:
         'Para ajudar sabiamente é preciso conhecer não só o coração, mas o que mais o influencia — sobretudo as outras pessoas e o próprio corpo. Um diagrama de setas em dois sentidos mostra mundo e coração em constante transação, com Deus acima e no meio de tudo.',
@@ -765,6 +778,7 @@ window.ESTUDO = {
         'Ser pessoal como Deus é pessoal',
         'Oração como habilidade a dominar',
       ],
+      responsavel: 'Bel',
       video: 'https://drive.google.com/file/d/19uResDrbdMX7Z4k9270SXwngLckUn6eW/view?usp=sharing',
       resumo:
         'A ajuda de verdade raramente vem de grandes insights, mas do envolvimento pessoal, do foco em Cristo e da oração. Ser pessoal significa imitar o próprio Deus, que se aproxima, fala, ouve e se deixa influenciar pelo que dizemos.',
@@ -777,6 +791,7 @@ window.ESTUDO = {
         'A narrativa do êxodo como história-mestra',
         'Aflições são únicas, mas todas doloridas',
       ],
+      responsavel: 'Eduardo',
       video: 'https://drive.google.com/file/d/1iTaMvhCVYqOCM6P9dTJLBzrORO3jg5Z_/view?usp=sharing',
       resumo:
         'Como a Escritura fala de sofrimento em quase cada página, a narrativa do êxodo — a compaixão de Deus ouvindo o clamor do povo (Êx 2.23-24) — serve de história-mestra para conversar sobre aflição. Toda aflição é única, mas todas compartilham a mesma dor, o que explica por que um único salmo consegue falar de tantas tribulações diferentes.',
@@ -789,9 +804,140 @@ window.ESTUDO = {
         'Falar do que há de bom antes do pecado (1Co 1.4-7)',
         'Retomada de Efésios 4.1-3 e 4.11-14',
       ],
+      responsavel: 'Bel',
       video: 'https://drive.google.com/file/d/15gyGI8ruml1h1cf9dKn8bAdqP8q5FJGH/view?usp=sharing',
       resumo:
         'Conversar sobre pecado pede a mesma cautela que conversar sobre sofrimento: primeiro se reconhece o que há de bom, como Paulo faz antes de tratar dos pecados graves da igreja de Corinto (1Co 1.4-7). O livro se encerra retomando Efésios 4 — o chamado a "desempenhar o serviço" de uns para com os outros, com toda a humildade, um passo de cada vez, até a edificação de todo o corpo de Cristo.',
+    },
+    {
+      data: '2025-08-26',
+      modulo: 'brecha-em-nossa-santidade',
+      capitulo: '1. Preocupe-se com o vazio',
+      topicos: [
+        '"Santidade é o novo camping" (a metáfora do título)',
+        'A diferença entre moralismo e evangelho que transforma',
+      ],
+      responsavel: 'Eduardo',
+      video: 'https://drive.google.com/file/d/1Z2tW7tAW2kIN5NFJHHmJQv_j3KqrZlUx/view?usp=sharing',
+      resumo:
+        'O título do livro nasce de uma imagem: santidade virou "o novo camping" — algo bom para os outros, mas que não é bem a sua praia. A brecha não é falta de discurso sobre pecado (há moralismo sobrando), mas a falta de uma exortação apaixonada e movida pelo evangelho para buscar a santidade.',
+    },
+    {
+      data: '2025-09-02',
+      modulo: 'brecha-em-nossa-santidade',
+      capitulo: '2. O que motivou a redenção',
+      topicos: [
+        'Por que Deus nos salvou, além do amor e do louvor (Ef 1)',
+        'A condição humana antes da graça (Ef 2.1-3; Rm 5.12-21)',
+      ],
+      responsavel: 'Bel',
+      video: 'https://drive.google.com/file/d/105U4cF-p_g6p1peTwEs_bkbGZ2xeT6Jg/view?usp=sharing',
+      resumo:
+        'Por que Deus nos salvou? Além de nos amar (Jo 3.16) e buscar louvor ao seu nome (Ef 1.6,12,14), Efésios 1 revela um terceiro motivo, tão bíblico quanto os outros: Deus te salvou para que você fosse santo.',
+    },
+    {
+      data: '2025-09-09',
+      modulo: 'brecha-em-nossa-santidade',
+      capitulo: '3. O padrão da piedade',
+      topicos: [
+        'Santidade como separação (Lv 11.44-45; 1Pe 1.15-16)',
+        '"Já, mas ainda crescendo"',
+      ],
+      responsavel: 'Eduardo',
+      video: 'https://drive.google.com/file/d/1mKecd6mi5Q2bMoTU-9K9wXvaMIEikF60/view?usp=sharing',
+      resumo:
+        'Santidade, no sentido mais básico, significa separação — a palavra aparece mais de 600 vezes na Bíblia. Somos chamados a ser santos porque Deus é santo (Lv 11.44-45; 1Pe 1.15-16): já santos em Cristo, mas ainda em processo de crescer nisso.',
+    },
+    {
+      data: '2025-09-16',
+      modulo: 'brecha-em-nossa-santidade',
+      capitulo: '4. Impetuosidade para com os imperativos',
+      topicos: [
+        'A lei como presente, não como fardo (C.S. Lewis, Reflections on the Psalms)',
+        'O atalho que sai caro: obedecer é a rota mais rápida',
+      ],
+      responsavel: 'Joventine',
+      video: 'https://drive.google.com/file/d/1dJev8r5nNJYADQLa-3dp9kLGBG99bHap/view?usp=sharing',
+      resumo:
+        'Assim como um atalho lamacento numa corrida acaba sendo mais lento que o caminho certo, os mandamentos de Deus não são um freio à liberdade, mas um presente que ajuda a correr até o fim. C. S. Lewis descreveu o deleite do salmista na lei como o deleite de sentir o asfalto firme debaixo dos pés depois de se enredar num atalho lamacento.',
+    },
+    {
+      data: '2025-09-23',
+      modulo: 'brecha-em-nossa-santidade',
+      capitulo: '5. O prazer de Deus e a possibilidade de piedade',
+      topicos: [
+        'Os padrões de 1 Timóteo 3 e Tito 1: metas, não perfeição',
+        'Deus se agrada da obediência imperfeita',
+      ],
+      responsavel: 'Bel',
+      video: 'https://drive.google.com/file/d/1gDon31dIJz_TUprfm3x-rG3S-Asun_pk/view?usp=sharing',
+      resumo:
+        'Nenhum presbítero — nem John MacArthur, nem Billy Graham — cumpre à risca os padrões de liderança de 1 Timóteo 3 e Tito 1. Mas isso não significa que a piedade seja inatingível: Paulo esperava exemplos reais, não uma perfeição messiânica, e Deus se agrada da obediência ainda imperfeita.',
+    },
+    {
+      data: '2025-09-30',
+      modulo: 'brecha-em-nossa-santidade',
+      capitulo: '6. Empenho energizado pelo Espírito, impelido pelo evangelho e abastecido pela fé',
+      topicos: [
+        'Contra os clichês espirituais vazios',
+        'John Owen: santidade por força própria é "a alma de toda falsa religião"',
+      ],
+      responsavel: 'Eduardo',
+      video: 'https://drive.google.com/file/d/1lGqkQjYfqVJ-fg81HCJu8eRuPN40ClC2/view?usp=sharing',
+      resumo:
+        'As entrevistas esportivas de após-jogo, cheias de clichês vazios, servem de espelho para conselhos espirituais igualmente genéricos — "entregue tudo a Deus", mas como? Citando John Owen, para quem buscar santidade pela própria força é "a alma de toda falsa religião", o capítulo defende uma santificação que Deus opera em nós à medida que colocamos a salvação em ação (Fl 2.12-13; 1Pe 4.11).',
+    },
+    {
+      data: '2025-10-07',
+      modulo: 'brecha-em-nossa-santidade',
+      capitulo: '7. Seja quem você é',
+      topicos: [
+        'A troca de uma preposição: de "com" Jesus para "em" Jesus',
+        'União com Cristo como base da semelhança com Cristo',
+      ],
+      responsavel: 'Bel',
+      video: 'https://drive.google.com/file/d/1_ru6YnQiyhIwwNj68oI5OOOX1gNeNf9G/view?usp=sharing',
+      resumo:
+        'Quando seu filho de cinco anos disse, admirado, "só o senhor e Jesus conseguem fazer isso", DeYoung percebe que uma única preposição trocada vira TNT teológica: não é ser como Jesus operando "com" ele, mas a partir de estar "em" Jesus. A semelhança com Cristo só é possível a partir da união com Cristo.',
+    },
+    {
+      data: '2025-10-14',
+      modulo: 'brecha-em-nossa-santidade',
+      capitulo: '8. Os santos e a imoralidade sexual',
+      topicos: [
+        'Não humilhar, mas encorajar no caminho de Deus',
+        'Padrões que valem para dentro da igreja, não só "lá fora"',
+      ],
+      responsavel: 'Eduardo',
+      video: 'https://drive.google.com/file/d/10Uwf9vqjpuB1tpQQrH0Wt1EheMmfMClk/view?usp=sharing',
+      resumo:
+        'Ao contrário do tom de humilhação comum quando se fala de santidade, o capítulo diz que seu propósito não é afundar ninguém, mas encorajar. E o assunto não é a cultura sexualizada "lá fora", mas como nós, cristãos, de fato estamos vivendo.',
+    },
+    {
+      data: '2025-10-21',
+      modulo: 'brecha-em-nossa-santidade',
+      capitulo: '9. Permanecer e obedecer',
+      topicos: [
+        'Buscar uma Pessoa, não uma coisa',
+        'União (irrevogável) e comunhão (variável) com Cristo — a analogia do casamento',
+      ],
+      responsavel: 'Bel',
+      video: 'https://drive.google.com/file/d/1DLoBrXKwUgVdiwPMNU6PWs1wg2ovDJGR/view?usp=sharing',
+      resumo:
+        'Buscar santidade não é ir atrás de uma coisa, mas de uma Pessoa — o Santo em quem fomos declarados santos. O capítulo distingue união com Cristo, irrevogável como um casamento, de comunhão com Cristo, que pode esfriar com o pecado, ainda que a união permaneça intacta.',
+    },
+    {
+      data: '2025-10-28',
+      modulo: 'brecha-em-nossa-santidade',
+      capitulo: '10. Que todos vejam o seu progresso',
+      topicos: [
+        '1 Timóteo 4.15-16: exemplo e progresso, não perfeição',
+        'Encerramento: santidade como caminhada, não linha de chegada',
+      ],
+      responsavel: 'Eduardo',
+      video: 'https://drive.google.com/file/d/1dPNWaTvVeWyNvQqClkPUToJfMvbh77bk/view?usp=sharing',
+      resumo:
+        '1 Timóteo 4.15 pede a Timóteo que seja exemplo "para que todos vejam o seu progresso" — não perfeição imediata, mas progresso visível. Passagem que DeYoung descreve como fonte tanto de consolo quanto de leve desânimo: fecha o livro lembrando que a santidade é caminhada, não linha de chegada.',
     },
   ],
 };
