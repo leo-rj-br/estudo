@@ -78,7 +78,7 @@ window.ESTUDO = {
     },
     {
       id: 'brecha-em-nossa-santidade',
-      titulo: 'A Brecha em Nossa Santidade',
+      titulo: 'Brecha em Nossa Santidade',
       autor: 'Kevin DeYoung',
       periodo: '2025 · 2º semestre',
       livro: 'livro-brecha-em-nossa-santidade',
