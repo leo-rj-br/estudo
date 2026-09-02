@@ -168,6 +168,7 @@ window.ESTUDO = {
       ],
       responsavel: 'Eduardo',
       foto: 'jovens',
+      video: 'https://www.youtube.com/watch?v=jiGxQmO5PzQ',
       resumo:
         'Por trás do culto à experiência imediata mora um niilismo: “comamos e bebamos, que amanhã morreremos”. Horton contrapõe o catecismo de Nietzsche ao de Agostinho e expõe a contradição que nos parte ao meio: exigimos autonomia total e ao mesmo tempo ansiamos por comunidade — e não dá para ter as duas. Daí a imagem que ficou do livro: vivemos numa era de jet-ski, deslizando pela superfície de muita coisa, quando o que forma alguém é mergulhar fundo.',
     },
