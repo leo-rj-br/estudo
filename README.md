@@ -8,6 +8,10 @@ estudo, as terças-feiras, e não o mês inteiro. Ao abrir qualquer data aparece
 do tema, os tópicos da semana, quem conduz e — nos encontros já realizados — o **player
 do vídeo, que toca dentro da própria página**, sem precisar sair para o Drive.
 
+Em [`/agenda`](agenda/) fica a **agenda de eventos da igreja** — Ceia do Senhor, reuniões,
+conferências e outros encontros, à parte do calendário do estudo. Ver a seção
+[Agenda de eventos](#agenda-de-eventos) mais abaixo.
+
 ---
 
 ## Como atualizar o site
@@ -161,6 +165,77 @@ No bloco `config`:
 
 ---
 
+## Agenda de eventos
+
+Em [`/agenda`](agenda/) fica a página com os eventos da igreja — Ceia do Senhor,
+reuniões, seminários, conferências — separada do calendário do estudo porque tem
+outro ritmo: em vez de um encontro semanal, são eventos espalhados e às vezes de mais
+de um dia, cada um com sua categoria e cor.
+
+**Só existe um arquivo para editar: [`data/agenda.js`](data/agenda.js).** Mesma regra
+do calendário do estudo: não é preciso mexer em HTML, CSS ou JavaScript, e **antes de
+commitar, sempre rode**:
+
+```bash
+node scripts/validar-agenda.js
+```
+
+### Como adicionar um evento
+
+Acrescente um item em `eventos`, na ordem que preferir — o site ordena por data
+sozinho. Só `data` e `categoria` são obrigatórios:
+
+```js
+{ data: '2026-12-06', categoria: 'ceia' }
+```
+
+Sem `titulo`, o site usa o nome da categoria (ex.: "Ceia do Senhor"). Um evento de mais
+de um dia usa `fim`:
+
+```js
+{ data: '2026-09-25', fim: '2026-09-26', categoria: 'conferencia',
+  titulo: 'Conferência Manifesto 2026' }
+```
+
+Um mesmo dia pode ter mais de um evento — é o caso de 1º de novembro de 2026, com Ceia
+do Senhor e Comunhão dos Santos no mesmo domingo. Basta repetir a data em dois itens.
+
+| Campo | Obrigatório | Descrição |
+|---|---|---|
+| `data` | sim | `"AAAA-MM-DD"`, primeiro dia do evento |
+| `categoria` | sim | id de uma categoria da lista `categorias` |
+| `fim` | — | `"AAAA-MM-DD"` — último dia, só em eventos de mais de um dia |
+| `titulo` | — | nome próprio, se diferente do nome da categoria |
+| `horario` | — | hora de início, `"HH:MM"` — sem isso o evento entra como **dia inteiro** |
+| `horarioFim` | — | hora de término, `"HH:MM"` (só faz sentido com `horario`) |
+| `local` | — | onde acontece — sem isso usa `config.localPadrao` |
+| `descricao` | — | parágrafo curto sobre o evento |
+| `link` | — | inscrição, formulário ou página com mais detalhes |
+
+### Categorias e cores
+
+As doze categorias de `categorias` — e as cores de cada uma — vieram do calendário
+impresso 2026 da igreja, para manter a mesma associação visual que os membros já
+conhecem. A cor é sempre decorativa: o nome da categoria aparece por escrito ao lado
+dela, tanto no calendário quanto na agenda, então a cor nunca é a única forma de saber
+do que se trata. Para trocar a cor de uma categoria ou criar uma nova, edite ou
+acrescente um item ali — `cor` é o fundo e `texto` é a cor da letra sobre esse fundo
+(preto `#111111` ou branco `#ffffff`, o que melhor contrasta).
+
+### O que a página faz
+
+- **Próximo evento em destaque**, com contagem regressiva e botão para adicionar à agenda
+- **Calendário do mês inteiro** — não só os dias de evento — com navegação entre meses
+  e um clique em qualquer dia com evento abre o detalhe
+- **Agenda** em lista cronológica, agrupada por mês, com os eventos anteriores recolhidos
+- **Filtro por categoria** e busca por evento, categoria, data ou local
+- **"Adicionar à agenda"** — baixa um `.ics`; eventos sem `horario` entram como
+  evento de dia inteiro, do jeito que o Google Agenda, Apple e Outlook esperam
+- **Link direto para uma data**: `estudo.comunidademanifesto.com/agenda/#2026-09-06`
+- Mesmo tema claro/escuro do site do estudo, com preferência própria e independente
+
+---
+
 ## Design
 
 O sistema visual segue a linguagem do Notion, a partir das referências fornecidas:
@@ -204,13 +279,17 @@ permanece.
 ## Estrutura
 
 ```
-index.html               página única
-data/calendario.js       ← o conteúdo (o único arquivo a editar)
-assets/css/app.css       sistema visual
+index.html               página do estudo
+agenda/index.html        página da agenda de eventos
+data/calendario.js       ← conteúdo do estudo (o único arquivo a editar ali)
+data/agenda.js           ← conteúdo da agenda (o único arquivo a editar aqui)
+assets/css/app.css       sistema visual, usado pelas duas páginas
+assets/css/agenda.css    componentes só da agenda (grade do mês, etiquetas de categoria)
 assets/css/fonts.css     @font-face das fontes locais
 assets/fonts/            Inter e Newsreader (OFL 1.1)
 assets/img/              fotos em WebP, logotipos em SVG e o cartão social
-assets/js/app.js         interface
+assets/js/app.js         interface do estudo
+assets/js/agenda.js      interface da agenda
 CNAME                    domínio para o GitHub Pages
 ```
 
@@ -226,12 +305,13 @@ no Unsplash.
 ## Publicar e a rede de segurança
 
 O site é publicado pelo workflow [`.github/workflows/pages.yml`](.github/workflows/pages.yml),
-a cada push na `main`. Ele faz duas coisas, nessa ordem:
+a cada push na `main`. Ele faz três coisas, nessa ordem:
 
 1. Roda `node scripts/validar-calendario.js`
-2. Só se passar, publica no GitHub Pages
+2. Roda `node scripts/validar-agenda.js`
+3. Só se as duas passarem, publica no GitHub Pages
 
-**Se a validação falhar, a publicação não acontece — o site continua no ar na
+**Se alguma validação falhar, a publicação não acontece — o site continua no ar na
 última versão que passou.** Antes disso existia, um erro de sintaxe em
 `data/calendario.js` deixava o site inteiro em branco até alguém notar e corrigir
 manualmente. Para ver o resultado de cada validação, ou publicar de novo sem um
@@ -253,9 +333,10 @@ sessão do Claude — precisa de **acesso de escrita (push)** ao repositório, n
 leitura. Sem isso, o commit falha silenciosamente ou com erro de permissão; foi o que
 aconteceu com a automação semanal deste projeto antes de identificarmos a causa.
 
-Antes de um processo automatizado commitar, ele deve rodar o mesmo validador que o
-CI roda: `node scripts/validar-calendario.js`. Assim um erro é pego ali mesmo, sem
-nem chegar a virar um push — mais rápido que esperar o workflow falhar no GitHub.
+Antes de um processo automatizado commitar, ele deve rodar os mesmos validadores que o
+CI roda: `node scripts/validar-calendario.js` e `node scripts/validar-agenda.js`. Assim
+um erro é pego ali mesmo, sem nem chegar a virar um push — mais rápido que esperar o
+workflow falhar no GitHub.
 
 ### Rodar localmente
 

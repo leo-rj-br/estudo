@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Agenda de Eventos · Comunidade Manifesto</title>
+<meta name="description" content="Agenda de eventos da Comunidade Manifesto: o próximo evento em destaque, o calendário do ano e a lista completa de encontros, cultos e reuniões da igreja.">
+<meta name="theme-color" content="#f6f5f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#191919" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://estudo.comunidademanifesto.com/agenda/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Comunidade Manifesto">
+<meta property="og:title" content="Agenda de Eventos · Comunidade Manifesto">
+<meta property="og:description" content="O próximo evento em destaque, o calendário do ano e a lista completa de encontros da igreja.">
+<meta property="og:url" content="https://estudo.comunidademanifesto.com/agenda/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/favicon.svg">
+
+<link rel="preload" href="../assets/fonts/inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/app.css">
+<link rel="stylesheet" href="../assets/css/agenda.css">
+
+<script>
+  // Aplica o tema antes da primeira pintura, para não haver "flash".
+  try {
+    var t = localStorage.getItem('agenda:tema');
+    if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.dataset.theme = t;
+  } catch (e) {}
+</script>
+</head>
+
+<body>
+<a class="sr-only" href="#programa">Ir para a agenda</a>
+
+<header class="head">
+  <div class="wrap head__in">
+    <a class="brand" href="./">
+      <span class="brand__logo" aria-hidden="true"></span>
+      <span class="brand__mark">Agenda</span>
+      <span class="brand__sub">Comunidade Manifesto</span>
+    </a>
+    <nav class="nav" aria-label="Seções">
+      <a href="#hero">Próximo</a>
+      <a href="#programa">Eventos</a>
+      <a href="../">Estudo</a>
+    </nav>
+    <button class="icon-btn theme-toggle" id="tema" type="button" aria-label="Alternar entre tema claro e escuro"></button>
+  </div>
+</header>
+
+<main>
+  <!-- Herói: o próximo evento, sempre em destaque -->
+  <section class="hero" id="hero" aria-labelledby="heroLabel">
+    <h2 class="sr-only" id="heroLabel">Próximo evento</h2>
+  </section>
+
+  <!-- Programa: calendário do mês + agenda cronológica -->
+  <section class="programa" id="programa">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <h2>Eventos</h2>
+        <p>Cultos, reuniões e encontros da igreja</p>
+      </div>
+
+      <div class="toolbar">
+        <div class="seg" role="tablist" aria-label="Modo de visualização">
+          <span class="seg__pill" aria-hidden="true"></span>
+          <button type="button" role="tab" data-view="calendario" aria-selected="true" aria-controls="panelCalendario">Calendário</button>
+          <button type="button" role="tab" data-view="agenda" aria-selected="false" aria-controls="panelAgenda">Agenda</button>
+        </div>
+
+        <div class="search">
+          <label class="sr-only" for="busca">Buscar por evento, categoria, data ou local</label>
+          <input id="busca" type="search" autocomplete="off" spellcheck="false"
+                 placeholder="Buscar evento, categoria ou data…">
+          <button class="search__clear" id="limpar" type="button" aria-label="Limpar busca"></button>
+        </div>
+      </div>
+
+      <div class="chips" id="toolCategorias" role="group" aria-label="Filtrar por categoria"></div>
+
+      <div class="panel" id="panelCalendario" role="tabpanel" aria-label="Calendário" style="margin-top:var(--s-6)">
+        <div id="calendario"></div>
+      </div>
+
+      <div class="panel" id="panelAgenda" role="tabpanel" aria-label="Agenda" hidden style="margin-top:var(--s-6)">
+        <div id="agenda"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div class="foot__brand">
+      <a class="foot__selo" href="https://comunidademanifesto.com" aria-label="Comunidade Manifesto"></a>
+      <p class="foot__word">“Permanecei na minha palavra… e conhecereis a verdade.”</p>
+    </div>
+    <div class="foot__meta">
+      <p><strong>Comunidade Manifesto</strong> · Rio de Janeiro</p>
+      <p>Toda a agenda da igreja num só lugar, sempre atualizada.</p>
+      <p><a href="https://comunidademanifesto.com">comunidademanifesto.com</a> · <a href="../">Calendário do estudo</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="../data/agenda.js"></script>
+<script src="../assets/js/agenda.js"></script>
+</body>
+</html>
