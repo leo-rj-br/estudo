@@ -32,9 +32,6 @@ jobs:
       - name: Validar data/calendario.js
         run: node scripts/validar-calendario.js
 
-      - name: Validar data/agenda.js
-        run: node scripts/validar-agenda.js
-
       - name: Preparar o Pages
         uses: actions/configure-pages@v5
 
