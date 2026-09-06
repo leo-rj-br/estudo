@@ -135,7 +135,7 @@
 
   const hojeD = toDate(HOJE);
   const ui = {
-    view: 'calendario',
+    view: 'agenda',
     busca: '',
     categoria: 'todos',
     ano: proximo ? toDate(proximo.data).getFullYear() : hojeD.getFullYear(),
@@ -760,7 +760,7 @@
     renderHero();
     renderFiltros();
     renderAgenda();
-    setView('calendario');
+    setView('agenda');
     bind();
     observarReveal();
 

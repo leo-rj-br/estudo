@@ -71,8 +71,8 @@
       <div class="toolbar">
         <div class="seg" role="tablist" aria-label="Modo de visualização">
           <span class="seg__pill" aria-hidden="true"></span>
-          <button type="button" role="tab" data-view="calendario" aria-selected="true" aria-controls="panelCalendario">Calendário</button>
-          <button type="button" role="tab" data-view="agenda" aria-selected="false" aria-controls="panelAgenda">Agenda</button>
+          <button type="button" role="tab" data-view="agenda" aria-selected="true" aria-controls="panelAgenda">Agenda</button>
+          <button type="button" role="tab" data-view="calendario" aria-selected="false" aria-controls="panelCalendario">Calendário</button>
         </div>
 
         <div class="search">
@@ -85,12 +85,12 @@
 
       <div class="chips" id="toolCategorias" role="group" aria-label="Filtrar por categoria"></div>
 
-      <div class="panel" id="panelCalendario" role="tabpanel" aria-label="Calendário" style="margin-top:var(--s-6)">
-        <div id="calendario"></div>
+      <div class="panel" id="panelAgenda" role="tabpanel" aria-label="Agenda" style="margin-top:var(--s-6)">
+        <div id="agenda"></div>
       </div>
 
-      <div class="panel" id="panelAgenda" role="tabpanel" aria-label="Agenda" hidden style="margin-top:var(--s-6)">
-        <div id="agenda"></div>
+      <div class="panel" id="panelCalendario" role="tabpanel" aria-label="Calendário" hidden style="margin-top:var(--s-6)">
+        <div id="calendario"></div>
       </div>
     </div>
   </section>
