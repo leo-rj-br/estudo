@@ -182,6 +182,7 @@ window.ESTUDO = {
       ],
       responsavel: 'Bel',
       foto: 'transito',
+      video: 'https://www.youtube.com/watch?v=-gePf5I0_Fw',
       resumo:
         'Setembro de 2003: a revista Adbusters lança seu próprio tênis “subversivo”. Dali em diante, diz Horton, ficou claro que a rebeldia não ameaça o sistema — ela é o sistema. E vem a ironia que dá nome ao capítulo: criado num meio que se julgava sem tradição, ele mostra que a corrida pela Próxima Grande Coisa é, ela mesma, uma tradição antiga, herdada do avivamentismo norte-americano.',
     },
