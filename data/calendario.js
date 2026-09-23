@@ -193,6 +193,7 @@ window.ESTUDO = {
       topicos: ['Ansiando por avivamento (p. 112–122)'],
       responsavel: 'Alamo',
       foto: 'transito',
+      video: 'https://www.youtube.com/watch?v=IBHtSSPDWL4',
       resumo:
         'Há duas maneiras de entender o avivamento. A de Edwards: uma “surpreendente obra de Deus”, bênção extraordinária sobre os seus meios ordinários de graça. E a de Finney: algo sob nosso controle, que se produz com os passos certos. Horton mostra que a segunda é uma abordagem tecnológica da religião — se até Deus obedece a causa e efeito, o culto vira técnica. Encontro desconfortável, e dos mais esclarecedores do semestre.',
     },
