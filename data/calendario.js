@@ -207,6 +207,7 @@ window.ESTUDO = {
       ],
       responsavel: 'Eduardo',
       foto: 'transito',
+      video: 'https://www.youtube.com/watch?v=ZGFFdxRzatI',
       resumo:
         'A alternativa que Horton propõe: nutrição pactual — crescimento lento na mesma direção, em vez de picos no gráfico. E a pergunta que dá título à seção, “como foi a igreja hoje?”, que nossos antepassados não entenderiam, porque ninguém pergunta como foram as refeições da semana. O ponto é que no culto comum acontece algo nada comum: quem está presente é Deus, que julga, justifica, lava e alimenta pelos meios que prometeu usar.',
     },
