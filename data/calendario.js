@@ -91,6 +91,7 @@ window.ESTUDO = {
       subtitulo: 'Desenvolvendo em sua cidade um ministério equilibrado e centrado no evangelho',
       autor: 'Timothy Keller',
       periodo: '2025 · 1º semestre',
+      livro: 'livro-igreja-centrada',
       capa: 'vizinhanca',
       epigrafe:
         'O evangelho não é um bom conselho, mas uma boa notícia — e é ele, e não um método importado, que deve moldar a cidade, a cultura e o movimento da igreja.',
