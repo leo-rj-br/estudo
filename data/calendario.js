@@ -957,218 +957,435 @@ window.ESTUDO = {
       data: '2025-01-14',
       modulo: 'igreja-centrada',
       capitulo: 'Introdução',
+      topicos: [
+        'Sucesso, fidelidade ou frutos?',
+        'Hardware, middleware, software',
+        'Compromissos da igreja centrada: evangelho, cidade e movimento',
+      ],
       responsavel: 'Eduardo',
       video: 'https://drive.google.com/file/d/14vuxsDL41ercWRA2ifAoD07OzX7xcm9Z/view?usp=sharing',
+      resumo:
+        'Keller propõe que o ministério precisa de uma visão teológica, um nível intermediário entre a doutrina e os programas, que resulte da reflexão sobre o evangelho e sobre a cultura local. Essa visão se expressa em três compromissos, evangelho, cidade e movimento, cada um vivido em equilíbrio entre dois extremos. O livro não traça um modelo a ser copiado, mas uma forma de pensar o ministério.',
     },
     {
       data: '2025-01-21',
       modulo: 'igreja-centrada',
       capitulo: '1. O evangelho não corresponde a tudo',
+      topicos: [
+        'O evangelho tem dois inimigos iguais e opostos',
+        'O evangelho tem capítulos',
+        'O correto relacionamento do evangelho com tudo no ministério',
+      ],
       responsavel: 'Álamo',
       video: 'https://drive.google.com/file/d/1TpR41VRpEhd2WDiHmEWhRYtgoUX7qh0b/view?usp=sharing',
+      resumo:
+        'O evangelho é notícia sobre o que foi feito por nós, e não conselho sobre o que devemos fazer. Precisa ser distinguido de seus resultados, embora esteja ligado a eles, e é sempre crucificado entre a religião e a irreligião, como entre dois ladrões. Keller insiste: “O evangelho é uma boa notícia, não um bom conselho.” Ele também mostra que o evangelho é uma narrativa que responde a perguntas sobre a origem, a queda, a restauração e a resposta humana.',
     },
     {
       data: '2025-01-28',
       modulo: 'igreja-centrada',
       capitulo: '2. O evangelho não é algo simples',
+      topicos: [
+        'A Bíblia não oferece um esboço-padrão do evangelho',
+        'O evangelho precisa ser conectado com o enredo e com os temas da Bíblia',
+        'O evangelho deve ser contextualizado',
+      ],
       responsavel: 'Eduardo',
       video: 'https://drive.google.com/file/d/1WD2ikpqad_nfdaHObhMGCUfnZmnJDXT9/view?usp=sharing',
+      resumo:
+        'O evangelho não pode ser reduzido a um formato único, recitado em qualquer lugar e tempo. Os autores bíblicos o apresentam de modos distintos, com temas como reino, aliança, exílio e retorno ao lar, e Paulo variava a apresentação conforme os ouvintes. Por isso o evangelho é capaz de responder às esperanças e aos ídolos de cada cultura. Nas palavras do autor: “Trata-se de uma mensagem singular, mas não é uma mensagem simples.”',
     },
     {
       data: '2025-02-04',
       modulo: 'igreja-centrada',
       capitulo: '3. O evangelho influencia todas as coisas',
+      topicos: [
+        'A riqueza do evangelho',
+        'A morte reconciliatória e o aspecto de dentro para fora do evangelho',
+        'O evangelho muda todas as coisas',
+      ],
       responsavel: 'Álamo',
       video: 'https://drive.google.com/file/d/1J6hrlB29O-724_RRSrwdld6SwV_0CkiP/view?usp=sharing',
+      resumo:
+        'O evangelho não é só o ponto de partida da vida cristã, mas o poder que transforma a mente, o coração e a vida inteira, alcançando o trabalho, os relacionamentos, a sexualidade e a cultura. Keller apresenta seus aspectos de cima para baixo (encarnação), de dentro para fora (expiação) e de frente para trás (ressurreição). Citando Newbigin, a narrativa cristã é lente “não algo para o qual olhamos, mas através do qual olhamos”.',
     },
     {
       data: '2025-02-11',
       modulo: 'igreja-centrada',
       capitulo: '4. A necessidade da renovação pelo evangelho',
+      topicos: [
+        'Definições de avivamento',
+        'Análise dos avivamentos',
+        'O papel singular do coração',
+      ],
       responsavel: 'Eduardo',
       video: 'https://drive.google.com/file/d/1Cd3qNmSEljgLdlP_aCyvA0KW8yqVbnFH/view?usp=sharing',
+      resumo:
+        'A renovação pelo evangelho é o resgate de um evangelho de efeitos transformadores, vivido e não apenas conhecido. Keller distingue esse entendimento de avivamento como espetáculo ou como atividade intensa e analisa a história dos grandes despertamentos, com seus benefícios e seus perigos. Defende um avivamento equilibrado, que passa pelos meios de graça da igreja e alcança também quem está dentro dela, mas nunca se converteu de fato.',
     },
     {
       data: '2025-02-18',
       modulo: 'igreja-centrada',
       capitulo: '5. A essência da renovação pelo evangelho',
+      topicos: [
+        'Três maneiras de responder a Deus',
+        'Mudança de comportamento pelo moralismo e pelo evangelho',
+        'A importância da idolatria',
+      ],
       responsavel: 'Álamo',
       video: 'https://drive.google.com/file/d/1hSSbe2P2INTjSWalbjp7-HQUcDvOw_Dj/view?usp=sharing',
+      resumo:
+        'A religião (“Obedeço; portanto, sou aceito”) é uma falsificação convincente do evangelho (“Sou aceito; portanto, obedeço”). Além de obedecer ou desobedecer a Deus, há uma terceira via: obedecer por gratidão pela graça recebida, e não para se autossalvar. O moralismo muda o comportamento por medo, enquanto o evangelho o muda pela alegria. Por isso é preciso expor os ídolos do coração, formas ocultas de autossalvação.',
     },
     {
       data: '2025-02-25',
       modulo: 'igreja-centrada',
       capitulo: '6. A obra da renovação pelo evangelho',
+      topicos: [
+        'Os meios da renovação pelo evangelho',
+        'Evangelho e inovação',
+        'A pregação que promove a renovação pelo evangelho',
+      ],
       responsavel: 'Eduardo',
       video: 'https://drive.google.com/file/d/1CVLPwmzPb6ddC77IFCpM-_nRee5_y70_/view?usp=sharing',
+      resumo:
+        'Embora a fonte do avivamento seja o Espírito Santo, ele usa meios como a oração extraordinária, a pregação, o pastoreio, a adoração e a aplicação do evangelho por leigos treinados. Keller acrescenta a criatividade na comunicação e dedica atenção a cinco características da pregação que gera renovação, a começar por distinguir religião e evangelho. O sinal central é que a igreja para de basear a justificação na santificação.',
     },
     {
       data: '2025-03-11',
       modulo: 'igreja-centrada',
       capitulo: '7. Contextualização internacional',
+      topicos: [
+        'Contextualização saudável',
+        'Um breve histórico do termo',
+        'O perigo da não contextualização',
+      ],
       responsavel: 'Álamo',
       video: 'https://drive.google.com/file/d/1TJ990kwDCfk1lHyP_yBPw4vuuiIftVTu/view?usp=sharing',
+      resumo:
+        'Contextualizar não é dizer às pessoas o que querem ouvir, mas dar respostas bíblicas às perguntas que elas fazem, em linguagem e formas que compreendam. Keller reconhece os riscos do termo, ligado ao liberalismo, mas afirma que toda igreja já está adaptada a alguma cultura, queira ou não. O perigo real é contextualizar sem perceber: “Todos contextualizam, mas poucos pensam seriamente sobre como estão fazendo isso.”',
     },
     {
       data: '2025-03-18',
       modulo: 'igreja-centrada',
       capitulo: '8. Contextualização equilibrada',
+      topicos: [
+        'A teologia contextual e Harvie Conn',
+        'A ponte e a espiral',
+        'Contextualização equilibrada',
+      ],
       responsavel: 'Eduardo',
       video: 'https://drive.google.com/file/d/1Da3zo2fQLCmqc_2aNh8DyxSbPZVJ18wV/view?usp=sharing',
+      resumo:
+        'Retomando a imagem de John Stott, a comunicação cristã é uma ponte entre a Bíblia e o mundo atual. Keller descreve o espectro que vai da recusa da contextualização à submissão do texto bíblico à cultura, com base em Harvie Conn e em Richard Lints. Propõe uma contextualização equilibrada, que evita os dois extremos apoiando-se firmemente na autoridade da Bíblia e reconhece que a interpretação sofre influência cultural.',
     },
     {
       data: '2025-03-25',
       modulo: 'igreja-centrada',
       capitulo: '9. Contextualização bíblica',
+      topicos: [
+        'O texto de Romanos 1 e 2 e a natureza mista da cultura',
+        'O texto de 1Coríntios 9 e a flexibilidade em relação à cultura',
+        'O texto de 1Coríntios 1 e o equilíbrio bíblico',
+      ],
       responsavel: 'Álamo',
       video: 'https://drive.google.com/file/d/1aLPTPXWN7zE-d4MosEyZxA3tBFw2Nl0D/view?usp=sharing',
+      resumo:
+        'O capítulo fundamenta a contextualização em três textos: Romanos 1 e 2 mostra que toda cultura mistura o bom e o mau; 1Coríntios 9 mostra a flexibilidade de Paulo para ganhar o maior número possível; 1Coríntios 1.22-25 oferece a fórmula, em que Cristo crucificado desafia tanto os que buscam sinais quanto os que buscam sabedoria. Keller conclui que a contextualização fiel decorre do próprio evangelho da graça.',
     },
     {
       data: '2025-04-01',
       modulo: 'igreja-centrada',
       capitulo: '10. Contextualização ativa',
+      topicos: [
+        'Entrando na cultura e adaptando-se a ela',
+        'Desafiando e confrontando a cultura',
+        'Apelando aos ouvintes e oferecendo consolo',
+      ],
       responsavel: 'Eduardo',
       video: 'https://drive.google.com/file/d/1IpopC3rB-0DTjCRRuRNKW0WqBEOLWvvG/view?usp=sharing',
+      resumo:
+        'Keller compara a contextualização a uma demolição: é preciso perfurar a rocha e também acender os explosivos. Primeiro, entender e identificar-se com os ouvintes, conhecendo a cultura por dentro, seus temores, esperanças e ídolos. Depois, desafiar essa cultura mostrando que ela busca coisas boas de modo autodestrutivo, e por fim apelar ao coração e oferecer em Cristo o consolo que as narrativas culturais prometem sem cumprir.',
     },
     {
       data: '2025-04-08',
       modulo: 'igreja-centrada',
       capitulo: '11. A tensão da cidade',
+      topicos: [
+        'Definição de cidade',
+        'A cidade no Antigo Testamento',
+        'Os profetas e a cidade',
+      ],
       responsavel: 'Álamo',
       video: 'https://drive.google.com/file/d/1lGiSvC8c6-yhkYqYUWX15y3YKulTtv45/view?usp=sharing',
+      resumo:
+        'A Bíblia tem uma visão equilibrada da cidade, marcada por uma tensão: ela concentra ao mesmo tempo a produtividade, a diversidade, a cultura e o pecado. Keller acompanha o tema desde Caim, que constrói a primeira cidade, passando pelas cidades de refúgio e por Jerusalém, até o chamado aos exilados para buscarem o bem da Babilônia (Jr 29.7). Como ele diz, “as cidades são iguais a todos os lugares, só que em muito maior grau”.',
     },
     {
       data: '2025-04-15',
       modulo: 'igreja-centrada',
       capitulo: '12. A redenção e a cidade',
+      topicos: [
+        'Residentes estrangeiros e a cultura',
+        'A importância do ministério da cidade na Bíblia',
+        'A cidade da graça comum',
+      ],
       responsavel: 'Eduardo',
       video: 'https://drive.google.com/file/d/1ra8oD_2ib_6_TFvIuMXMR30c3j56F8-R/view?usp=sharing',
+      resumo:
+        'O modelo do exílio ajuda a entender a igreja no Novo Testamento: estrangeiros que servem a cidade e a ela oferecem uma “leve diferença”. A missão de Paulo e da igreja primitiva foi essencialmente urbana, com impacto cultural, e a Bíblia termina com uma cidade, a Nova Jerusalém. Keller resume: “A cidade é uma estrutura social intrinsecamente positiva com um passado diversificado e um lindo futuro.”',
     },
     {
       data: '2025-04-22',
       modulo: 'igreja-centrada',
       capitulo: '13. O chamado à cidade',
+      topicos: [
+        'Globalização e renascimento',
+        'O desafio do ministério nas cidades',
+        'A oportunidade de ministrar nas cidades',
+      ],
       responsavel: 'Álamo',
       video: 'https://drive.google.com/file/d/1n1ds63SAy78REOeQ9uthCgCf_OAhwv4r/view?usp=sharing',
+      resumo:
+        'As cidades crescem em número e em influência por causa da globalização, e muitas se reinventaram, como Minneapolis e Milão. Keller trata do desafio que isso impõe à missão, de escala, custo e recursos, mas também da oportunidade de alcançar pessoas difíceis de alcançar e influenciar a cultura. Sua conclusão: “Se os cristãos querem alcançar os não alcançados, têm de ir para as cidades.”',
     },
     {
       data: '2025-04-29',
       modulo: 'igreja-centrada',
       capitulo: '14. O evangelho para a cidade',
+      topicos: [
+        'Como a cidade nos impacta',
+        'Como os cristãos devem se relacionar com a cidade?',
+        'Sete características de uma igreja para a cidade',
+      ],
       responsavel: 'Eduardo',
       video: 'https://drive.google.com/file/d/15nVjYcHeGofAi7iPkjPWQJszEKPxU6ir/view?usp=sharing',
+      resumo:
+        'Keller esclarece que não pede que todos se mudem para os centros urbanos, mas que os cristãos amem e sirvam a cidade onde estiverem. Mostra que a cidade forma as pessoas, pois a comunicação e a comunidade dependem do contato face a face, e propõe atitudes de apreço por ela. Descreve sete características de uma igreja urbana eficaz, como a sensibilidade às diferenças culturais e a integração entre fé e obras, sem dispensar as marcas da igreja verdadeira.',
     },
     {
       data: '2025-05-06',
       modulo: 'igreja-centrada',
       capitulo: '15. A crise cultural da igreja',
+      topicos: [
+        'Mudança cultural',
+        'A postura do pietismo',
+        'Capital simbólico',
+      ],
       responsavel: 'Álamo',
       video: 'https://drive.google.com/file/d/1096JH99VVuVOyc82JZke96B2RbPTjmcQ/view?usp=sharing',
+      resumo:
+        'A igreja americana vive uma crise cultural: o Ocidente se afastou dos valores tradicionais, os jovens se afastam da fé e a postura pietista de ignorar a cultura já não se sustenta. Keller usa a noção de capital simbólico, de James Hunter, para explicar por que o grande número de evangélicos tem pouco impacto cultural. Descreve então o surgimento de novos modelos de engajamento, do neocalvinismo ao debate com a visão dos dois reinos.',
     },
     {
       data: '2025-05-13',
       modulo: 'igreja-centrada',
       capitulo: '16. As respostas culturais da igreja',
+      topicos: [
+        'Modelo transformacionista',
+        'Modelo da relevância',
+        'Modelo contracultural',
+      ],
       responsavel: 'Eduardo',
       video: 'https://drive.google.com/file/d/1h7-GT2n4L43mEmdpE9d4CBD3SOcx4gK3/view?usp=sharing',
+      resumo:
+        'A partir dos tipos de Niebuhr, Keller descreve quatro respostas atuais à pergunta sobre como se relacionar com a cultura: transformacionista, da relevância, contracultural e dos dois reinos. De cada um expõe as convicções e o fundamento bíblico, depois aponta os problemas, por exemplo o triunfalismo, a adaptação excessiva à cultura, o pessimismo e o peso exagerado dado à graça comum. Nota também que os proponentes já se corrigem entre si.',
     },
     {
       data: '2025-05-20',
       modulo: 'igreja-centrada',
       capitulo: '17. Por que todos os modelos estão certos… e errados',
+      topicos: [
+        'Duas perguntas sobre cultura',
+        'Recursos da teologia bíblica',
+        'O evangelho e o reino',
+      ],
       responsavel: 'Álamo',
       video: 'https://drive.google.com/file/d/1QCquNPpE9VJd9U-i9tKRJyoqL-vDEoPN/view?usp=sharing',
+      resumo:
+        'Cada modelo tem apoio bíblico e também falhas. Keller reduz as diferenças a duas perguntas: devemos ser pessimistas ou otimistas quanto à mudança cultural, e a cultura é redimível ou está perdida? Com a teologia bíblica (criação, queda, redenção e consumação), a antítese, a graça comum e o reino, mostra que a Bíblia pede um equilíbrio em que o pensamento seja controlado por tudo o que ela ensina, “simultaneamente e o tempo todo”.',
     },
     {
       data: '2025-05-27',
       modulo: 'igreja-centrada',
       capitulo: '18. Engajamento cultural pela fusão das perspectivas',
+      topicos: [
+        'Busque o centro',
+        'Identifique a estação em que você se encontra',
+        'Lembre-se da diferença entre organizado e orgânico',
+      ],
       responsavel: 'Eduardo',
       video: 'https://drive.google.com/file/d/1qJJX7SOHXaQWBKNLOBQu6LUM1FoKB-7b/view?usp=sharing',
+      resumo:
+        'Keller propõe princípios práticos: aprender com todos os modelos, buscando o centro, sem tentar uma fusão perfeita, pois cada pessoa tem dons, chamado e momento diferentes. Recomenda distinguir a igreja organizada da igreja orgânica, agir a partir da Bíblia, da cultura e dos próprios dons e não por reação a outros cristãos, e manter clara a missão. O caso de William Stuntz ilustra um engajamento cultural fiel e equilibrado.',
     },
     {
       data: '2025-06-03',
       modulo: 'igreja-centrada',
       capitulo: '19. A busca pela igreja missional',
+      topicos: [
+        'O resgate Newbigin-Bosch',
+        'O movimento contemporâneo da igreja missional',
+        'O que essas abordagens têm em comum?',
+      ],
       responsavel: 'Álamo',
       video: 'https://drive.google.com/file/d/1Anc2zjpFTra_TXTnmy2ShRSHSVI7hF9v/view?usp=sharing',
+      resumo:
+        'O termo missional se popularizou em 1998, a partir das ideias de Lesslie Newbigin e David Bosch sobre um encontro missionário com o Ocidente, que deixou de ser cristandade. Keller reconhece diferentes correntes, evangelística, encarnacional, contextual, comunal e outras, e identifica o que elas têm em comum: o cativeiro cultural da igreja e a necessidade de comunicar o evangelho em uma sociedade secular e pluralista.',
     },
     {
       data: '2025-06-10',
       modulo: 'igreja-centrada',
       capitulo: '20. Centrando a igreja missional',
+      topicos: [
+        'Primeiro problema: abrangência insuficiente',
+        'Segundo problema: ligação excessiva a determinado formato',
+        'Terceiro problema: falta de entendimento claro do evangelho',
+      ],
       responsavel: 'Eduardo',
       video: 'https://drive.google.com/file/d/16bDpbmmEa2Qb_EYeHiiPCDCSfhtGiZVN/view?usp=sharing',
+      resumo:
+        'Keller aponta três problemas no debate missional: a abrangência insuficiente do evangelismo, o apego a um formato de igreja e, o maior deles, a falta de um entendimento claro do evangelho. Defende que uma igreja pode ser sólida na doutrina e missional ao mesmo tempo, e enumera seis marcas: confrontar os ídolos, contextualizar com linguagem coloquial, preparar os membros para a missão em toda a vida, ser contracultura para o bem comum, esperar a presença de não crentes e exercitar a união.',
     },
     {
       data: '2025-06-17',
       modulo: 'igreja-centrada',
       capitulo: '21. Preparando as pessoas para a vida missional',
+      topicos: [
+        'A dinâmica do ministério leigo',
+        'O evangelismo missional por intermédio de pequenas decisões',
+        'Criando uma dinâmica de ministério leigo',
+      ],
       responsavel: 'Álamo',
       video: 'https://drive.google.com/file/d/1OM1iF2uRNb1cg32isl24gBn8yujjksm9/view?usp=sharing',
+      resumo:
+        'Já não vivemos na cristandade, e por isso a igreja precisa preparar todos os membros para o ministério do evangelho em seu dia a dia, e não apenas depender do clérigo. Keller mostra que muitos chegam à fé por pequenas decisões e descreve três fatores da dinâmica leiga: crentes com integridade relacional, apoio pastoral e ambientes seguros. E observa: “O evangelismo deve ser natural, e não ditado por uma lista”.',
     },
     {
       data: '2025-06-24',
       modulo: 'igreja-centrada',
       capitulo: '22. O equilíbrio das frentes ministeriais',
+      topicos: [
+        'Equilibrando as metáforas bíblicas da igreja',
+        'Quebrando o paradigma liberal/conservador',
+        'Quatro frentes ministeriais',
+      ],
       responsavel: 'Eduardo',
       video: 'https://drive.google.com/file/d/1hqpMqeME8iic4CJN_1Jx-5uZ5L6V5UyK/view?usp=sharing',
+      resumo:
+        'A Bíblia usa dezenas de metáforas para a igreja, e cada modelo tende a enfatizar algumas em prejuízo de outras. Keller propõe um ministério integrativo em quatro frentes, culto, comunidade, misericórdia e justiça, e engajamento cultural, sabendo que nenhuma igreja faz tudo igualmente bem. O evangelho, segundo ele, também torna impossível encaixar a igreja no eixo liberal/conservador, e é útil distinguir a igreja institucional da orgânica.',
     },
     {
       data: '2025-07-01',
       modulo: 'igreja-centrada',
       capitulo: '23. Pondo as pessoas em contato com Deus',
+      topicos: [
+        'Princípios norteadores para pôr as pessoas em contato com Deus',
+        'O culto que conquista o mundo',
+        'Culto sensível às pessoas em busca de espiritualidade versus culto evangelístico',
+      ],
       responsavel: 'Álamo',
       video: 'https://drive.google.com/file/d/1vwbWRmhJ7GcoqVrVy3DuwFivdHKjiYvR/view?usp=sharing',
+      resumo:
+        'O culto deve nos pôr em contato com Deus, e há hoje uma grande variedade de estilos. Keller propõe considerar três perspectivas: a normativa (a Bíblia e o passado), a situacional (a cultura e a igreja local) e a existencial (temperamento e afinidades). Defende que o culto seja também evangelístico, compreensível aos visitantes e capaz de levá-los a um compromisso, em vez de apenas deixar o não crente à vontade.',
     },
     {
       data: '2025-07-08',
       modulo: 'igreja-centrada',
       capitulo: '24. Pondo as pessoas em contato umas com as outras',
+      topicos: [
+        'A comunidade e o nosso testemunho',
+        'A comunidade e o nosso caráter',
+        'Conselho prático para desenvolver uma comunidade',
+      ],
       responsavel: 'Eduardo',
       video: 'https://drive.google.com/file/d/1uwlXdsYmLECTRSrbQXMNpXormw2MD37V/view?usp=sharing',
+      resumo:
+        'O evangelho forma comunidades, e a comunidade não é apenas uma frente entre outras, mas molda o testemunho, o caráter, o comportamento e o conhecimento de Deus. Keller defende que “O verdadeiro segredo da missão eficaz e frutífera no mundo é a qualidade da nossa comunidade”. Reconhece que construí-la no centro das cidades é difícil e recorre a Bonhoeffer para fundamentá-la no evangelho da justificação.',
     },
     {
       data: '2025-07-15',
       modulo: 'igreja-centrada',
       capitulo: '25. Pondo as pessoas em contato com a cidade',
+      topicos: [
+        'Bases bíblicas para os ministérios de misericórdia e de justiça',
+        'Recursos limitados para a missão da igreja',
+        'Abordagens práticas para os ministérios de misericórdia e de justiça',
+      ],
       responsavel: 'Álamo',
       video: 'https://drive.google.com/file/d/1BSRu0k6u9z8eE5JLwW0kxwD_Tr_r_TzF/view?usp=sharing',
+      resumo:
+        'O evangelho também põe os cristãos em contato com os necessitados da cidade. Keller apresenta as bases bíblicas, os conceitos de próximo, serviço e justiça, responde à objeção dos recursos limitados e discute abordagens práticas, com diferentes níveis de ajuda aos pobres e o papel do diaconato. Conclui: “Um ministério integrativo significa entremear palavra e obras tanto quanto possível.”',
     },
     {
       data: '2025-07-22',
       modulo: 'igreja-centrada',
       capitulo: '26. Pondo as pessoas em contato com a cultura',
+      topicos: [
+        'O evangelho molda nosso trabalho',
+        'A cosmovisão por trás de seu trabalho',
+        'Como a igreja pode ajudar',
+      ],
       responsavel: 'Eduardo',
       video: 'https://drive.google.com/file/d/1frGiI4aFkgZebaAKY4Gyd9_Tc1JPdPGY/view?usp=sharing',
+      resumo:
+        'Na cristandade, a igreja podia limitar o discipulado à oração, ao estudo bíblico e ao evangelismo; hoje precisa ajudar os cristãos a pensar sua vocação. Keller rejeita o dualismo entre sagrado e secular, sugere analisar a cosmovisão de cada profissão e propõe apoio à prestação de contas, ao trabalho de modo caracteristicamente cristão e à excelência. Pois “se nosso trabalho é malfeito, nosso testemunho verbal só leva os ouvintes a desprezar nossas crenças”.',
     },
     {
       data: '2025-07-29',
       modulo: 'igreja-centrada',
       capitulo: '27. Movimentos e instituições',
+      topicos: [
+        'A soberania de Deus e o crescimento da igreja',
+        'Contraste entre movimentos e instituições',
+        'Como os movimentos e as instituições convergem',
+      ],
       responsavel: 'Álamo',
       video: 'https://drive.google.com/file/d/1eBReCXSGUEl_xFT1QWf5lwE4nB7J0sCh/view?usp=sharing',
+      resumo:
+        'Partindo da iniciativa missionária do século 19, Keller compara movimentos e instituições. As instituições oferecem estabilidade por regras e políticas; os movimentos se unem por uma visão e por um compromisso sacrificial. Ele não os opõe como bom e mau, mas defende que toda organização precisa de ambas as dinâmicas, embora com tensões, e recorda que o crescimento da igreja depende de fatores que o líder não controla, sob a soberania de Deus.',
     },
     {
       data: '2025-08-05',
       modulo: 'igreja-centrada',
       capitulo: '28. A igreja como organismo organizado',
+      topicos: [
+        'Ofício geral e especial',
+        'Dinâmica de movimento na igreja local',
+        'Tensão criativa',
+      ],
       responsavel: 'Eduardo',
       video: 'https://drive.google.com/file/d/1sv-1GWeBPSYMjdD4tRwz-6kUPvnHoXgq/view?usp=sharing',
+      resumo:
+        'A igreja deve ser ao mesmo tempo instituição e movimento, um organismo organizado. Keller relaciona o ofício geral de todos os crentes e os ofícios especiais e descreve as características de um movimento na igreja local: visão gerada por crenças comuns, sacrifício, cooperação com outros grupos e espontaneidade sem autoritarismo. Como os movimentos tendem a se institucionalizar, propõe períodos de renovação, semelhantes à renovação da aliança em Israel.',
     },
     {
       data: '2025-08-12',
       modulo: 'igreja-centrada',
       capitulo: '29. A plantação de igrejas como uma dinâmica do movimento',
+      topicos: [
+        'Plantação natural de igrejas',
+        'Respostas às objeções',
+        'De quantas igrejas uma cidade precisa?',
+      ],
       responsavel: 'Álamo',
       video: 'https://drive.google.com/file/d/1Q4Dc_4Rcb9MYz1H0Xc_aS_l3eMAEIUTy/view?usp=sharing',
+      resumo:
+        'No livro de Atos, plantar igrejas é parte natural do ministério, e não um evento traumático. Keller responde às objeções de que já há igrejas suficientes: “Não evangelizamos uma cidade por meio de programas evangelísticos, mas mediante igrejas totalmente evangelísticas.” Argumenta que novas igrejas alcançam novas gerações, residentes e grupos, revitalizam as existentes, e descreve etapas para plantar: assegurar-se das informações, amar, associar e lançar.',
     },
     {
       data: '2025-08-19',
       modulo: 'igreja-centrada',
       capitulo: '30. A cidade e o ecossistema do evangelho',
+      topicos: [
+        'Modelos de igreja e movimentos',
+        'Os três elos do ecossistema do evangelho',
+        'Pontos de ruptura que geram mudança',
+      ],
       responsavel: 'Eduardo',
       video: 'https://drive.google.com/file/d/1WsptdjvS2pbhAw5GmghFZUu1uEpr_B22/view?usp=sharing',
+      resumo:
+        'Nenhum modelo de igreja faz tudo bem, por isso as igrejas de uma cidade precisam formar um movimento de movimentos, com espírito de catolicidade. Keller descreve o ecossistema do evangelho com três elos: a visão teológica contextualizada, a plantação e a revitalização de igrejas e os ministérios especializados. Espera que, alcançado um ponto de ruptura, o evangelho transforme a cidade, como já ocorreu na história da igreja.',
     },
   ],
 };
