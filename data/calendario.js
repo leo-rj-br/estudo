@@ -1054,7 +1054,7 @@ window.ESTUDO = {
     {
       data: '2025-03-11',
       modulo: 'igreja-centrada',
-      capitulo: '7. Contextualização internacional',
+      capitulo: '7. Contextualização intencional',
       topicos: [
         'Contextualização saudável',
         'Um breve histórico do termo',
