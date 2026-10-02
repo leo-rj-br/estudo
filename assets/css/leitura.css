@@ -1,0 +1,203 @@
+/* =============================================================================
+   Leitura · páginas de texto corrido (comunicados, orientações)
+   Carregada DEPOIS de app.css: reaproveita os tokens, o cabeçalho e o rodapé
+   do site e só acrescenta a coluna de leitura. Corpo em Newsreader, títulos
+   em Inter — o mesmo par que o rodapé já usa.
+   ========================================================================== */
+
+.leitura {
+  width: min(100% - var(--gut) * 2, 42rem);
+  margin-inline: auto;
+  padding: var(--s-12) 0 var(--s-16);
+}
+@media (min-width: 62rem) { .leitura { padding-top: var(--s-16); } }
+
+/* ---------- Abertura ----------------------------------------------------- */
+
+.leitura__topo { margin-bottom: var(--s-10); }
+
+.leitura__topo .eyebrow { display: block; margin-bottom: var(--s-3); }
+
+.leitura__titulo {
+  font-size: var(--t-display);
+  letter-spacing: -0.035em;
+  line-height: 1.04;
+}
+
+.leitura__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-2) var(--s-4);
+  margin-top: var(--s-5);
+  font-size: var(--t-sm);
+  color: var(--ink-muted);
+}
+.leitura__meta strong { color: var(--ink); font-weight: 600; }
+
+.leitura__lead {
+  margin-top: var(--s-8);
+  padding-top: var(--s-8);
+  border-top: 1px solid var(--hairline);
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 1.15rem + 0.6vw, 1.55rem);
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  color: var(--ink-2);
+}
+
+/* ---------- Corpo -------------------------------------------------------- */
+
+.prosa {
+  font-family: var(--font-serif);
+  font-size: 1.1875rem;
+  line-height: 1.68;
+  color: var(--ink-2);
+}
+.prosa > * + * { margin-top: var(--s-5); }
+
+.prosa h2 {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-3);
+  margin-top: var(--s-16);
+  margin-bottom: calc(var(--s-1) * -1);
+  font-family: var(--font-ui);
+  font-size: var(--t-h2);
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  scroll-margin-top: 5.5rem;
+}
+.prosa h2 .pill-num { font-size: 0.72em; flex: none; transform: translateY(-0.12em); }
+
+.prosa h3 {
+  margin-top: var(--s-8);
+  font-family: var(--font-ui);
+  font-size: var(--t-sm);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+}
+
+.prosa strong { color: var(--ink); font-weight: 600; }
+
+.prosa ul { display: grid; gap: var(--s-3); }
+.prosa ul > li {
+  position: relative;
+  padding-left: var(--s-6);
+}
+.prosa ul > li::before {
+  content: '';
+  position: absolute;
+  left: var(--s-1);
+  top: 0.72em;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: var(--r-full);
+  background: var(--ink-faint);
+}
+
+/* ---------- Checklist ("Para esta semana") ------------------------------- */
+
+.checklist {
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  overflow: hidden;
+}
+.prosa .checklist { display: block; }
+.prosa .checklist > li { padding: 0; }
+.prosa .checklist > li::before { content: none; }
+.checklist > li + li { border-top: 1px solid var(--hairline); }
+
+.checklist label {
+  display: flex;
+  gap: var(--s-3);
+  align-items: flex-start;
+  padding: var(--s-4) var(--s-5);
+  cursor: pointer;
+  font-size: 1.0625rem;
+  line-height: 1.5;
+  transition: background var(--dur) var(--ease);
+}
+.checklist label:hover { background: var(--hover); }
+
+.checklist input {
+  appearance: none;
+  -webkit-appearance: none;
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0.18em 0 0;
+  border: 1.5px solid var(--hairline-firm);
+  border-radius: var(--r-xs);
+  background: var(--surface);
+  cursor: pointer;
+  transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+.checklist input::after {
+  content: '';
+  width: 0.34rem;
+  height: 0.62rem;
+  border: solid var(--on-blue);
+  border-width: 0 2px 2px 0;
+  transform: translateY(-0.06rem) rotate(45deg) scale(0);
+  transition: transform 160ms var(--spring);
+}
+.checklist input:checked { background: var(--blue); border-color: var(--blue); }
+.checklist input:checked::after { transform: translateY(-0.06rem) rotate(45deg) scale(1); }
+.checklist input:checked + span { color: var(--ink-muted); text-decoration: line-through; text-decoration-color: var(--ink-faint); }
+
+.nota {
+  font-family: var(--font-ui);
+  font-size: var(--t-caption);
+  color: var(--ink-faint);
+}
+
+/* ---------- Oração ------------------------------------------------------- */
+
+.oracao {
+  padding: var(--s-8) var(--s-6);
+  border-radius: var(--r-xl);
+  background: var(--canvas-sunk);
+  border: 1px solid var(--hairline);
+  font-style: italic;
+  font-size: clamp(1.2rem, 1.1rem + 0.4vw, 1.375rem);
+  line-height: 1.6;
+  color: var(--ink);
+}
+@media (min-width: 40rem) { .oracao { padding: var(--s-10); } }
+
+/* ---------- Fecho -------------------------------------------------------- */
+
+.fecho {
+  margin-top: var(--s-12);
+  padding-top: var(--s-8);
+  border-top: 1px solid var(--hairline);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.125rem;
+  color: var(--ink-muted);
+}
+.fecho strong { font-style: normal; font-family: var(--font-ui); font-size: var(--t-base); }
+
+.leitura__acoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-3) var(--s-4);
+  margin-top: var(--s-10);
+}
+.leitura__aviso { font-size: var(--t-sm); color: var(--ink-muted); }
+
+/* ---------- Impressão ---------------------------------------------------- */
+
+@media print {
+  .leitura { padding: 0; width: auto; }
+  .leitura__acoes { display: none !important; }
+  .prosa, .leitura__lead { color: #000; }
+  .checklist, .oracao { background: none; }
+}
