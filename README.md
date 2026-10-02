@@ -8,6 +8,12 @@ estudo, as terças-feiras, e não o mês inteiro. Ao abrir qualquer data aparece
 do tema, os tópicos da semana, quem conduz e — nos encontros já realizados — o **player
 do vídeo, que toca dentro da própria página**, sem precisar sair para o Drive.
 
+A **agenda de eventos da igreja** — Ceia do Senhor, reuniões, conferências e outros
+encontros, à parte do calendário do estudo — mora em domínio e repositório próprios:
+[`agenda.comunidademanifesto.com`](https://agenda.comunidademanifesto.com), no
+repositório [`leo-rj-br/agenda`](https://github.com/leo-rj-br/agenda). Este repositório
+cuida só do estudo.
+
 ---
 
 ## Como atualizar o site
@@ -161,6 +167,17 @@ No bloco `config`:
 
 ---
 
+## Agenda de eventos
+
+A agenda de eventos da igreja foi para o repositório
+[`leo-rj-br/agenda`](https://github.com/leo-rj-br/agenda), publicada em
+[`agenda.comunidademanifesto.com`](https://agenda.comunidademanifesto.com) — domínio e
+código próprios, independentes deste repositório. `agenda/index.html` aqui é só um
+redirecionamento para quem ainda tiver o link antigo (`estudo.comunidademanifesto.com/agenda/`)
+guardado.
+
+---
+
 ## Design
 
 O sistema visual segue a linguagem do Notion, a partir das referências fornecidas:
@@ -205,6 +222,7 @@ permanece.
 
 ```
 index.html               página única
+agenda/index.html        redirecionamento para agenda.comunidademanifesto.com
 data/calendario.js       ← o conteúdo (o único arquivo a editar)
 assets/css/app.css       sistema visual
 assets/css/fonts.css     @font-face das fontes locais

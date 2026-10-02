@@ -179,6 +179,7 @@ window.ESTUDO = {
       ],
       responsavel: 'Eduardo',
       foto: 'jovens',
+      video: 'https://www.youtube.com/watch?v=jiGxQmO5PzQ',
       resumo:
         'Por trás do culto à experiência imediata mora um niilismo: “comamos e bebamos, que amanhã morreremos”. Horton contrapõe o catecismo de Nietzsche ao de Agostinho e expõe a contradição que nos parte ao meio: exigimos autonomia total e ao mesmo tempo ansiamos por comunidade — e não dá para ter as duas. Daí a imagem que ficou do livro: vivemos numa era de jet-ski, deslizando pela superfície de muita coisa, quando o que forma alguém é mergulhar fundo.',
     },
@@ -192,6 +193,7 @@ window.ESTUDO = {
       ],
       responsavel: 'Bel',
       foto: 'transito',
+      video: 'https://www.youtube.com/watch?v=-gePf5I0_Fw',
       resumo:
         'Setembro de 2003: a revista Adbusters lança seu próprio tênis “subversivo”. Dali em diante, diz Horton, ficou claro que a rebeldia não ameaça o sistema — ela é o sistema. E vem a ironia que dá nome ao capítulo: criado num meio que se julgava sem tradição, ele mostra que a corrida pela Próxima Grande Coisa é, ela mesma, uma tradição antiga, herdada do avivamentismo norte-americano.',
     },
@@ -202,6 +204,7 @@ window.ESTUDO = {
       topicos: ['Ansiando por avivamento (p. 112–122)'],
       responsavel: 'Alamo',
       foto: 'transito',
+      video: 'https://www.youtube.com/watch?v=IBHtSSPDWL4',
       resumo:
         'Há duas maneiras de entender o avivamento. A de Edwards: uma “surpreendente obra de Deus”, bênção extraordinária sobre os seus meios ordinários de graça. E a de Finney: algo sob nosso controle, que se produz com os passos certos. Horton mostra que a segunda é uma abordagem tecnológica da religião — se até Deus obedece a causa e efeito, o culto vira técnica. Encontro desconfortável, e dos mais esclarecedores do semestre.',
     },
@@ -215,6 +218,7 @@ window.ESTUDO = {
       ],
       responsavel: 'Eduardo',
       foto: 'transito',
+      video: 'https://www.youtube.com/watch?v=ZGFFdxRzatI',
       resumo:
         'A alternativa que Horton propõe: nutrição pactual — crescimento lento na mesma direção, em vez de picos no gráfico. E a pergunta que dá título à seção, “como foi a igreja hoje?”, que nossos antepassados não entenderiam, porque ninguém pergunta como foram as refeições da semana. O ponto é que no culto comum acontece algo nada comum: quem está presente é Deus, que julga, justifica, lava e alimenta pelos meios que prometeu usar.',
     },
