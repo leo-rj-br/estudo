@@ -127,13 +127,15 @@ agrupa e destaca automaticamente.
 | `subtitulo` | subtítulo da capa, se houver |
 | `autor` | autor |
 | `periodo` | ex.: `2026 · 2º semestre` |
-| `livro` | **capa do livro**, exibida no cartão "Estudando agora" |
+| `livro` | **capa do livro**, exibida no cartão "Estudando agora" e na estante de estudos |
 | `capa` | foto de ambiente, usada quando um encontro não define a sua |
 | `epigrafe` | frase curta que resume a tese do livro |
 
 Para a capa, salve duas larguras em `assets/img` — `<nome>-400.webp` e `<nome>-696.webp` —
 e informe só o nome-base em `livro`. Uma foto reta da capa, sem moldura nem fundo, é o
-que funciona: o site já aplica o canto arredondado e a sombra que dão volume de livro.
+que funciona: o site transforma a imagem num livro em perspectiva — gira de leve, mostra
+a lombada (com as cores da própria capa) e se endireita no hover. A proporção da capa
+pode ser qualquer uma; o livro tem altura fixa e largura natural.
 
 ### Configuração geral
 

@@ -439,6 +439,105 @@ a { color: inherit; }
 }
 .countdown__live { font-size: var(--t-title); font-weight: 700; color: var(--blue); letter-spacing: -0.02em; }
 
+/* Livro em perspectiva — a capa é a face frontal de um volume de verdade:
+   gira de leve para mostrar a lombada, que reaproveita as cores da própria
+   capa, e se endireita quando o cartão recebe hover ou foco. Altura fixa e
+   largura natural, porque as capas têm proporções diferentes. */
+.livro3d {
+  --alt: 8rem;     /* altura do livro */
+  --esp: 0.65rem;  /* espessura da lombada */
+  --giro: 26deg;   /* ângulo de repouso */
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: none;
+  perspective: 560px;
+  perspective-origin: 50% 42%;
+}
+/* sombra de apoio, sob o livro */
+.livro3d::before {
+  content: '';
+  position: absolute;
+  left: 14%;
+  right: 6%;
+  bottom: -3px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  filter: blur(6px);
+  opacity: 0.55;
+  transition: opacity 500ms var(--ease), transform 500ms var(--ease);
+}
+.livro3d__corpo {
+  position: relative;
+  display: block;
+  width: max-content;
+  transform-style: preserve-3d;
+  transform: rotateY(var(--giro));
+  transition: transform 520ms var(--spring);
+}
+.livro3d__capa {
+  display: block;
+  height: var(--alt);
+  width: auto;
+  max-width: none;
+  aspect-ratio: 0.7;
+  border-radius: 1px 4px 4px 1px;
+  background: var(--canvas-sunk);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.12), 0 10px 22px -8px rgba(0,0,0,0.38);
+}
+/* vinco da encadernação e brilho do papel por cima da capa */
+.livro3d__corpo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1px 4px 4px 1px;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.30) 0, rgba(0,0,0,0.22) 2.2%, rgba(255,255,255,0.12) 4.4%, transparent 8%),
+    linear-gradient(118deg, rgba(255,255,255,0.16), transparent 42%);
+  pointer-events: none;
+  transform: translateZ(0.5px);
+}
+.livro3d__lombada {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--esp);
+  height: 100%;
+  transform-origin: left center;
+  transform: rotateY(90deg);
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.42), rgba(0,0,0,0.12) 55%, rgba(0,0,0,0.38)),
+    var(--capa, none) left center / auto 100% no-repeat,
+    #3a3835;
+  border-radius: 1px 0 0 1px;
+}
+:root[data-theme='dark'] .livro3d__capa {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.5), 0 12px 26px -8px rgba(0,0,0,0.75);
+}
+:root[data-theme='dark'] .livro3d::before { opacity: 0.8; }
+/* no escuro a lombada some contra o cartão: clareia e ganha um fio de luz */
+:root[data-theme='dark'] .livro3d__lombada {
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.22), rgba(255,255,255,0.04) 55%, rgba(0,0,0,0.2)),
+    var(--capa, none) left center / auto 100% no-repeat,
+    #55524d;
+  box-shadow: inset 1px 0 0 rgba(255,255,255,0.22);
+}
+
+@media (hover: hover) {
+  .estudo-card:hover .livro3d__corpo,
+  .booklet__capa--livro:hover .livro3d__corpo { transform: rotateY(0deg) translateY(-2px); }
+  .estudo-card:hover .livro3d::before,
+  .booklet__capa--livro:hover::before { opacity: 0.35; transform: scaleX(0.92); }
+}
+.estudo-card:focus-visible .livro3d__corpo { transform: rotateY(0deg) translateY(-2px); }
+.estudo-card.is-ativo .livro3d__corpo { --giro: 14deg; }
+
+@media (prefers-reduced-motion: reduce) {
+  .livro3d__corpo, .livro3d::before { transition: none; }
+}
+
 /* Cartão do livro em estudo */
 .booklet {
   display: grid;
@@ -449,6 +548,7 @@ a { color: inherit; }
   border: 1px solid var(--hairline);
 }
 .booklet__top { display: flex; gap: var(--s-4); align-items: flex-start; }
+.booklet__capa--livro { --alt: 11.75rem; --esp: 0.85rem; width: 8.6rem; margin-left: -0.35rem; }
 
 /* A capa se apoia na página como um exemplar de verdade */
 .booklet__capa {
@@ -544,8 +644,8 @@ a { color: inherit; }
 .estudo-card {
   display: flex;
   align-items: center;
-  gap: var(--s-4);
-  padding: var(--s-4);
+  gap: var(--s-3);
+  padding: var(--s-3) var(--s-4) var(--s-3) var(--s-3);
   border: 1px solid var(--hairline);
   border-radius: var(--r-lg);
   background: var(--surface);
@@ -558,6 +658,7 @@ a { color: inherit; }
   border-color: transparent;
 }
 
+.estudo-card__capa--livro { --alt: 8.6rem; --esp: 0.6rem; width: 6rem; }
 .estudo-card__capa {
   width: 3.4rem;
   aspect-ratio: 696 / 1000;

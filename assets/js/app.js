@@ -138,12 +138,19 @@
   function capaModuloHTML(mod, classe) {
     if (!mod) return `<span class="${classe} ${classe}--vazia">${ico.book}</span>`;
     if (mod.livro) {
-      return `<img class="${classe}"
-             src="assets/img/${mod.livro}-400.webp"
-             srcset="assets/img/${mod.livro}-400.webp 400w, assets/img/${mod.livro}-696.webp 696w"
-             sizes="7rem"
-             alt="Capa de ${escape(mod.titulo)}"
-             width="400" height="575" loading="lazy" decoding="async">`;
+      // Livro em perspectiva (ver .livro3d no CSS): a capa é a face frontal e a
+      // lombada, que aproveita as cores da própria capa, aparece ao lado.
+      return `<span class="livro3d ${classe}--livro" style="--capa:url('assets/img/${mod.livro}-400.webp')">
+        <span class="livro3d__corpo">
+          <img class="livro3d__capa"
+               src="assets/img/${mod.livro}-400.webp"
+               srcset="assets/img/${mod.livro}-400.webp 400w, assets/img/${mod.livro}-696.webp 696w"
+               sizes="9rem"
+               alt="Capa de ${escape(mod.titulo)}"
+               loading="lazy" decoding="async">
+          <span class="livro3d__lombada" aria-hidden="true"></span>
+        </span>
+      </span>`;
     }
     if (mod.capa) {
       return `<img class="${classe} ${classe}--foto"
