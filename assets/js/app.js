@@ -25,6 +25,7 @@
     video: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>',
     ext: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>',
     cal: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg>',
+    ordem: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4v16M3.5 16.5 7 20l3.5-3.5M17 20V4M13.5 7.5 17 4l3.5 3.5"/></svg>',
     list: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></svg>',
     search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>',
     x: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>',
@@ -206,7 +207,14 @@
     livro: 'todos', // 'todos' ou o id de um módulo — filtra agenda, calendário e busca
     ano: (proximo ? proximo.inicio : new Date()).getFullYear(),
     aberto: null,
-    mostrarPassado: false,
+    mostrarPassado: false,  // ordem cronológica: abre os encontros anteriores
+    mostrarFuturos: false,  // mais recentes primeiro: abre os encontros depois da próxima
+    // 'recentes' (padrão): a próxima aula, depois as anteriores da mais recente
+    // para a mais antiga. 'cronologica': da mais antiga para a mais nova.
+    ordem: (() => {
+      try { return localStorage.getItem('estudo:ordem') === 'cronologica' ? 'cronologica' : 'recentes'; }
+      catch (_) { return 'recentes'; }
+    })(),
   };
 
   const correspondeEscopo = (e) => ui.livro === 'todos' || e.modulo === ui.livro;
@@ -428,6 +436,7 @@
   function renderAgenda() {
     const host = $('#agenda');
     const lista = visiveis();
+    atualizarBotaoOrdem();
 
     if (!lista.length) {
       host.innerHTML = `
@@ -438,28 +447,74 @@
       return;
     }
 
-    // Na visão completa o passado fica recolhido, para que a próxima aula
-    // apareça de imediato — sem esconder nada: é um clique para abrir.
     const neutro = ui.filtro === 'todos' && !ui.busca.trim();
+    host.innerHTML = ui.ordem === 'recentes'
+      ? agendaRecentes(lista, neutro)
+      : agendaCronologica(lista, neutro);
+    if (ui.aberto) abrir(ui.aberto, false);
+  }
+
+  // Ordem cronológica: na visão completa o passado fica recolhido, para que a
+  // próxima aula apareça de imediato — sem esconder nada: é um clique para abrir.
+  function agendaCronologica(lista, neutro) {
     const passados = neutro ? lista.filter((e) => e.passado) : [];
     const adiante = neutro ? lista.filter((e) => !e.passado) : lista;
 
     let html = '';
     if (passados.length && adiante.length) {
-      html += `
-        <button class="past-toggle" type="button" id="verPassado" aria-expanded="${ui.mostrarPassado}">
-          <span class="past-toggle__chev">${ico.chev}</span>
-          <span>${ui.mostrarPassado ? 'Ocultar' : 'Ver'} os ${passados.length} encontros anteriores</span>
-          <span class="past-toggle__rule"></span>
-        </button>`;
+      html += toggleHTML('verPassado', ui.mostrarPassado,
+        `${ui.mostrarPassado ? 'Ocultar' : 'Ver'} os ${passados.length} encontros anteriores`);
       if (ui.mostrarPassado) html += porMes(passados);
     } else {
       html += porMes(passados);
     }
-    html += porMes(adiante);
+    return html + porMes(adiante);
+  }
 
-    host.innerHTML = html;
-    if (ui.aberto) abrir(ui.aberto, false);
+  // Mais recentes primeiro: a próxima aula no topo, seguida das anteriores da
+  // mais recente para a mais antiga. As aulas futuras depois da próxima ficam
+  // por último, em ordem de data — recolhidas na visão completa.
+  function agendaRecentes(lista, neutro) {
+    const { topo, passados, depois } = separarRecentes(lista);
+    const primeiro = [...topo, ...passados];
+
+    if (!neutro || !depois.length || !primeiro.length) return porMes([...primeiro, ...depois]);
+
+    let html = porMes(primeiro);
+    html += toggleHTML('verFuturos', ui.mostrarFuturos,
+      `${ui.mostrarFuturos ? 'Ocultar' : 'Ver'} os ${depois.length} próximos encontros`);
+    if (ui.mostrarFuturos) html += porMes(depois);
+    return html;
+  }
+
+  // "topo" é a próxima aula (e a de hoje, se ainda estiver no dia dela);
+  // "depois" são as futuras além dela.
+  function separarRecentes(lista) {
+    const limite = proximo ? proximo.data : HOJE;
+    const futuros = lista.filter((e) => !e.passado);
+    return {
+      topo: futuros.filter((e) => e.data <= limite).reverse(),
+      passados: lista.filter((e) => e.passado).reverse(),
+      depois: futuros.filter((e) => e.data > limite),
+    };
+  }
+
+  function toggleHTML(id, aberto, texto) {
+    return `
+      <button class="past-toggle" type="button" id="${id}" aria-expanded="${aberto}">
+        <span class="past-toggle__chev">${ico.chev}</span>
+        <span>${texto}</span>
+        <span class="past-toggle__rule"></span>
+      </button>`;
+  }
+
+  function atualizarBotaoOrdem() {
+    const btn = $('#ordem');
+    if (!btn) return;
+    const recentes = ui.ordem === 'recentes';
+    btn.innerHTML = `${ico.ordem}<span>${recentes ? 'Mais recentes primeiro' : 'Mais antigos primeiro'}</span>`;
+    btn.setAttribute('aria-label',
+      `Ordem: ${recentes ? 'mais recentes primeiro' : 'mais antigos primeiro'}. Toque para inverter.`);
   }
 
   function encHTML(e) {
@@ -745,6 +800,7 @@
     // Um link direto pra data precisa funcionar mesmo com um livro filtrado.
     if (ui.livro !== 'todos' && e.modulo !== ui.livro) ui.livro = 'todos';
     if (e.passado) ui.mostrarPassado = true;
+    if (proximo && e.data > proximo.data) ui.mostrarFuturos = true;
 
     const busca = $('#busca');
     if (busca) { busca.value = ''; $('.search').classList.remove('has-value'); }
@@ -871,6 +927,7 @@
     $('#panelAgenda').hidden = v !== 'agenda';
     $('#panelCalendario').hidden = v !== 'calendario';
     $('#toolFiltros').hidden = v !== 'agenda';
+    $('#ordem').hidden = v !== 'agenda';
     posicionarPill();
     if (v === 'calendario') renderCalendario();
     if (foco) $('#programa').scrollIntoView({ behavior: prefersMotion() ? 'smooth' : 'auto', block: 'start' });
@@ -974,6 +1031,19 @@
 
       if (ev.target.closest('#verPassado')) {
         ui.mostrarPassado = !ui.mostrarPassado;
+        renderAgenda();
+        return;
+      }
+
+      if (ev.target.closest('#verFuturos')) {
+        ui.mostrarFuturos = !ui.mostrarFuturos;
+        renderAgenda();
+        return;
+      }
+
+      if (ev.target.closest('#ordem')) {
+        ui.ordem = ui.ordem === 'recentes' ? 'cronologica' : 'recentes';
+        try { localStorage.setItem('estudo:ordem', ui.ordem); } catch (_) {}
         renderAgenda();
         return;
       }
