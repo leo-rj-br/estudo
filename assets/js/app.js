@@ -141,7 +141,9 @@
     if (mod.livro) {
       // Livro em perspectiva (ver .livro3d no CSS): a capa é a face frontal e a
       // lombada, que aproveita as cores da própria capa, aparece ao lado.
-      return `<span class="livro3d ${classe}--livro" style="--capa:url('assets/img/${mod.livro}-400.webp')">
+      // O endereço vai absoluto: dentro de uma variável CSS, um url() relativo
+      // é resolvido a partir de assets/css/, e a lombada ficava sem a capa.
+      return `<span class="livro3d ${classe}--livro" style="--capa:url('${new URL(`assets/img/${mod.livro}-400.webp`, document.baseURI).href}')">
         <span class="livro3d__corpo">
           <img class="livro3d__capa"
                src="assets/img/${mod.livro}-400.webp"
