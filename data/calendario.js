@@ -243,6 +243,7 @@ window.ESTUDO = {
       ],
       responsavel: 'Alamo',
       foto: 'multidao',
+      video: 'https://www.youtube.com/watch?v=8d2zDYdd3kA',
       resumo:
         'Ícaro, na versão de Ovídio: as asas de cera derretem porque o filho quis subir até o sol, além do curso do pai. Horton usa a lenda para dizer o que a Escritura não permite negociar — a ambição egoísta não é um impulso que se canalize para o bem; está no coração do velho homem, que precisa morrer e ressuscitar em Cristo. Não é maquiagem. E a tragédia maior é que as igrejas ajudaram a promover a troca.',
     },
