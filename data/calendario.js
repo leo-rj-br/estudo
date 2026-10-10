@@ -229,6 +229,7 @@ window.ESTUDO = {
       topicos: ['Introdução (p. 132–134)', 'Ambição na Escritura (p. 134–141)'],
       responsavel: 'Bel',
       foto: 'multidao',
+      video: 'https://www.youtube.com/watch?v=uIFFNFv3eqU',
       resumo:
         'Palavras trocam de valor com o tempo: “inquieto” já significou instável e pouco confiável. Com a ambição foi igual — virou virtude. Horton volta ao grego eritheia, lembra que os filósofos tinham a humildade como postura de escravo, e mostra em Filipenses 2 a “completa revolução moral” que muda tudo: onde a humanidade sobe em ambição, Deus desce em humildade.',
     },
