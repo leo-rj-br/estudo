@@ -264,6 +264,23 @@ a { color: inherit; }
 }
 .nav a:hover { background: var(--hover); color: var(--ink); }
 
+/* No celular os quatro links não cabem ao lado da marca: o menu desce para
+   uma segunda linha, de largura total, e rola para o lado se ainda faltar
+   espaço — em vez de passar por cima da marca e empurrar o botão de tema
+   para fora da tela. */
+@media (max-width: 40rem) {
+  .head__in { flex-wrap: wrap; row-gap: 0; min-height: 0; padding-top: var(--s-2); }
+  .brand { flex: none; min-height: 2.75rem; }
+  .nav {
+    order: 3;
+    flex: 1 0 100%;
+    margin: 0 calc(-1 * var(--s-2));
+    padding-bottom: var(--s-1);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .nav::-webkit-scrollbar { display: none; }
+}
 @media (max-width: 30rem) {
   .nav a { padding: var(--s-2); font-size: var(--t-caption); }
 }
@@ -326,7 +343,7 @@ a { color: inherit; }
 .hero { padding: var(--s-12) 0 var(--s-10); }
 @media (min-width: 62rem) { .hero { padding: var(--s-16) 0 var(--s-12); } }
 
-.hero__grid { display: grid; gap: var(--s-8); }
+.hero__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-8); }
 @media (min-width: 64rem) {
   .hero__grid {
     grid-template-columns: minmax(0, 1.6fr) minmax(17rem, 0.8fr);
@@ -411,7 +428,7 @@ a { color: inherit; }
 
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--s-3); }
 
-.hero__side { display: grid; gap: var(--s-5); }
+.hero__side { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-5); }
 
 /* Contagem regressiva */
 .countdown {
@@ -541,6 +558,7 @@ a { color: inherit; }
 /* Cartão do livro em estudo */
 .booklet {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--s-4);
   padding: var(--s-5);
   border-radius: var(--r-lg);
@@ -549,6 +567,10 @@ a { color: inherit; }
 }
 .booklet__top { display: flex; gap: var(--s-4); align-items: flex-start; }
 .booklet__capa--livro { --alt: 11.75rem; --esp: 0.85rem; width: 8.6rem; margin-left: -0.35rem; }
+/* Celulares bem estreitos (320px): o livro encolhe para o título caber ao lado */
+@media (max-width: 22rem) {
+  .booklet__capa--livro { --alt: 8.75rem; --esp: 0.65rem; width: 6.4rem; }
+}
 
 /* A capa se apoia na página como um exemplar de verdade */
 .booklet__capa {
@@ -568,6 +590,8 @@ a { color: inherit; }
 .booklet__ident .eyebrow { margin-bottom: var(--s-2); }
 .booklet__title {
   font-size: var(--t-title);
+  overflow-wrap: break-word;
+  hyphens: auto;
   font-weight: 700;
   letter-spacing: -0.018em;
   line-height: 1.2;
@@ -803,8 +827,27 @@ a { color: inherit; }
   font-weight: 600;
 }
 
+/* Inverter a ordem da agenda — discreto, à direita dos filtros */
+.ordem {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  min-height: 2.1rem;
+  margin-left: auto;
+  padding: 0 var(--s-3);
+  border-radius: var(--r-md);
+  font-size: var(--t-sm);
+  font-weight: 500;
+  color: var(--ink-muted);
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.ordem svg { width: 1rem; height: 1rem; flex: none; }
+.ordem:hover { background: var(--hover); color: var(--ink); }
+.ordem[hidden] { display: none; }
+
 @media (max-width: 40rem) {
   .toolbar { gap: var(--s-2); }
+  .ordem { margin-left: 0; padding-left: var(--s-2); }
   .seg { width: 100%; }
   .seg button { flex: 1; justify-content: center; }
   .search { flex-basis: 100%; max-width: none; }
