@@ -258,6 +258,7 @@ window.ESTUDO = {
       ],
       responsavel: 'Eduardo',
       foto: 'travessia',
+      video: 'https://www.youtube.com/watch?v=mf9gDkkgjyw',
       resumo:
         'Paulo diante dos “superapóstolos” de Corinto, e os discípulos discutindo qual deles era o maior — ao que Jesus responde: “o maior entre vós seja como o menor” (Lc 22.24-27). Horton mostra que a idolatria de líderes é antiga e cara. Hebreus 13.7 manda imitar a fé deles, não a personalidade; Jerônimo e Ambrósio lembravam que os presbíteros eram “todos iguais”; e Gregório Magno se ofendeu ao ser chamado de “papa universal”.',
     },
