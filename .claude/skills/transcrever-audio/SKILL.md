@@ -10,9 +10,12 @@ Whisper (`faster-whisper`, rodando na CPU da sessão, de graça) e devolve o tex
 
 ## Como o usuário envia o áudio
 
-No WhatsApp: pressionar o áudio → **Compartilhar** (ou Encaminhar → compartilhar
-fora do app) → **Google Drive**. O arquivo costuma chegar com nome
-`PTT-AAAAMMDD-WA0001.opus` ou `WhatsApp Audio ....ogg`/`.opus`.
+- **Anexo na conversa (o jeito mais simples):** o arquivo chega em
+  `/root/.claude/uploads/<sessão>/...` e o caminho aparece na mensagem com `@`.
+  Vá direto para o passo 3.
+- **Google Drive:** no WhatsApp, pressionar o áudio → **Compartilhar** → **Google
+  Drive**. O nome costuma ser `PTT-AAAAMMDD-WA0001.opus`, `AUDIO-AAAA-MM-DD-...m4a`
+  ou `WhatsApp Audio ....ogg`.
 
 ## Passo a passo
 
@@ -44,7 +47,10 @@ fora do app) → **Google Drive**. O arquivo costuma chegar com nome
    ```
 
    - Na primeira vez da sessão o script instala o `faster-whisper` e baixa o modelo
-     (`small` ≈ 480 MB, de `huggingface.co`). Use timeout de 10 minutos.
+     (`small` ≈ 480 MB, de `huggingface.co`).
+   - Tempo com `small` em 4 CPUs: cerca de 1/3 da duração do áudio (12 min → 4,5 min).
+     Use timeout de 10 minutos; acima de ~20 min de áudio, rode em segundo plano
+     com `--saida` e avise o usuário que vai demorar.
    - Modelos: `small` (padrão, bom para português), `medium` (mais preciso e mais
      lento), `large-v3-turbo` (o melhor, ~1,6 GB). `tiny`/`base` só para testes.
    - `--tempos` marca o minuto de cada trecho; use em áudios longos.
