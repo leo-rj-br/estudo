@@ -72,6 +72,24 @@ def garantir_faster_whisper():
         subprocess.run([sys.executable, "-m", "pip", "install", "-q", "faster-whisper"], check=True)
 
 
+def carregar_audio(caminho):
+    """Decodifica com o ffmpeg para 16 kHz mono. Evita o PyAV, cuja versão varia entre
+    ambientes e já quebrou o decode interno do faster-whisper."""
+    import shutil
+
+    import numpy as np
+
+    if not shutil.which("ffmpeg"):
+        return caminho
+    bruto = subprocess.run(
+        ["ffmpeg", "-nostdin", "-loglevel", "error", "-i", caminho, "-f", "s16le", "-ac", "1", "-ar", "16000", "-"],
+        capture_output=True,
+    )
+    if bruto.returncode != 0:
+        sys.exit(f"Erro: o ffmpeg não conseguiu ler o áudio: {bruto.stderr.decode(errors='ignore').strip()}")
+    return np.frombuffer(bruto.stdout, np.int16).astype(np.float32) / 32768.0
+
+
 def duracao(segundos):
     m, s = divmod(int(segundos), 60)
     return f"{m:02d}:{s:02d}"
@@ -104,7 +122,7 @@ def main():
         )
 
     segmentos, info = modelo.transcribe(
-        audio,
+        carregar_audio(audio),
         language=None if args.idioma == "auto" else args.idioma,
         vad_filter=True,
         beam_size=5,
