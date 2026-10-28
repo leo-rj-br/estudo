@@ -272,6 +272,7 @@ window.ESTUDO = {
       ],
       responsavel: 'Bel',
       foto: 'travessia',
+      video: 'https://www.youtube.com/watch?v=qeRcmjM4FZY',
       resumo:
         '“Trata-se do ministério, não do ministro.” Pastores vêm e vão, e são iguais e mutuamente responsáveis: a igreja é de Cristo, que governa por sua Palavra através de homens falíveis. O capítulo fecha tirando um peso das costas — “Eu edificarei a minha igreja” (Mt 16.18). Não é o seu ministério, sua igreja, seu povo. Encontro especialmente bom para quem serve em algum ministério e anda cansado.',
     },
