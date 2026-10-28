@@ -289,6 +289,7 @@ window.ESTUDO = {
       ],
       responsavel: 'Alamo',
       foto: 'fogueira',
+      video: 'https://www.youtube.com/watch?v=nP-cVEs1HMc',
       resumo:
         'A cura para a ambição inquieta é o contentamento — e Horton pega emprestado o vocabulário da ecologia: fé sustentável é a que não consome os próprios recursos. Com os dados de Tim Kasser (a renda por pessoa nos EUA dobrou desde 1957, enquanto a fatia dos que se dizem muito felizes caiu de 35% para 29%), ele expõe a ganância como irmã gêmea da ambição. A virada do capítulo é a distinção entre contrato e pacto: tratar o casamento — ou Deus — como contrato é tratar o outro como prestador de serviço.',
     },
