@@ -304,6 +304,7 @@ window.ESTUDO = {
       ],
       responsavel: 'Eduardo',
       foto: 'fogueira',
+      video: 'https://www.youtube.com/watch?v=I2KOYRW4UUQ',
       resumo:
         '“Deus é um estranho economista, pelo menos segundo os nossos padrões.” O contentamento se desdobra em três direções: com Cristo e seu reino, com o modo comum como Deus sustenta a criação e com o modo comum como ele salva. O argumento decisivo é a encarnação — o Espírito operando por meios criaturais — e a resposta de Maria, “que se cumpra em mim conforme a tua palavra”, como retrato do ordinário que Deus escolheu para si.',
     },
