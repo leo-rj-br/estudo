@@ -319,6 +319,7 @@ window.ESTUDO = {
       ],
       responsavel: 'Bel',
       foto: 'oracao',
+      video: 'https://www.youtube.com/watch?v=NMHw1QICy8M',
       resumo:
         'Horton começa discordando do próprio título: heróis são necessários, mas a coisa foi longe demais — e Cristo acaba reduzido a Herói Máximo, quando é muito mais que isso por nós. O capítulo questiona a linguagem de “transformar a cultura”, faz um balanço franco do fracasso da Direita Cristã e propõe a troca: serviço por amor, dentro do chamado comum que já temos. Encontro importante para quem trabalha, estuda ou cria.',
     },
