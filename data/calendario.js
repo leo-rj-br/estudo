@@ -333,6 +333,7 @@ window.ESTUDO = {
       ],
       responsavel: 'Alamo',
       foto: 'oracao',
+      video: 'https://www.youtube.com/watch?v=bO00GaaC9JU',
       resumo:
         '“Amar o próximo é mais difícil do que amar as causas.” É fácil transformar pessoas em atores coadjuvantes do filme da nossa vida; amar o vizinho concreto, todo dia, é bem mais corriqueiro e bem mais duro. Horton lembra 1Coríntios 1.26 — Deus escolheu as coisas loucas e fracas — e dá exemplos que não abalam o mundo: a mãe que decide levar a filha ao médico, a história antes de dormir, a ronda do enfermeiro, os trabalhos que o professor corrige.',
     },
